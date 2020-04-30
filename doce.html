@@ -38,11 +38,11 @@
       }
       
       .game_column{
-        position:absolute;
+        position:relative;
         width:1080px;
         max-width: 1400px;
         height: 100%;
-        top: 0;
+        top: 51;
         right:0;
         left:0;
         margin: auto;
@@ -58,11 +58,16 @@
         heigth: 60%;
         
       }
-      .logo-wrapper{
-        width  100%;
+      .game-wrapper{
+        position: relative;
+        width: 100%;
+        heigth: 600px;
+        max-heigth: 600px;
         background-color:black;
         align-items: center;
+        text-align:center;
         justify-content: center; 
+        margin: auto;
       }
       .image-foot{
         align-items: center;
@@ -120,7 +125,7 @@
       }
 
       #loader {
-        position: absolute;
+        position: relative;
         left: 0;
         top: 0;
         width: 100%;
@@ -129,6 +134,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
+        z-index: 100;
       }
 
       .spinner,
@@ -166,21 +173,34 @@
 
   <body>
     
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+          <a href="/" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+          <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+      <!--     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a> -->
+          <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+      <!--     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+        </div>
+        <!-- Navbar on small screens -->
+         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+          <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
+          <a href="/projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+          <a href="/contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+          <a href="#" class="w3-bar-item w3-button w3-padding-large">?</a>
+        </div>
+    </div>
+    
+    
     <div id = "main_column" class = "game_column">
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-        <a href="/projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
-        <a href="/contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">?</a>
-      </div>
-      <div id="gameContainer"></div>
-      <div id="loader">
-        <div id = 'logo-wrapper'> 
-          <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+      <div id="game-wrapper">
+        <div id="gameContainer"></div>
+        <div id="loader">
+          <div class="w3-container w3-red w3-center" style="height: 600px; margin: auto; border: 2px grey;">
             <h1 class="w3-margin w3-jumbo" style="font-weight:bolder">KILLERBOT STUDIOS</h1>
             <p class="w3-xlarge">Videogame made awesome</p>
-            <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="location.href='/doce'" type = "button">Check our latest project</button>
-          </header>
+          </div>
           <div class="spinner"></div>
           <div class="progress"><div class="full"></div></div>
         </div>
