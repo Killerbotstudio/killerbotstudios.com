@@ -1,2 +1,2 @@
-# killerbotstudio.com
-Source files for our main website killerbotstudio.com hosted with Github pages 
+# killerbotstudios.com
+Source files for our main website killerbotstudios.com hosted with Github pages 
