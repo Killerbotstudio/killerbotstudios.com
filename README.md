@@ -1,2 +1,2 @@
-# DOCE-WebGL
-WebGL build for the web-version of the DOCE videogame from Smart Iguana Games developed by KilerBot Studios
+# killerbotstudio.com
+Source files for our main website killerbotstudio.com hosted with Github pages 
