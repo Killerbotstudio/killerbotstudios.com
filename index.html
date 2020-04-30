@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="icon" href="https://dl.dropboxusercontent.com/s/u97vxqvcp4ox4rs/favicon.ico">
+      <title>Killerbot</title>
+      <style>
+        html {
+          box-sizing: border-box;
+        }
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        body {
+          margin: 0;
+          background: #444;
+        }
+        #gameContainer {
+          width: 100%;
+          height: 630px;
+        }
+        canvas {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+        /* try to handle mobile dialog */
+        canvas + * {
+          z-index: 2;
+        }
+        .main_column{
+          position:absolute;
+          width:960px;
+          max-width: 960px;
+          min-height: 943px;
+          top: 0;
+          right:0;
+          left:0;
+          margin: auto;
+          background-color:white;
+          align-items: center;
+          text-align: center;
+        }
+        .topnav {
+          background-color: grey;
+          overflow: hidden;
+          align-text: left;
+        }
+
+        .logo {
+            display: block;
+            width : 100%;
+            max-heigth : 600px;
+            max-height: 300px;
+            align-items: center;
+            justify-content: center; 
+        }
+        .header-logo{
+          width: 100%;
+          height: 100%;
+          width: 360px;
+          max-height : 480px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id = 'main-column' class = 'main_column'> 
+      <div class="navigation-bar">
+        <a class="active" href="/">Home</a>
+        <a href="/">Games</a>
+        <a href="/">Contact</a>
+        <a href="/">About</a>
+      </div> 
+      <img alt = "KB-Logo" class = "header-logo" src = "https://dl.dropboxusercontent.com/s/klwy9sonq02tun6/KILLERBOT%20ConceptArt-04%20Transparent.png">
+      <h3> Check the videogames we've developed: </h3>
+      <a href="/doce" title="DOCE GAME">DOCE</a> <p>From Smart Iguana Games</p>
+   </div>
+  </body>
+         
+</html>
+
