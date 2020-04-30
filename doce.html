@@ -129,6 +129,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
+        z-index: 100;
       }
 
       .spinner,
@@ -188,15 +190,12 @@
         
       <div id="gameContainer"></div>
       <div id="loader">
-        <div id = 'logo-wrapper'> 
-          <header class="w3-container w3-red w3-center" style="width:100%; height: 100%">
-            <h1 class="w3-margin w3-jumbo" style="font-weight:bolder">KILLERBOT STUDIOS</h1>
-            <p class="w3-xlarge">Videogame made awesome</p>
-            <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="location.href='/doce'" type = "button">Check our latest project</button>
-          </header>
-          <div class="spinner"></div>
-          <div class="progress"><div class="full"></div></div>
-        </div>
+        <header class="w3-container w3-red w3-center" style="width:100%; height: 100%">
+          <h1 class="w3-margin w3-jumbo" style="font-weight:bolder">KILLERBOT STUDIOS</h1>
+          <p class="w3-xlarge">Videogame made awesome</p>
+        </header>
+        <div class="spinner"></div>
+        <div class="progress"><div class="full"></div></div>
       </div>
       <div id = "image_footer" class = "image-foot">
         <img alt = "Doce Logo" class = "header-logo" src = "https://dl.dropboxusercontent.com/s/0o2rfqkfmbc40ka/Doce_Title.png">
