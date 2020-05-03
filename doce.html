@@ -44,6 +44,7 @@
         width:1080px;
         max-width: 1400px;
         height: 100%;
+        min-height: 1060px;
         top: 51px;
         right:0;
         left:0;
@@ -60,10 +61,10 @@
         
       }
       .game-wrapper{
-        position: fixed;
+        position: static;
         width: 1080px;
         heigth: 600px;
-        top: 90px;
+/*         top: 90px; */
         max-heigth: 600px;
         background-color:black;
         align-items: center;
@@ -75,6 +76,7 @@
         align-items: center;
         text-align: center;
         background-color:black;
+        position: relative;
       }
       
       .header-logo{
@@ -85,16 +87,26 @@
       }
       
       .w3-container {
-        position: relative;
+        position: absolute;
         align-items: center;
         text-align: center;
         margin: auto;
-        height: 400px;
+        height: 100%;
         width: 100%;
+        
+      }
+      
+      .w3-margin{
+        margin:16px;
+        margin-top:15%;
+      }
+      .w3-jumbo{
+        
       }
 
       .progress {
           margin: 1.5em;
+          margin-top: 1100px;
           border: 1px solid white;
           width: 50vw;
           display: none;
@@ -114,6 +126,7 @@
         margin:auto;
         display: flex;
         flex-direction: column;
+        text-align: center;
         align-items: center;
         justify-content: center;
         z-index: 100;
@@ -173,19 +186,20 @@
         </div>
     </div>
     
-    <div id="loader">
-<!--       <div class="w3-container w3-red w3-center">
-        <h1 class="w3-margin w3-jumbo" style="font-weight:bolder">KILLERBOT STUDIOS</h1>
-        <p class="w3-xlarge">Videogame made awesome</p>
-      </div> -->
-      <div class="spinner"></div>
-      <div class="progress"><div class="full"></div></div>
-    </div>
-    
     <div id = "main_column" class = "game_column">
       <div id="game-wrapper">
-        <div id="gameContainer"></div>
+        <div id="gameContainer">
+          <div id="loader">
+<!--       <div class="w3-container w3-red w3-center">
+            <h1 class="w3-margin w3-jumbo" style="font-weight:bolder">KILLERBOT STUDIOS</h1>
+            <p class="w3-xlarge">Videogame made awesome</p>
+           </div> -->
+           <div class="spinner"></div>
+           <div class="progress"><div class="full"></div></div>
+          </div>
+        </div>
       </div>
+      
       <div id = "image_footer" class = "image-foot">
         <img alt = "Doce Logo" class = "header-logo" src = "https://dl.dropboxusercontent.com/s/0o2rfqkfmbc40ka/Doce_Title.png">
       </div>
