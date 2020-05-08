@@ -15,6 +15,11 @@
     <title>DOCE</title>
     <style>
       html {
+          transform: rotate(-90deg);
+          transform-origin: left top;
+          width: 100vh;
+          overflow-x: hidden;
+          position: absolute;
         box-sizing: border-box;
       }
       *, *:before, *:after {
@@ -205,9 +210,9 @@
     </div>
   </body>
 
-  <script src="DoceOnline/Build/UnityLoader.js"></script>
+  <script src="Build/UnityLoader.js"></script>
   <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "DoceOnline/Build/DOCE_online.json", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WEBGL_build.json", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
