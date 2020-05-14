@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<style media="screen">
+  #container{
+    width: 400px;
+    height:400px;
+    position:relative;
+    background-color:yellow;
+  }
+  #anim{
+    width:50px;
+    height:50px;
+    position:absolute;
+    background-color:red;
+  }
+  #loadingSquare{
+    width: 50px;
+    height: 50px;
+    background-color:red;
+    position:relative;
+    animation-name:example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+img.star {
+  width:100px;
+    animation-name:            rotation;
+    animation-duration:        2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+  .imgRotate {
+    width: 100px;
+    height:100px
+    animation-name:rotation;
+    animation-play-state:running;
+    animation-durartion:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+  }
+
+  @keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+  }
+
+  @keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:50px; top:0px;}
+  50%  {background-color:blue; left:50px; top:50px;}
+  75%  {background-color:white; left:0px; top:50px;}
+  100% {background-color:red; left:0px; top:0px;}
+  }
+
+</style>
+<script src="javascript.js" type="text/javascript"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+  </head>
+  <body>
+    <p>
+
+    <button onclick="myMove()"> Click Me</button>
+    </p>
+    <div id = "container">
+      <div id="anim"></div>
+    </div>
+
+    <img name = "slide" width="400"height="200">
+    <br><br><br><br>
+    <div id="loadingSquare"></div>
+<br><br><br><br><br><br>
+
+    <div>
+      <img class = "star" src="webassets/KBlogogray.png">
+    </div>
+
+
+
+
+
+    <!-- <img name = "rot" width="300" height="300"> -->
+
+
+  </body>
+</html>
+
+<script>
+
+  var i = 0;
+  var images = [];
+  var time = 3000;
+
+  images[0] = "webassets/bots3Dw.png";
+  images[1] = "webassets/bots.jpg";
+  images[2] = "webassets/bs1.jpg";
+  images[3] = "webassets/bs2.jpg";
+
+  function changeImg(){
+
+    document.slide.src = images[i];
+    if(i<images.length -1 ){
+      i++;
+    }else {
+      i=0;
+    }
+    setTimeout("changeImg()",time);
+  }
+
+  function myMove() {
+    var elem = document.getElementById("anim");
+    var pos = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (pos == 350) {
+        clearInterval(id);
+      } else {
+        pos++;
+        elem.style.top = pos + 'px';
+        elem.style.left = pos + 'px';
+      }
+    }
+  }
+
+  window.onload = changeImg;
+
+
+</script>
+<!-- $. getscript ("/Javascripts.js", function(){
+  myMove();
+}); -->
