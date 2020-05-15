@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "DOCE",
+"productVersion": "BETA 0.1",
+"dataUrl": "DOCEBeta2.data.unityweb",
+"wasmCodeUrl": "DOCEBeta2.wasm.code.unityweb",
+"wasmFrameworkUrl": "DOCEBeta2.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#808080",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.13f1"
+}
