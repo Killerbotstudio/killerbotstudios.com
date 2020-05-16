@@ -1,15 +1,206 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DOCE</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.instantiate("unityContainer", "Build/DOCE_Online.json");
-    </script>
-  </head>
-  <body>
-    <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+<!DOCTYPE HTML><html lang="en">
+
+<head><meta charset="UTF-8"/>
+  <meta content="#e53b44" name="theme-color"/>
+  <link rel="icon" href="Assets/images_zone/aW1nLzMyNDk4MjcucG5n/32x32%23/asyP5x.png" type="image/png"/>
+  <script type="application/ld+json">{
+    "@context":"http:\/\/schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {
+        "item":{
+          "@id":"https:\/\/itch.io\/games",
+          "name":"Games"
+        },
+        "@type":"ListItem",
+        "position":1
+      },
+      {
+        "item":{
+          "@id":"https:\/\/itch.io\/games\/genre-strategy","name":"Strategy"
+        },
+        "@type":"ListItem",
+        "position":2
+      },
+      {"item":{"@id":"https:\/\/itch.io\/games\/free","name":"Free"},
+      "@type":"ListItem",
+      "position":3}
+    ]
+  }
+  </script>
+  <title>Doce</title>
+  <link rel="stylesheet" href="../static/game392b.css?1588963261"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="../static/lib392b.js?1588963261"></script>
+  <script type="text/javascript" src="../static/bundle.min392b.js?1588963261"></script>
+  <script type="text/javascript" src="../static/game.min392b.js?1588963261"></script>
+
+
+  <style type="text/css" id="game_theme">
+
+      body{
+        background-color:#444;
+      }
+      /*! */  /*
+      } */
+      .inner_column{
+        color:#ffffff;
+        font-family:Lato,Lato,LatoExtended,sans-serif;
+        background-color:rgba(0, 0, 0, 1)
+        }
+      .inner_column ::selection{
+        color:white;
+        background:#fa5c5c
+      }
+      .inner_column ::-moz-selection{
+        color:white;b
+        ackground:#fa5c5c
+        }
+      .inner_column h1,.inner_column h2,.inner_column h3,.inner_column h4,.inner_column h5,.inner_column h6{
+        font-family:inherit;
+        font-weight:900;
+        color:inherit
+        }
+      .inner_column a,.inner_column .footer a{
+        color:#fa5c5c
+        }
+      .inner_column .button,.inner_column .button:hover,.inner_column .button:active{
+        background-color:#fa5c5c;color:white;text-shadow:0 1px 0px #e54747
+        }
+      .inner_column hr{background-color:#262626}
+      .inner_column table{border-color:#262626}
+      .inner_column .redactor-box .redactor-toolbar li a{color:#fa5c5c}
+      .inner_column .redactor-box .redactor-toolbar li a:hover,.inner_column .redactor-box .redactor-toolbar li a:active,.inner_column .redactor-box .redactor-toolbar li a.redactor-act{
+        background-color:#fa5c5c !important;
+        color:white !important;
+        text-shadow:0 1px 0px #e54747 !important}
+      .inner_column .redactor-box .redactor-toolbar .re-button-tooltip{
+        text-shadow:none
+      }
+      .game_frame{
+        background:#191919;/*! */  /* */
+      }
+      .game_frame .embed_info{
+        background-color:rgba(0, 0, 0, 0.85)
+      }.game_loading .loader_bar .loader_bar_slider{
+        background-color:#fa5c5c
+      }.view_game_page .reward_row,.view_game_page .bundle_row{border-color:#191919 !important}
+      .view_game_page .game_info_panel_widget{background:rgba(25, 25, 25, 1)}
+      .view_game_page .star_value .star_fill{color:#fa5c5c}
+      .view_game_page .rewards .quantity_input{
+        background:rgba(25, 25, 25, 1);
+        border-color:rgba(255, 255, 255, 0.5);
+        color:#ffffff}
+      .view_game_page .right_col{display:none}
+      .footer .svgicon,.view_game_page .more_informatiosn_toggle .svgicon{fill:#ffffff !important}
+
+
+    }
+    </style>
+</head>
+
+<body data-page_name="view_game" class="locale_en game_layout embedded_game responsive no_theme_toggle">
+
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);"
+    onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  </div>
+
+    <div id="wrapper" class="main wrapper">
+      <div class="inner_column size_large family_lato" id="inner_column" style = "background: black">
+        <!-- IMAGE LOGO HEADER -->
+        <!-- GAME PAGE -->
+        <div id="view_html_game_page_30137" class="view_html_game_page view_game_page page_widget ready">
+
+          <!--GAME CONTAINER START-->
+          <div id="html_embed_widget_94781" class="html_embed_widget embed_wrapper">
+            <div data-height="504" data-width="896" class="game_frame game_pending" style="width: 896px; height: 504px">
+              <button title="Enter fullscreen" class="fullscreen_btn">
+                <img src="Assets/fullScreenRed.png"/>
+              </button>
+              <!-- IFRAME -->
+              <div data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot;
+                allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi&quot; frameborder=&quot;0&quot;
+                src=web_build/index.html msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot;
+                allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot;
+                allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;" class="iframe_placeholder">
+
+                <button class="button load_iframe_btn" style = "background : grey">
+                  <svg stroke-linecap="round" stroke="grey" class="svgicon icon_play" role="img" version="1.1" viewBox="0 0 24 24"
+                  stroke-width="2" height="50" stroke-linejoin="round" aria-hidden fill="none" width="2">
+                    <!-- <circle cx="12" cy="12" r="10"></circle> -->
+                    <!-- <polygon points="10 8 15 12 10 16  9" style="fill:white";></polygon> -->
+                  </svg>START
+                </button>
+              </div>
+            </div>
+          </div>
+        <!--GAME CONTAINER END-->
+
+          <div class="header has_image align_center" id="header">
+            <img alt="Doce Web" src="Assets/images_zone/aW1nLzMyNDk2OTAucG5n/original/SgoOeY.png"/>
+            <h1 itemprop="name" class="game_title">Doce Web</h1>
+          </div>
+
+
+          <script type="text/javascript">new I.HtmlEmbed('#html_embed_widget_94781', {"width":896,"start_maximized":false,"height":504})</script>
+          <div class="columns">
+            <div class="left_col column">
+
+              <div class = "more_info_panel">
+                <p style = "color : grey; text-align : center">ABOUT THE GAME</p>
+                <p  style = "color : white">DOCE is a strategy turn-based video-game from Smart Iguana Games based on their board game with the same name.&nbsp;<br></p>
+                <p style = "color : white">More info: <a href="https://smartiguanagames.com/doce/">https://smartiguanagames.com/doce/</a><br><br></p>
+              </div>
+
+
+              <div class="more_information_toggle">
+                <div class="toggle_row">
+                  <br>
+                  <a class="toggle_info_btn" href="javascript:void(0)">MORE
+                    <svg height="6" width="12" class="svgicon icon_down_tick" role="img" aria-hidden viewBox="0 0 37 20" version="1.1">
+                      <path d="m2.0858 0c-1.1535 0-2.0858 0.86469-2.0858 1.9331 0 0.5139 0.21354 1.0183 0.38704 1.1881l18.113 16.879 18.112-16.879c0.174-0.1696 0.388-0.674 0.388-1.1879 0-1.0684-0.932-1.9331-2.086-1.9331-0.577 0-1.111 0.23008-1.49 0.57992l-14.924 13.894-14.925-13.893c-0.3777-0.34998-0.9134-0.581-1.4902-0.581z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="info_panel_wrapper">
+                  <div class="game_info_panel_widget">
+                    <!-- INSIDE MORE INFO -->
+                    <div class="formatted_description user_formatted">
+                      <p  style = "color : white">DOCE is a strategy turn-based video-game from Smart Iguana Games based on their board game with the same name.&nbsp;<br></p>
+                      <p style = "color : white">Press the &quot;Start&quot; button on the game window above and once you are in the game menu navigate to the option &quot;HOW TO&quot; for quick and easy-to-understand instructions about how to play DOCE.&nbsp;</p>
+                      <p style = "color : white">More info: <a href="https://smartiguanagames.com/doce/" rel="nofollow noopener">https://smartiguanagames.com/doce/</a><br><br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        new I.ViewHtmlGame(
+          '#view_html_game_page_30137', {
+            "id":611145,
+            "hit_url":"",
+            "type_name":"html",
+            "play_after":90,
+            "actual_price":0,
+            "min_price":0,
+            "slug":"doce-web",
+            "play_url":"https:\/\/killerbotstudios.itch.io\/doce-web\/rp\/eyJtIjoxNTg4OTYzNDYxLCJpZCI6NjExMTQ1LCJybiI6NjYyNzAsImUiOjE1ODg5NjM1MjF9%2e8eUrV9mD2lvtslkchwiQsXXJpuE%3d",
+            "type":5
+          }, {});
+      </script>
+    </div>
+  </div>
+
   </body>
 </html>
