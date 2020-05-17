@@ -280,7 +280,6 @@
           }
         }(this),
       });
-      this.image_viewer = new I.ImageViewer(el);
       if (this.opts.first_view) {
         I.Lightbox.open_tpl("first_game_lightbox", I.FirstGameLightbox)
       }
