@@ -29,15 +29,20 @@
   }
   </script>
   <title>Doce</title>
-  <link rel="stylesheet" href="static/game392b.css?1588963261"/>
+  <link rel="stylesheet" href="static/game392b.css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" src="static/lib392b.js?1588963261"></script>
-  <script type="text/javascript" src="static/bundle.min392b.js?1588963261"></script>
-  <script type="text/javascript" src="static/game.min392b.js?1588963261"></script>
+  <script type="text/javascript" src="https://static.itch.io/lib.js?1589668861"></script>
+  <script type="text/javascript" src="https://static.itch.io/bundle.min.js?1589668861"></script>
+
+
+  <script type="text/javascript" src="static/lib392b.js"></script>
+  <script type="text/javascript" src="static/bundle.min392b.js"></script>
+  <script type="text/javascript" src="static/game.min392b.js"></script>
+  <script type="text/javascript" src="static/user.min392b.js"></script>
 
 
   <style type="text/css" id="game_theme">
@@ -49,7 +54,7 @@
       } */
       .inner_column{
         color:#ffffff;
-        font-family:Lato,Lato,LatoExtended,sans-serif;
+        font-family:sans-serif;
         background-color:rgba(0, 0, 0, 1)
         }
       .inner_column ::selection{
@@ -115,14 +120,14 @@
   </div>
 
     <div id="wrapper" class="main wrapper">
-      <div class="inner_column size_large family_lato" id="inner_column" style = "background: black">
+      <div class="inner_column size_large family_lato" id="inner_column" style = "background: black; min-height : 524px;">
         <!-- IMAGE LOGO HEADER -->
         <!-- GAME PAGE -->
         <div id="view_html_game_page_30137" class="view_html_game_page view_game_page page_widget ready">
 
           <!--GAME CONTAINER START-->
           <div id="html_embed_widget_94781" class="html_embed_widget embed_wrapper">
-            <div data-height="504" data-width="896" class="game_frame game_pending" style="width: 896px; height: 504px">
+            <div data-height="524" data-width="916" class="game_frame game_pending" style="width: 916px; height: 524px">
               <button title="Enter fullscreen" class="fullscreen_btn">
                 <img src="Assets/fullScreenRed.png"/>
               </button>
@@ -151,35 +156,34 @@
           </div>
 
 
-          <script type="text/javascript">new I.HtmlEmbed('#html_embed_widget_94781', {"width":896,"start_maximized":false,"height":504})</script>
+          <script type="text/javascript">
+            new I.HtmlEmbed('#html_embed_widget_94781', {
+              "width":916,
+              "start_maximized":false,
+              "height":524
+            })
+          </script>
           <div class="columns">
             <div class="left_col column">
 
-              <div class = "more_info_panel">
-                <p style = "color : grey; text-align : center">ABOUT THE GAME</p>
-                <p  style = "color : white">DOCE is a strategy turn-based video-game from Smart Iguana Games based on their board game with the same name.&nbsp;<br></p>
-                <p style = "color : white">More info: <a href="https://smartiguanagames.com/doce/">https://smartiguanagames.com/doce/</a><br><br></p>
-              </div>
+              <div class = "more_info_panel"></div>
 
 
-              <div class="more_information_toggle">
+              <div class="more_information_toggle" style = "text-align : center; color: white">
                 <div class="toggle_row">
                   <br>
-                  <a class="toggle_info_btn" href="javascript:void(0)">MORE
-                    <svg height="6" width="12" class="svgicon icon_down_tick" role="img" aria-hidden viewBox="0 0 37 20" version="1.1">
+                  <a style = "color : white" class="toggle_info_btn" href="javascript:void(0)">ABOUT THE GAME
+                    <svg height="6" width="12" class="svgicon icon_down_tick" role="img" aria-hidden viewBox="0 0 37 20" version="1.1" style = "filter : brightness(1000%)">
                       <path d="m2.0858 0c-1.1535 0-2.0858 0.86469-2.0858 1.9331 0 0.5139 0.21354 1.0183 0.38704 1.1881l18.113 16.879 18.112-16.879c0.174-0.1696 0.388-0.674 0.388-1.1879 0-1.0684-0.932-1.9331-2.086-1.9331-0.577 0-1.111 0.23008-1.49 0.57992l-14.924 13.894-14.925-13.893c-0.3777-0.34998-0.9134-0.581-1.4902-0.581z"/>
                     </svg>
                   </a>
                 </div>
                 <div class="info_panel_wrapper">
-                  <div class="game_info_panel_widget">
-                    <!-- INSIDE MORE INFO -->
-                    <div class="formatted_description user_formatted">
-                      <p  style = "color : white">DOCE is a strategy turn-based video-game from Smart Iguana Games based on their board game with the same name.&nbsp;<br></p>
-                      <p style = "color : white">Press the &quot;Start&quot; button on the game window above and once you are in the game menu navigate to the option &quot;HOW TO&quot; for quick and easy-to-understand instructions about how to play DOCE.&nbsp;</p>
-                      <p style = "color : white">More info: <a href="https://smartiguanagames.com/doce/" rel="nofollow noopener">https://smartiguanagames.com/doce/</a><br><br></p>
-                    </div>
-                  </div>
+                  <!-- INSIDE MORE INFO -->
+                  <p  style = "color : white">DOCE® Classic by Smart Iguana Games is a new two-player abstract strategy board game for all ages created by Luis & Dan Machado, father and son.&nbsp;<br></p>
+                  <p  style = "color : white">Currently under development, <b> this is the official video game version of DOCE® Classic.</b>&nbsp;<br></p>
+                  <p style = "color : white">If you still dont know how to play, press the &quot;Start&quot; button on the window above and once you are in the game menu navigate to the option &quot;HOW TO&quot; for quick and easy-to-understand instructions about how to play DOCE.&nbsp;</p>
+                  <p style = "color : white"><b>More info: <a href="https://smartiguanagames.com/doce/" rel="nofollow noopener" style = "color:green !important">https://smartiguanagames.com/doce/</a><br><br></b></p>
                 </div>
               </div>
             </div>
@@ -199,6 +203,15 @@
             "type":5
           }, {});
       </script>
+      <script type="text/javascript">
+            I.setup_layout()
+        </script>
+        <script id="loading_lightbox_tpl" type="text/template">
+            <div class="lightbox loading_lightbox"><div class="loader_outer"><div class="loader_label">Loading</div><div class="loader_bar"><div class="loader_bar_slider"></div></div></div></div>
+        </script>
+        <script type="text/javascript">
+            I.setup_page();
+        </script>
     </div>
   </div>
 
