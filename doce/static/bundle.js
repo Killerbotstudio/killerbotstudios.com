@@ -716,8 +716,8 @@
           if ((ref = window.screen) != null) {
             if ((ref1 = ref.orientation) != null) {
               if (typeof ref1.lock === "function") {
-                console.log("request_fullscreen attempting to lock screen")
-                //ref1.lock(orientation)
+                //console.log("request_fullscreen attempting to lock screen")
+                ref1.lock(orientation)
               }
             }
           }
