@@ -150,13 +150,25 @@
     </script>
     <script type="text/javascript">
           I.setup_layout()
-      </script>
-      <script id="loading_lightbox_tpl" type="text/template">
-          <div class="lightbox loading_lightbox"><div class="loader_outer"><div class="loader_label">Loading</div><div class="loader_bar"><div class="loader_bar_slider"></div></div></div></div>
-      </script>
-      <script type="text/javascript">
-          I.setup_page();
-      </script>
+    </script>
+    <script id="loading_lightbox_tpl" type="text/template">
+        <div class="lightbox loading_lightbox"><div class="loader_outer"><div class="loader_label">Loading</div><div class="loader_bar"><div class="loader_bar_slider"></div></div></div></div>
+    </script>
+    <script type="text/javascript">
+        I.setup_page();
+    </script>
+    
+    <script>
+      function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+      
   </div>
 </div>
 
