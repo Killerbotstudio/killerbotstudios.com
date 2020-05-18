@@ -1,187 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <link rel="icon" href="webassets/BOTfavicon.ico" type="imagen.ico">
+    <title>Killerbot : About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/redStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, html{height:100%; background-color:none}
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    .parallax{height:100%;  background-image:url('/webassets/bkgcode2.jpg');background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover}
+    .clearBackground{background-color:none; height:100px; content:box}
+    .w3-padding-64{padding-top: 20px!important;}
 
+    .container{position:relative; width:100%;}
+    .container img{width:100%;height:auto}
+    .container h1,h4 {position: absolute;left: 50%;transform:translate(-50%, 50%);text-align:center}
+    .container .btn{position:absolute;top:70%;left:50%;transform:translate(-50%,50%);background-color:#555; color:white;font-size:16;padding: 12px 24px; border:none; cursor:pointer;text-align:center}
+    .container .btn:hover{background-color:black;}
+    </style>
 
-        <title>Killerbot : About</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/styles/redStyle.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-        body, html{height:100%; background-color:none}    
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-        .fa-anchor,.fa-coffee {font-size:200px}
-        .parallax{height:100%;  background-image:url('/webassets/bkgcode2.jpg');background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover}
-        .clearBackground{background-color:none; height:100px; content:box}
-        .w3-padding-64{padding-top: 20px!important;}
+  </head>
+  <body>
+      <div class= "paralax"></div>
+  <!-- Navbar -->
+      <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+          <a href="https://killerbotstudios.com" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+          <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-white">About</a>
+  <!--         <a href="/projects" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a> -->
+          <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  <!--         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+        </div>
 
-        .container{position:relative; width:100%;}
-        .container img{width:100%;height:auto}
-        .container h1,h4 {position: absolute;left: 50%;transform:translate(-50%, 50%);text-align:center}
-        .container .btn{position:absolute;top:70%;left:50%;transform:translate(-50%,50%);background-color:#555; color:white;font-size:16;padding: 12px 24px; border:none; cursor:pointer;text-align:center}
-        .container .btn:hover{background-color:black;}
-        </style>
-
-    </head>
-<body>
-    <div class= "paralax"></div>
-<!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="https://killerbotstudios.com" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-white">About</a>
-<!--         <a href="/projects" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a> -->
-        <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
-<!--         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+          <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
+          <a href="/projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+          <a href="/contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+          <a href="#" class="w3-bar-item w3-button w3-padding-large">?</a>
+        </div>
       </div>
 
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-        <a href="/projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
-        <a href="/contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">?</a>
+      <!-- Header -->
+      <!--<header class="w3-container w3-red w3-center" style="padding:128px 16px">-->
+
+      <header class="container w3-red w3-center"style="padding:0px 16px" >
+        <img src="webassets/bots3Dt.png" alt="bots" style="width:100%">
+       <!-- <h1 class="text w3-jumbo" style=" position:absolute;  top:50%;left:50%; transform:translate(-50%, 50%);  font-weight:100; line-height: 50%; text-align:center" >WE'RE</h1>-->
+       <!--<h1 class="w3-margin w3-jumbo" style=" font-family:Arial, Helvetica, sans-serif; font-weight:900; line-height:100% ">KILLERBOT STUDIOS</h1>-->
+        <h1  style="font-size:3.5vw;top:15%; font-weight:100">WE ARE</h1>
+        <h1   style=" font-size:4.5vw;font-family:Arial, Helvetica, sans-serif;font-weight:900;top:15%">KILLERBOT STUDIOS</h1>
+        <h4 style="font-size:2vw; top:55%; line-height:50%; text-wrap:none">AND WE MAKE VIDEOGAMES</h4>
+
+        <button onclick="location.href='/doce'" class="btn">Check our latest project</button>
+      </header>
+
+      <!-- First Grid -->
+          <!---->
+
+      <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>About us</h1>
+            <h5 class="w3-padding-32">We are an independent Software development and Videogame Design studio.</h5>
+              <h5> Starting in early 2018 by a small collective of family and friends,
+              this project started out by developing small and private games before turning to commercial development.</h5>
+
+            <p >The studio name was inspired by our early projects where we always seek to create highly performing task automated software applications commonly known in the videogame realm as 'BOT'.
+              </p>
+
+          </div>
+
+          <div class="w3-container w3-third"><!-- class="w3-third w3-center">-->
+          <img src="/webassets/botslogo.png" alt="bots3" style=" width:100 ; background-position :center; background-size:cover">
+              <!--<img src="/webassets/botslogo.png" style="width:50%; height:20%">-->
+            <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+          </div>
+
+
+        </div>
       </div>
-    </div>
 
-    <!-- Header -->
-    <!--<header class="w3-container w3-red w3-center" style="padding:128px 16px">-->
+      <!-- Second Grid -->
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+              <img src="logo.png" alt="bots3" style="width:30%">
+          <!--  <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+          </div>
 
-        <header class="container w3-red w3-center"style="padding:0px 16px" >
-        <img src="/webassets/bots3Dt.png" alt="bots" style="width:100%">
-     <!-- <h1 class="text w3-jumbo" style=" position:absolute;  top:50%;left:50%; transform:translate(-50%, 50%);  font-weight:100; line-height: 50%; text-align:center" >WE'RE</h1>-->
-     <!--<h1 class="w3-margin w3-jumbo" style=" font-family:Arial, Helvetica, sans-serif; font-weight:900; line-height:100% ">KILLERBOT STUDIOS</h1>-->
-            <h1  style="font-size:3.5vw;top:15%; font-weight:100">WE ARE</h1>
-            <h1   style=" font-size:4.5vw;font-family:Arial, Helvetica, sans-serif;font-weight:900;top:15%">KILLERBOT STUDIOS</h1>
-      <h4 style="font-size:2vw; top:55%; line-height:50%; text-wrap:none">AND WE MAKE VIDEOGAMES</h4>
+          <div class="w3-twothird">
+            <h1>Latest Dev</h1>
+              <h2 class="w3-padding-32"style="font-weight:100;  line-height: 50%;margin-bottom :0px" >DOCE®</h2>
+            <h5 >In honor to our partners, we reserve this section to our most recent collaboration as they are part of us.</h5>
 
-        
-            
-            <button class="btn">Check our latest project</button>
-       
-        
-        
-    </header>
+            <p class="w3-text-grey">DOCE® is a abstract strategy board game realsed by SmartIguana Games, invented by Dan & Luis Machado, father and son.
+              This game will bring great challenges and the best logical thinking of anyone joining this addicting and clever creation. It is now a video game!</p><br /><br />
 
-    <!-- First Grid -->
-        <!---->
-    
-    <div class="w3-row-padding w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-twothird">
-          <h1>About us</h1>
-          <h5 class="w3-padding-32">We are an independent Software development and Videogame Design studio.</h5>
-            <h5> Starting in early 2018 by a small collective of family and friends,
-            this project started out by developing small and private games before turning to commercial development.</h5>
+          </div>
 
-          <p >The studio name was inspired by our early projects where we always seek to create highly performing task automated software applications commonly known in the videogame realm as 'BOT'.
-            </p>
-            
         </div>
-
-        <div class="w3-container w3-third"><!-- class="w3-third w3-center">-->
-        <img src="/webassets/botslogo.png" alt="bots3" style=" width:100 ; background-position :center; background-size:cover">
-            <!--<img src="/webassets/botslogo.png" style="width:50%; height:20%">-->
-          <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
-        </div>
-            
+          <div class="w3-content w3-center">
+              <h1 style="text-align:center">WANT TO PLAY?</h1>
+              <button onclick="location.href='/doce'" type = "button" class="w3-content  w3-button w3-black  w3-xlarge " style="text-align:center; font-stretch:ultra-expanded">•  DOCE®  •</button>
+          </div>
 
       </div>
-    </div>
 
-    <!-- Second Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-third w3-center">
-            <img src="logo.png" alt="bots3" style="width:30%">
-        <!--  <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
-        </div>
-
-        <div class="w3-twothird">
-          <h1>Latest Dev</h1>
-            <h2 class="w3-padding-32"style="font-weight:100;  line-height: 50%;margin-bottom :0px" >DOCE®</h2>
-          <h5 >In honor to our partners, we reserve this section to our most recent collaboration as they are part of us.</h5>
-
-          <p class="w3-text-grey">DOCE® is a abstract strategy board game realsed by SmartIguana Games, invented by Dan & Luis Machado, father and son.
-            This game will bring great challenges and the best logical thinking of anyone joining this addicting and clever creation. It is now a video game!</p><br /><br />
-        
-        </div>
-      
+      <!--<div class=" paralax">-->
+      <div style=" background-image:url('webassets/botslogo.png'); height:100%; background-position:center; background-size:cover; ">
+          <div class="w3-container w3-center w3-padding-64">
+              <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+          </div>
       </div>
-        <div class="w3-content w3-center">
-            <h1 style="text-align:center">WANT TO PLAY?</h1>
-            <button onclick="location.href='/doce'" type = "button" class="w3-content  w3-button w3-black  w3-xlarge " style="text-align:center; font-stretch:ultra-expanded">•  DOCE®  •</button>
-        </div>
-    
-    </div>
-    
-    <!--<div class=" paralax">-->
-    <div style=" background-image:url('webassets/botslogo.png'); height:100%; background-position:center; background-size:cover; ">
-        <div class="w3-container w3-center w3-padding-64">
-            <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-        </div>
-    </div>
 
-        <!-- Third Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-    
-      <div class="w3-content">
-           <img src="/webassets/KBOTb.png" alt="bots3" style="width:30%">
-        <div class="w3-twothird">
-          <h1>About us</h1>
-          <h5 class="w3-padding-32">We are an independent Software development and Videogame Design studio.</h5>
-            <h5> Starting in early 2018 by a small collective of family and friends,
-            this project started out by developing small and private games before turning to commercial development.</h5>
+          <!-- Third Grid -->
+      <div class="w3-row-padding w3-padding-64 w3-container">
 
-          <p class="w3-text-grey">The studio name was inspired by our early projects where we always seek to create highly performing task automated software applications commonly known in the videogame realm as 'BOT'.
-            </p>
-        </div>
+        <div class="w3-content">
+             <img src="/webassets/KBOTb.png" alt="bots3" style="width:30%">
+          <div class="w3-twothird">
+            <h1>About us</h1>
+            <h5 class="w3-padding-32">We are an independent Software development and Videogame Design studio.</h5>
+              <h5> Starting in early 2018 by a small collective of family and friends,
+              this project started out by developing small and private games before turning to commercial development.</h5>
 
-        <div><!-- class="w3-third w3-center">-->
-     
-            <!--<img src="/webassets/botslogo.png" style="width:50%; height:20%">-->
-          <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+            <p class="w3-text-grey">The studio name was inspired by our early projects where we always seek to create highly performing task automated software applications commonly known in the videogame realm as 'BOT'.
+              </p>
+          </div>
+
+          <div><!-- class="w3-third w3-center">-->
+
+              <!--<img src="/webassets/botslogo.png" style="width:50%; height:20%">-->
+            <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+          </div>
+
         </div>
-     
       </div>
-    </div>
-    <div class=" paralax">
-    <div class="clearBackground">
-        <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-    </div>
-        </div>
+      <div class=" paralax">
+      <div class="clearBackground">
+          <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+      </div>
+          </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-      <div class="w3-xlarge w3-padding-32">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-     </div>
-     <p><a href="https://www.killerbotstudios.com" target="_blank">www.killerbotstudios.com</a></p>
-    </footer>
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+       </div>
+       <p><a href="https://www.killerbotstudios.com" target="_blank">www.killerbotstudios.com</a></p>
+      </footer>
 
-    <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else { 
-        x.className = x.className.replace(" w3-show", "");
+      <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
       }
-    }
-    </script>
+      </script>
 
-</body>
+  </body>
 </html>
