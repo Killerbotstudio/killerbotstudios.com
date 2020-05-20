@@ -46,8 +46,8 @@ document.onload = on();
           }
           function off(){
             document.getElementById("overlay").style.display = "none";
-            window.open("https://www.killerbotstudios.com","_blank");
-            myFunction();
+            window.open("https://www.killerbotstudios.com");
+            
           }
 
 
