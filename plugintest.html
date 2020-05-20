@@ -42,12 +42,13 @@
 document.onload = on();
           function on(){
             document.getElementById("overlay").style.display = "block";
+            document.onmouseup = myFunction();
              // document.onmouseup = off();
           }
           function off(){
             document.getElementById("overlay").style.display = "none";
             window.open("https://www.killerbotstudios.com");
-            
+
           }
 
 
