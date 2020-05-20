@@ -3,79 +3,57 @@
     <head>
         <title>Javascript open link without click</title>
         <style>
-            .gfg {
-                text-align:center;
-                font-size:40px;
-                font-weight:bold;
-                color:green;
-            }
-
-            #myRect{
-              border: 1px solid black;
-              width: 200px;
-              heigh: 200px;
-              background-color: black;
-            }
+        #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
 
         </style>
+
+    </head>
+    <body>
+      <!-- <button type ="button" id="myBtn" onclick"myFunction()"></button> -->
+
+      <!-- <canvas id="myCanvas" width = "300" height= 150 style = "position:absolute; border:1px solid black;"></canvas> -->
+
+
+        <!-- <div class = "gfg" onmouseover = "myFunction()">
+                Killerbot studios
+        </div> -->
+
+
+        <div id="overlay" onclick="off()"></div>
+        <!-- <button onclick="on()">Click to try</button> -->
+
+
+        <!-- <script src = "Build/UnityLoader.js"></script>
+        <script> console.log("mobile: " + UnityLoader.SystemInfo.mobile);</script> -->
         <script>
 
-          // document.onload = function() {CreateRect()};
-
-          function findRect(finding){
-            for (var i=0; i<documnet.styleSheets.lenght; i++){
-              var sheet = documnet.styleSheets[i];
-              if(sheet.title == finding){
-                return sheet;
-              }
-            }
+document.onload = on();
+          function on(){
+            document.getElementById("overlay").style.display = "block";
+             // document.onmouseup = off();
           }
-
-          function CreateRect(){
-            //var rect = findRect(myRet);
-            // var rect = document.getElementById("myCanvas").style;
-            // rect.width = 100px;
-//             var canvas = document.getElementById("myCanvas");
-//             var ctx = canvas.getContext("2d");
-//             ctx.fillStyle = "#FF0000";
-// ctx.fillRect(20, 20, 150, 100);
-
-document.getElementById("myBtn").style.height = "auto|length|%|initial|inherit";
-
-            //var rect = document.createElement("myRect");
-            //rect.styleSheets = {width : 100; border: 1px solid black};
-            //rect.innerHTML = "check";
-            // var rect = document.createElement("myRect");
-
-            //rect.innerHTML = "div {border2px solid black; width:300px}";
-
-            //document.body.appendChild(rect);
-            //documnent.body.appendChild(rect);
-
-
-            // document.getElementById("myRect").addEventListener("mousemove", myFunction);
+          function off(){
+            document.getElementById("overlay").style.display = "none";
+            window.open('https://www.killerbotstudios.com','_blank');
           }
-
 
 
             function myFunction() {
                 window.open("https://www.geeksforgeeks.org", "_blank");
             }
         </script>
-    </head>
-    <body>
-      <button type ="button" id="myBtn" onclick"myFunction()"></button>
-      <button onclick="CreateRect()">Try it</button>
-      <canvas id="myCanvas" width = "300" height= 150 style = "position:absolute; border:1px solid black;"></canvas>
-
-
-        <div class = "gfg" onmouseover = "myFunction()">
-                Killerbot studios
-        </div>
-        <br><br><br><br><br><br>
-
-        <script src = "Build/UnityLoader.js"></script>
-        <script> console.log("mobile: " + UnityLoader.SystemInfo.mobile);</script>
-
     </body>
+
 </html>
