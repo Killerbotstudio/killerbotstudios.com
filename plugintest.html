@@ -42,18 +42,19 @@
 document.onload = on();
           function on(){
             document.getElementById("overlay").style.display = "block";
-            document.onmouseup = myFunction();
+            // document.onmouseup = myFunction();
              // document.onmouseup = off();
           }
           function off(){
             document.getElementById("overlay").style.display = "none";
-            // window.open("https://www.killerbotstudios.com");
+             window.open("https://www.smartiguanagames.com", "_blank");
 
           }
 
 
             function myFunction() {
-                window.open("https://www.geeksforgeeks.org", "_blank");
+                window.open("https://www.geeksforgeeks.org");
+                document.onmouseup = null;
             }
         </script>
     </body>
