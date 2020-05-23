@@ -14,11 +14,18 @@
       }
       body {
         margin: 0;
-        background: #444;
+        background: black;
       }
       #gameContainer {
         width: 100vw;
-        height: 100vh;
+        height: 56.25vw; /* 100/56.25 = 1.778 */
+        background: black;
+        max-height: 100vh;
+        max-width: 177.78vh; /* 16/9 = 1.778 */
+        margin: auto;
+        position: absolute;
+        top:0;bottom:0; /* vertical center */
+        left:0;right:0; /* horizontal center */
       }
       canvas {
         width: 100%;
@@ -58,6 +65,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: black;
       }
 
       .spinner,
@@ -123,4 +131,3 @@
   </script>
 
 </html>
-
