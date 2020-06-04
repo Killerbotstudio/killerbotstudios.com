@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7KHBDHMDK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-G7KHBDHMDK');
-    </script>
-    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | DOCE</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "Build/DOCEBeta.json");
     </script>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | DOCE</title>
-   
-    
   </head>
   <body>
-    <div class = "gameContainer" style = "width: 896px; height: 504px; margin: 10; text-align : center; align : center"
-      <div id="unityContainer" style="width: 896px; height: 504px; margin: auto; text-align : center"></div>
-   </div>
+    <div id="unityContainer" style="width: 896px; height: 504px; margin: auto"></div>
   </body>
 </html>
