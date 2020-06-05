@@ -31,6 +31,7 @@
     }
   };
   I.HtmlEmbed = function() {
+
     HtmlEmbed.current = $.Deferred().done(function() {
       return window.addEventListener("popstate", function(e) {
         var state;

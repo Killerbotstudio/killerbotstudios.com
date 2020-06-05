@@ -1,0 +1,112 @@
+<!DOCTYPE HTML><html lang="en">
+
+<head><meta charset="UTF-8"/>
+
+  <meta content="#191919" name="theme-color"/>
+  <title>Doce</title>
+  <link rel="stylesheet" href="doce/static/gamepage.css"/>
+  <link rel="stylesheet" href="static/wp-css.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="doce/static/lib.js"></script>
+  <script type="text/javascript" src="doce/static/util.js"></script>
+  <script type="text/javascript" src="doce/static/game.js"></script>
+
+  <style>
+  body{
+    background:#cbcdd3;
+  }
+
+  </style>
+
+</head>
+
+<body data-page_name="game">
+
+  <header id="site-header" class="header-footer-group" role="banner" style = "height: 50%">
+
+			<div class="header-inner section-inner" >
+
+				<div class="header-titles-wrapper">
+
+					<div class="header-titles" style = "height: 15%">
+						<h1 class="site-title" style = "height: 15%; display: inline-block;">
+              <a href="https://docegame.com/wp/">DOCE® Game</a>
+            </h1>
+            <div class="site-description" style = "display: inline-block;">Have fun!</div>
+					</div>
+
+				</div><!-- .header-titles-wrapper -->
+
+			</div><!-- .header-inner -->
+
+	</header>
+
+  <div id="wrapper" class="main wrapper" style= "height: 100%; ">
+    <div class="inner_column" id="inner_column" style = "margin-top: 1px; background:#cbcdd3;  ">
+
+      <!-- GAME PAGE -->
+      <div id="view_html_game_page_30137" class="view_html_game_page view_game_page page_widget">
+
+        <!--GAME CONTAINER START-->
+        <div id="html_embed_widget_94781" class="html_embed_widget embed_wrapper">
+          <div data-height="524" data-width="896" class="game_frame game_pending" style="width: 896px; height: 524px; padding:0; margin: 0">
+            <button title="Enter fullscreen" class="fullscreen_btn">
+              <img src="doce/Assets/fullScreenRed.png"/>
+            </button>
+            <!-- IFRAME -->
+            <div style = "background:black;"   data-iframe="&lt;iframe mozallowfullscreen=&quot;true&quot;
+              allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi&quot; frameborder=&quot;0&quot;
+              src=doce/web_build/index.html msallowfullscreen=&quot;true&quot; scrolling=&quot;no&quot;
+              allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; id=&quot;game_drop&quot;
+              allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;" class="iframe_placeholder">
+
+              <button id = "start_button" class="button load_iframe_btn" >
+                <svg stroke-linecap="round" stroke="grey" class="svgicon icon_play" role="img"
+                version="1.1" viewBox="0 0 24 24"
+                stroke-width="2" height="50" stroke-linejoin="round" aria-hidden fill="none" width="2">
+                </svg>START
+              </button>
+            </div>
+          </div>
+        </div>
+      <!--GAME CONTAINER END-->
+
+        <script type="text/javascript">
+          new I.HtmlEmbed('#html_embed_widget_94781', {
+            "width":896,
+            "start_maximized":false,
+            "height":524
+          })
+        </script>
+    </div>
+    <script type="text/javascript">
+
+      new I.ViewHtmlGame(
+        '#view_html_game_page_30137', {
+          "id":611145,
+          "hit_url":"",
+          "type_name":"html",
+          "play_after":90,
+          "actual_price":0,
+          "min_price":0,
+          "slug":"doce-web",
+          "play_url":"doce/web_build/index.html",
+          "type":5
+        }, {});
+    </script>
+    <script type="text/javascript">
+          I.setup_layout()
+    </script>
+    <script id="loading_lightbox_tpl" type="text/template">
+        <div class="lightbox loading_lightbox"><div class="loader_outer"><div class="loader_label">Loading</div><div class="loader_bar"><div class="loader_bar_slider"></div></div></div></div>
+    </script>
+    <script type="text/javascript">
+        I.setup_page();
+    </script>
+
+  </div>
+</div>
+
+  </body>
+</html>
