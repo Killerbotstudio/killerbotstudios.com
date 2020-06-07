@@ -38,7 +38,11 @@
 	    }
 	    
 	</script>
-	  <div><button id="pront" style="width:100px; height: 40px;" onclick="OnFinishedEdit()">SEND INPUT</buton></div>
+	  <div>
+		  <button id="pront" style="width:100px; height: 40px;" onclick="OnFinishedEdit()">SEND INPUT</buton>
+		  <button id="open" style="width:100px; height: 40px;" onclick="OnClickTest()">CLICK</buton>
+	  </div>
+	  
 	  <div>
 		  <form onsubmit = "TestInput()" autocomplete = "off" style = "width:100px; height: 30px;">
 		  <input type= "text" id="inputTest" oninput = "OnEdit()" onblur="WasBlured()" style = "fontsize: 10px;">
