@@ -17,12 +17,22 @@
     			document.getElementById("fixInput").blur();
     			event.preventDefault();
     		}
+
+        OpenInputKeyboard: function (currentValue)
+        	{
+        		document.getElementById("fixInput").value = Pointer_stringify(currentValue);
+        		document.getElementById("fixInput").focus();
+        	}
+
     	</script>
         <div>
     		<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
     			<input type="text" id="fixInput" oninput="gameInstance.Module.ccall('FixInputUpdate', null)" onblur="gameInstance.Module.ccall('FixInputOnBlur', null)" style="font-size: 42px;">
     		</form>
+
+
     	</div>
+      <button id="prompt" style="width: 200px; height: 85px; background-color : #a61b08; color: white" onclick="OpenInputKeyboard()">OPEN INPUT</button>
 
     <div id="unityContainer" style="width: 896px; height: 504px; margin: auto"></div>
   </body>
