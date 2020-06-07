@@ -18,8 +18,36 @@
 			document.getElementById("fixedInput").blur();
 			event.preventDefault();
 		}
+	    function TestInput(){
+		    console.log("submited on input");
+	    }
+	    
+	    function OnClicktest(){
+		document.getElementById("inputTest").focus();
+		    console.log("Opened input log");
+	    }
+	    function OnFinishedEdit(){
+		document.getElementById("inputTest").blur();
+		    console.log("Closed input log");
+	    }
+	    function OnEdit(){
+		console.log("changed values")    ;
+	    }
+	    function WasBlured(){
+		console.log("Was blured")    ;
+	    }
+	    
 	</script>
-    <div>
+	  <button id="pront" style="width:100px; height: 40px;" onclick="OnFinishedEdit()">SEND INPUT</buton>
+	  <div>
+		  <form onsubmit = "TestInput()" autocomplete = "off" style = "width:100px; height: 30px;">
+		  <input type= "text" id="inputTest" oninput = "OnEdit()" onblur="WasBlured()" style = "fontsize: 10px;">
+		  </form>
+	  </div>
+	  
+	  
+	  
+	  <div>
 		<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
 			<input type="text" id="fixedInput" oninput="unityInstance.Module.ccall('FixInputUpdate', null)" onblur="unityInstance.Module.ccall('FixInputOnBlur', null)" style="font-size: 42px;">
 		</form>
