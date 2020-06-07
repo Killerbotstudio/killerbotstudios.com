@@ -10,6 +10,11 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/DOCEBeta12.json", {onProgress: UnityProgress});
+      
+      function fullScreen(){
+       unityInstance.SetFullscreen(1);
+        console.log("clicked fullscreen");
+      }
     </script>
   </head>
   <body>
@@ -17,7 +22,7 @@
       <div id="unityContainer" style="width: 896px; height: 504px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="fullscreen" onclick="fullScreen()"></div>
         <div class="title">DOCE</div>
       </div>
     </div>
