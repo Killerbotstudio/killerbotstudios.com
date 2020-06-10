@@ -115,9 +115,26 @@ body:not(.enable-search-modal) .site-logo img {
 	top: 32px;
 }
 
-@media (max-width: 782px) {
-
-	.admin-bar.overlay-header #site-header {
-		top: 46px;
+@media (max-width: 800px) {
+  #site-header{
+    align-content: center;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: red;
+  }
+	.header-inner section-inner{
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: red;
+	}
+	.header-titles-wrapper{
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: red;
 	}
 }

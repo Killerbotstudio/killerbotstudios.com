@@ -41,17 +41,17 @@ h2 {
 }
 
 .button:hover {
-  background: #blue;
+  background: grey;
 }
 
 .button:active {
-  background-color: #e1193b;
+  background-color: grey;
   position: relative;
   top: 1px
 }
 
 .button:focus {
-  outline-color: #361275
+  outline-color: grey;
 }
 
 .button.outline {
@@ -128,18 +128,6 @@ abbr {
   cursor: help
 }
 
-@media (max-width: 1000px) {
-  .responsive .wrapper {
-    padding: 0 20px
-  }
-}
-
-@media (max-width: 600px) {
-  .responsive .wrapper {
-    padding: 0
-  }
-}
-
 .inner_column {
   width: 960px;
   height:100%;
@@ -155,52 +143,6 @@ abbr {
   width: auto
 }
 
-@media (max-width: 1000px) {
-  .responsive .inner_column {
-    padding-bottom: 0;
-    max-width: 600px
-  }
-
-  .responsive .inner_column .footer {
-    position: static;
-    display: block;
-    background: rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
-    padding: 10px 20px;
-    line-height: 1.8
-  }
-
-  .responsive .inner_column .footer .icon_logo {
-    float: right
-  }
-
-  .responsive .inner_column .footer .icon_logo .svgicon {
-    margin: 0 0 0 10px
-  }
-
-  .responsive .inner_column .footer .dot.last_dot {
-    display: none
-  }
-
-  .responsive .inner_column .footer .breadcrumbs {
-    text-align: left
-  }
-
-  .responsive .inner_column .footer .update_timestamp {
-    display: block;
-    opacity: 0.7
-  }
-
-  .responsive .inner_column .footer .update_timestamp:before {
-    content: ""
-  }
-}
-
-@media (max-width: 650px) {
-  .responsive .inner_column .footer {
-    padding-bottom: 60px
-  }
-}
 
 .inner_column.size_small {
   font-size: 11px
@@ -216,12 +158,6 @@ abbr {
 
 .inner_column.size_very_large {
   font-size: 19px
-}
-
-@media (max-width: 1000px) {
-  .responsive .inner_column.size_very_large {
-    font-size: 16px
-  }
 }
 
 .inner_column.family_pixel.size_small {
@@ -491,32 +427,9 @@ abbr {
   margin: 20px 0
 }
 
-@media (max-width: 400px) {
-  .view_game_page.view_flash_game_page .center_column, .view_game_page.view_unity_game_page .center_column, .view_game_page.view_java_game_page .center_column, .view_game_page.view_html_game_page .center_column {
-    margin: 0
-  }
-}
-
-
 .view_game_page.view_flash_game_page .embed_wrapper, .view_game_page.view_html_game_page .embed_wrapper {
   margin: 20px 0
 }
-
-@media (max-width: 400px) {
-  .view_game_page.view_html_game_page .center_column {
-    margin-top: 20px
-  }
-}
-
-@media (max-width: 1000px) {
-  .responsive .view_game_page .columns {
-    margin: 0;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    max-width: 100vw
-  }
 
 .view_game_page .formatted_description {
   margin: 20px;
