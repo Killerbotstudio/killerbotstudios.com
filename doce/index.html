@@ -182,5 +182,23 @@
   </div>
 </div>
 
+  <script>
+    var getting = browser.tabs.get(tabId);
+    console.log(getting);
+    console.log("with initializing tabID:");
+    var tabId = 1 ;
+    var getting = browser.tabs.get(tabId);
+    console.log(getting);
+    // async function logListener(info) {
+    //   try {
+    //     let tabInfo = await browser.tabs.get(info.tabId);
+    //     console.log(tabInfo);
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // }
+    // browser.tabs.onActivated.addListener(logListener);
+  </script>
+
   </body>
 </html>
