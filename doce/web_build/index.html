@@ -14,7 +14,7 @@
       }
       body {
         margin: 0;
-        background: #444;
+        background: black;
       }
       #gameContainer {
         width: 100vw;
@@ -60,6 +60,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: black;
       }
 
       .spinner,
@@ -95,9 +96,10 @@
   <body>
     <div id="gameContainer"></div>
     <div id="loader">
-      <img class="logo" src="logo.png">
+      <!-- <img class="logo" src="logo.png"> -->
       <div class="spinner"></div>
       <div class="progress"><div class="full"></div></div>
+      <h3 style = "color : white; font-family: sans-serif">Loading game ...</h3>
     </div>
   </body>
 
@@ -111,13 +113,14 @@
     const loader = document.querySelector("#loader");
     if (!gameInstance.progress) {
       const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
+      // progress.style.display = "block";
       gameInstance.progress = progress.querySelector(".full");
-      loader.querySelector(".spinner").style.display = "none";
+      // loader.querySelector(".spinner").style.display = "none";
     }
     gameInstance.progress.style.transform = `scaleX(${progress})`;
     if (progress === 1 && !gameInstance.removeTimeout) {
       gameInstance.removeTimeout = setTimeout(function() {
+          loader.querySelector(".spinner").style.display = "none";
           loader.style.display = "none";
       }, 2000);
     }
@@ -125,4 +128,3 @@
   </script>
 
 </html>
-
