@@ -115,6 +115,29 @@ body:not(.enable-search-modal) .site-logo img {
 	top: 32px;
 }
 
+.info_panel_wrapper {
+	font-family: sans-serif;
+	background : #cbcdd3;
+	color : black;
+}
+
+.info_panel_wrapper a{
+	color: blue;
+	font-size: 1em;
+}
+
+.inner_column {
+  width: 960px;
+  height:100%;
+  margin: auto;
+  position: relative;
+  padding-bottom: 40px;
+  background: white;
+  overflow: hidden;
+  margin-top: 50%;
+  background:#cbcdd3;
+}
+
 @media (max-width: 800px) {
   #site-header{
     align-content: center;

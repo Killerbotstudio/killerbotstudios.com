@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  /* color: green; */
+  color: blue;
 }
 
 a img {
@@ -27,7 +27,7 @@ h2 {
   text-decoration: none;
   padding: 0 10px;
   font-size: 25px;
-  text-shadow: 0 1px 0 #c3223e;
+  text-shadow: 0 1px 0 #870c2d;
   cursor: pointer;
   border-radius: 3px;
   border: none;
@@ -41,7 +41,7 @@ h2 {
 }
 
 .button:hover {
-  background: grey;
+  background-color: grey;
 }
 
 .button:active {
@@ -51,7 +51,8 @@ h2 {
 }
 
 .button:focus {
-  outline-color: grey;
+  outline-color: red;
+  background-color: grey;
 }
 
 .button.outline {
@@ -131,80 +132,18 @@ abbr {
 .inner_column {
   width: 960px;
   height:100%;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   padding-bottom: 40px;
   background: white;
-  overflow: hidden
+  overflow: hidden;
 }
-
-.responsive .inner_column {
-  max-width: 960px;
-  width: auto
-}
-
-
-.inner_column.size_small {
-  font-size: 11px
-}
-
-.inner_column.size_medium {
-  font-size: 13px
-}
-
-.inner_column.size_large {
-  font-size: 16px
-}
-
-.inner_column.size_very_large {
-  font-size: 19px
-}
-
-.inner_column.family_pixel.size_small {
-  font-size: 8px
-}
-
-.inner_column.family_pixel.size_small .column {
-  font-size: 8px
-}
-
-.inner_column.family_pixel.size_small h1, .inner_column.family_pixel.size_small h2, .inner_column.family_pixel.size_small h3, .inner_column.family_pixel.size_small h4 {
-  font-size: 8px;
-  font-weight: bold
-}
-
-.inner_column.family_pixel.size_medium {
-  font-size: 16px
-}
-
-.inner_column.family_pixel.size_medium .column {
-  font-size: 16px
-}
-
-.inner_column.family_pixel.size_medium h1, .inner_column.family_pixel.size_medium h2, .inner_column.family_pixel.size_medium h3, .inner_column.family_pixel.size_medium h4 {
-  font-size: 24px;
-  font-weight: bold
-}
-
-.inner_column.family_pixel.size_large, .inner_column.family_pixel.size_very_large {
-  font-size: 24px
-}
-
-.inner_column.family_pixel.size_large .column, .inner_column.family_pixel.size_very_large .column {
-  font-size: 24px
-}
-
-.inner_column.family_pixel.size_large h1, .inner_column.family_pixel.size_large h2, .inner_column.family_pixel.size_large h3, .inner_column.family_pixel.size_large h4, .inner_column.family_pixel.size_very_large h1, .inner_column.family_pixel.size_very_large h2, .inner_column.family_pixel.size_very_large h3, .inner_column.family_pixel.size_very_large h4 {
-  font-size: 40px;
-  font-weight: normal
-}
-
 .inner_column p, .inner_column ul, .inner_column ol {
   line-height: 1.4
 }
 
 .inner_column a {
-  color: #ff0b34
+  color: blue;
 }
 
 .inner_column h2, .inner_column h3, .inner_column h4 {
@@ -224,43 +163,6 @@ abbr {
   border: 0;
   height: 1px;
   background: #dadada
-}
-.columns {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 20px
-}
-
-.columns .left_col {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: 0;
-  min-width: 0
-}
-
-.columns .right_col {
-  width: 367px
-}
-
-.game_page_apperance_columns {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex
-}
-
-.game_page_apperance_columns>.game_page_primary_column {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1
-}
-
-.popup_details {
-  z-index: 1002
 }
 
 .html_embed_widget .button.load_iframe_btn, .html_embed_widget .button.restore_btn {
@@ -410,6 +312,13 @@ abbr {
   color: #222;
   padding: 10px 20px
 }
+
+.view_html_game_page{
+  margin: auto;
+  width: 896px;
+
+}
+
 .view_game_page.view_flash_game_page, .view_game_page.view_unity_game_page, .view_game_page.view_java_game_page, .view_game_page.view_html_game_page {
   *zoom: 1
 }
@@ -480,7 +389,7 @@ abbr {
   text-decoration: none;
   padding: 0 10px;
   font-size: 32px;
-  text-shadow: 0 1px 0 #c3223e;
+  text-shadow: 0 1px 0 grey;
   cursor: pointer;
   border-radius: 3px;
   border: none;
@@ -494,7 +403,7 @@ abbr {
 }
 
 .view_game_page .button:hover {
-  background: #blue
+  background: #black
 }
 
 .view_game_page .button:active {

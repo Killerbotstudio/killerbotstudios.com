@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>DOCE</title>
     <style>
       html {
@@ -16,9 +18,16 @@
         margin: 0;
         background: black;
       }
-      #gameContainer {
-        width: 100vw;
+      #gameWrapper{
+        position: relative;
+        width: 171vh;
         height: 100vh;
+        margin: auto;
+      }
+      #gameContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
       canvas {
         width: 100%;
@@ -31,9 +40,8 @@
       }
       .logo {
           display: block;
-          max-width: 200px;
-          max-height: 200px;
-        animation: spinner-spin 2s infinite linear;
+          max-width: 100vw;
+          max-height: 70vh;
       }
 
       .progress {
@@ -47,7 +55,6 @@
           background: white;
           height: 1em;
           transform-origin: top left;
-        
       }
 
       #loader {
@@ -94,18 +101,22 @@
   </head>
 
   <body>
-    <div id="gameContainer"></div>
+    <div id = "gameWrapper">
+      <div id="gameContainer"></div>
+    </div>
     <div id="loader">
       <!-- <img class="logo" src="logo.png"> -->
       <div class="spinner"></div>
       <div class="progress"><div class="full"></div></div>
-      <h3 style = "color : white; font-family: sans-serif">Loading game ...</h3>
+      <h3 class = "LoadingText" style = "color : white; font-family: sans-serif">Loading game ...</h3>
+      <h3 class = "percentage" style = "color : white; margin: -5px; font-family: sans-serif">0%</h3>
     </div>
   </body>
 
   <script src="Build/UnityLoader.js"></script>
   <script>
   var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+  var percentage = document.querySelector(".percentage");
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
@@ -113,11 +124,13 @@
     const loader = document.querySelector("#loader");
     if (!gameInstance.progress) {
       const progress = document.querySelector("#loader .progress");
-      // progress.style.display = "block";
+      progress.style.display = "block";
       gameInstance.progress = progress.querySelector(".full");
-      // loader.querySelector(".spinner").style.display = "none";
+      loader.querySelector(".spinner").style.display = "none";
     }
     gameInstance.progress.style.transform = `scaleX(${progress})`;
+    console.log(progress*100 + '%');
+    percentage.innerText = Math.round(progress*100) + '%';
     if (progress === 1 && !gameInstance.removeTimeout) {
       gameInstance.removeTimeout = setTimeout(function() {
           loader.querySelector(".spinner").style.display = "none";
