@@ -24,7 +24,7 @@ $password = $_POST["password"];
 
 $namecheckquery = "SELECT Users, Password FROM DOCEPlayers WHERE Users='".$username."';";
 $namecheck = mysqli_query($con, $namecheckquery) or die ("2: Name check query failed"); //error code #2 : name check query failed
-s
+
 if(mysqli_num_rows($namecheck) != 1)
 {
     echo "5: There's no users with that ID"; // error code #5 : number of names matching != 1;
