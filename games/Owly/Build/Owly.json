@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Owly",
+"productVersion": "0.1",
+"dataUrl": "Owly.data.unityweb",
+"wasmCodeUrl": "Owly.wasm.code.unityweb",
+"wasmFrameworkUrl": "Owly.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 1.0","WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.13f1"
+}
