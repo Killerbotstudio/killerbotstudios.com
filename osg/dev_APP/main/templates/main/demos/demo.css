@@ -1,0 +1,119 @@
+.marquee {
+        margin: auto;
+        width: 100%;
+        max-height: 30px;
+        white-space: nowrap;
+        overflow:  hidden;
+        /* box-sizing: border-box; */
+        position: relative;
+        background-color: black;
+      }
+      .marquee:before,
+      .marquee:after {
+        position: absolute;
+        top: 0;
+        width: auto;
+        max-height: 30px;
+        content: "";
+        z-index: 1;
+      }
+      .marquee:before {
+        left: 50;
+        background: linear-gradient(to right, #ccc 10%, transparent 80%);
+      }
+      .marquee:after {
+        right: 0;
+        background: linear-gradient(to left, #ccc 10%, transparent 80%);
+      }
+      .marquee__content {
+        color:white;
+        width: 66%;
+        display: flex;
+        line-height: 30px;
+        animation: marquee 10s linear infinite forwards;
+      }
+      .marquee__content:hover {
+        animation-play-state: paused;
+      }
+      .list-inline {
+        display: flex;
+        justify-content: space-around;
+        width: 200%;
+        /* reset list */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+#scroll-container {
+  /* border: 3px solid black; */
+  background-color: black;
+  /* border-radius: 5px; */
+  overflow: hidden;
+}
+
+#scroll-text-left {
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+blink {
+  -webkit-animation: 1s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+  animation: 1s linear infinite condemned_blink_effect;
+}
+
+/* for Safari 4.0 - 8.0 */
+@-webkit-keyframes condemned_blink_effect {
+  0% { visibility: hidden; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+}
+
+@keyframes condemned_blink_effect {
+  0% { visibility: hidden; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+}
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(-100%); }
+  to { -moz-transform: translateX(100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(-100%); }
+  to { -webkit-transform: translateX(100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>OSG{%block title%}{%endblock%}</title>
+    </head>
+
+    <body>
+        <h2>{{head_title}}</h2>
+        <h1>...将軍...</h1>
+
+        <h5>welcome</h5>
+
+        <div id ="sms">
+            <h1>{{message}}</h1>
+        </div>
+
+        <br></br>
+
+        <div id = "content", name = "content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {%block fo_base%}{%endblock%}
+
+    </body>
+</html>
