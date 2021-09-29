@@ -3,10 +3,13 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="osg_light.css" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
   html,
   body,
@@ -18,12 +21,12 @@
     font-family: "Raleway", sans-serif
   }
 </style>
-<head>
 
+<head>
 </head>
-<body class="w3-light-grey">
+<body class="i-theme">
   <!-- Top container -->
-  <div class="w3-bar w3-top w3-gray w3-xlarge" style="z-index:4">
+  <div class="w3-bar w3-top w3-black w3-xlarge" style="z-index:4">
 
     <!-- BUTTON -->
     <button
@@ -63,10 +66,18 @@
 
 
     <!-- LOGO IMAGE -->
-    <span class="w3-bar-item w3-right"
-    style="background-image: url('images/logos/osg_emblem.png'); ">
-      <img src="images/logos/osg_emblem.png" style="max-width:15%; height:auto;"></img>
-      Logo</span>
+    <div class ="w3-bar-item w3-right">
+      <!-- icon -->
+      <img class="w3-right" src="images/logos/osg_emblem_smooth.png"
+          style="max-width:50px; display:block">
+      </img>
+      <!-- text -->
+      <div class="w3-bar-item w3-right;">
+
+        ALERT MESSAGE
+
+      </div>
+    </div>
   </div>
 
   <!-- Sidebar/menu -->
@@ -109,12 +120,12 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-      <h5><b><i class="fa fa-dashboard"></i> App Control</b></h5>
+      <h5><b><i class="fa fa-dashboard "></i > App Control</b></h5>
     </header>
 
     <div class="w3-responsive">
       <div class="w3-quarter w3-panel">
-        <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-container w3-black w3-padding-16">
           <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>52</h3>
@@ -124,7 +135,7 @@
         </div>
       </div>
       <div class="w3-quarter w3-panel">
-        <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-container w3-padding-16 w3-theme">
           <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>52</h3>
