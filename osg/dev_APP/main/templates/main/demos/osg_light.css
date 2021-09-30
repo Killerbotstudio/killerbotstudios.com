@@ -52,15 +52,19 @@
   word-spacing: -2px;
   display: inline-block:
  }
-.i-navy {color:rgb(70, 70, 214) !important; background-color:rgb(34, 55, 214) !important}
-.i-osg {color:#fff !important; background-color:rgb(33, 33, 155) !important}
-.i-osg-light {color:#fff !important; background-color:rgb(55, 55, 255) !important}
-.i-osg-dark {color:#fff !important; background-color:rgb(33, 33, 100) !important}
-.i-title-h5 {
-  font-family:'Verdana';
-  color:white;
-  font-stretch: expanded;
-}
+ .i-warning2 {
+   color:#000000;
+   background-color: rgb(255, 136, 0);
+   font-family:'Courier';
+   word-spacing: -2px;
+   display: inline-block:
+  }
+
+.i-osg {color:#fff !important; background-color:rgb(33, 33, 100) !important}
+.i-osg-light {color:rgb(10, 10, 50) !important; background-color:rgb(235, 240, 255) !important}
+.i-osg-dark {color:#fff !important; background-color:rgb(15, 15, 80) !important}
+
+
 .i-title-h1 {
   font-family:'Oswald';
   font-weight: lighter;
@@ -89,6 +93,12 @@
   word-spacing: 10px;
   font-weight:lighter;
   line-height: 95%;
+}
+
+.i-title-h5 {
+  font-family:'Verdana';
+  color:white;
+  font-stretch: expanded;
 }
 
 .i-text-h1 {

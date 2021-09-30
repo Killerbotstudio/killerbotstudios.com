@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>iSURVEYOR : home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
   <link rel="stylesheet" href="osg_light.css" type="text/css">
+  <link rel="stylesheet" href="osg_layouts.css" type="text/css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+
 <style>
   html,
   body,
@@ -23,30 +24,62 @@
   }
 </style>
 
+
+</head>
+
 <body class="i-osg-light">
 
   <!-- Top container -->
-  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-    <span class="w3-bar-item w3-right">Logo</span>
+  <div id"head_band"
+    class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+      <i class="fa fa-bars w3-hide-large"></i>
+      <b class="i-title-h1"> iSURVEYOR</b>
+
+
+    </button>
+
+    <!-- <div class ="w3-bar-item w3-hide-mobile"> -->
+      <!-- icon -->
+      <img class="w3-animate-top  w3-right w3-hide-saml w3-hide-mobile"
+        src="images/logos/osg_emblem_smooth.png"
+          style="
+          height: inherit;
+          max-width:5%;
+          /* position:fixed; */
+          overflow: hidden;
+          resize: auto
+          ">
+      </img>
+    <!-- </div> -->
+
+
   </div>
+
 
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
     <div class="w3-container w3-row">
       <div class="w3-col s4">
-        <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right" style="width:46px">
+        <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right"
+        style="width:46px">
       </div>
       <div class="w3-col s8 w3-bar">
         <span>Welcome, <strong>Mike</strong></span><br>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-user"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-cog"></i>
+        </a>
       </div>
     </div>
     <hr>
     <div class="w3-container">
-      <h5>Dashboard</h5>
+      <h5>Control Panel</h5>
     </div>
     <div class="w3-bar-block">
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
@@ -68,51 +101,165 @@
 
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+    <div
+      class="w3-animate-bottom w3-bar i-osg-dark">
+
+      <div class="w3-bar-item  i-title-h2"
+      style="
+      text-overflow: clip;
+      word-wrap: break-word;
+      max-height:50px;
+      max-width:95%;
+      padding-top:5px;
+      ">
+      IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING
+    </div>
+      <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
+      <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
+      <!--  EXAND BUTTON -->
+      <div class="w3-bar-item w3-right">
+        <i class="fa fa-caret-down"
+          style = "
+          vertical-align:super;
+          font-size:150%">
+          <blink>!</blink>
+        </i>
+      </div>
+
+
+      <!-- CONTENT -->
+      <!-- <div class = "w3-bar">
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+      </div>
+ -->
+
+        <!-- BOTTOM BAR -->
+        <div class="w3-bar i-text-h3"
+          style = "vertical-align: sub;"
+          >
+          <div class="w3-bar-item w3-left "
+              style= "text-align: left;
+              max-width: 40%;
+              text-overflow: clip;
+              ">
+            <b class=" w3-responsive"
+              style='font-size:70%'>
+              log:
+            </b>shorted version from what came from the log in the server
+
+          </div>
+          <div class="w3-bar-item w3-right i-title-h2">
+                  <div class="w3-container" style = "
+                    position:absolute;
+                    bottom:8px;
+                    right:5px;
+                    text-align: justify;
+                    max-width: 48%;
+                  ">
+                  <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
+                </div>
+              </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+
+
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-      <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+      <h5><b><i class="fa fa-dashboard"></i> Control Panel</b></h5>
     </header>
 
     <div class="w3-row-padding w3-margin-bottom">
       <div class="w3-quarter">
-        <div class="w3-container w3-red w3-padding-16">
-          <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+        <div class="w3-container i-osg w3-padding-16">
+          <div class="w3-left"><i class="fa fa-envelope w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>52</h3>
           </div>
           <div class="w3-clear"></div>
-          <h4>Messages</h4>
+          <h4>MAIL</h4>
         </div>
       </div>
       <div class="w3-quarter">
-        <div class="w3-container w3-blue w3-padding-16">
-          <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+        <div class="w3-container i-osg-dark w3-padding-16">
+          <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>99</h3>
           </div>
           <div class="w3-clear"></div>
-          <h4>Views</h4>
+          <h4>LOG</h4>
         </div>
       </div>
       <div class="w3-quarter">
-        <div class="w3-container w3-teal w3-padding-16">
-          <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+        <div class="w3-container i-osg-light w3-padding-16">
+          <div class="w3-left"><i class="fa fa-building w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>23</h3>
           </div>
           <div class="w3-clear"></div>
-          <h4>Shares</h4>
+          <h4>DOJO</h4>
         </div>
       </div>
       <div class="w3-quarter">
-        <div class="w3-container w3-orange w3-text-white w3-padding-16">
-          <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+        <div class="w3-container i-warning2 w3-padding-16">
+          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>50</h3>
           </div>
           <div class="w3-clear"></div>
-          <h4>Users</h4>
+          <h4>TOOLBOX</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container i-osg-dark w3-padding-16">
+          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TOOLBOX</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container i-osg-light w3-padding-16">
+          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TOOLBOX</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container i-warning w3-padding-16">
+          <div class="w3-left"><i class="fa fa-coffee w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TOOLBOX</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-red w3-padding-16">
+          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TOOLBOX</h4>
         </div>
       </div>
     </div>
@@ -278,6 +425,97 @@
           <p>Active</p>
           <p>Geo</p>
           <p>Interests</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w3-animate-bottom w3-container i-osg-dark">
+      <b class="w3-container i-title-h2"
+      style="max-width:50%;">IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING</b>
+      <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
+      <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
+
+
+      <!--  EXAND BUTTON -->
+      <div class="w3-bar-item w3-right">
+        <i class="fa fa-caret-down"
+          style = "vertical-align:super;font-size:150%">
+          <blink>!</blink>
+        </i>
+      </div>
+
+      <div class = "w3-bar">
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h4 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+
+        <div
+          class="w3-bar-item  i-text-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 sdcame here
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="w3-bar i-text-h3"
+          style = "vertical-align: sub;"
+          >
+          <div class="w3-bar-item w3-left "
+              style= "text-align: left;
+              max-width: 40%;
+              text-overflow: clip;
+              ">
+            <b class=" w3-responsive"
+              style='font-size:70%'>
+              log:
+            </b>shorted version from what came from the log in the server
+
+          </div>
+          <div class="w3-bar-item w3-right i-title-h2">
+                  <div class="w3-container" style = "
+                    position:absolute;
+                    bottom:8px;
+                    right:5px;
+                    text-align: justify;
+                    max-width: 48%;
+                  ">
+                  <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
+                </div>
+
+
+          </div>
         </div>
       </div>
     </div>
