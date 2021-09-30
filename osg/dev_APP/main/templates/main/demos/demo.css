@@ -29,11 +29,14 @@
         color:white;
         width: 66%;
         display: flex;
-        line-height: 30px;
+        /* line-height: 15; */
         animation: marquee 10s linear infinite forwards;
       }
       .marquee__content:hover {
+        line-height: 15px;
+        font-size: 150%;
         animation-play-state: paused;
+
       }
       .list-inline {
         display: flex;
