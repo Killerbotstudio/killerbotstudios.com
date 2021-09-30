@@ -31,15 +31,11 @@
 
   <!-- Top container -->
   <div id"head_band"
-    class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    class="w3-bar w3-top w3-black w3-large " style="z-index:4; display:inline">
     <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
       <i class="fa fa-bars w3-hide-large"></i>
       <b class="i-title-h1"> iSURVEYOR</b>
-
-
     </button>
-
-    <!-- <div class ="w3-bar-item w3-hide-mobile"> -->
       <!-- icon -->
       <img class="w3-animate-top  w3-right w3-hide-saml w3-hide-mobile"
         src="images/logos/osg_emblem_smooth.png"
@@ -47,10 +43,38 @@
           height: inherit;
           max-width:5%;
           /* position:fixed; */
-          overflow: hidden;
-          resize: auto
+          /* overflow: hidden; */
+          /* resize: auto */
+          display:inline;
+          padding-top:5px;
           ">
       </img>
+
+
+      <div class ="w3-bar-item w3-hide-mobile w3-right">
+
+        <div class="i-warning"
+              style="font-size:50%;
+              display:inline;
+              ">
+                <blink><b>!</b><blink>
+          <!-- <l class="w3-left" style="line-height:20%">
+          case alert and mesages <p>and other content</p>
+          </l> -->
+          <blink3>
+            <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest"></i>
+          </blink3>
+          <!-- ALERT MESAGE -->
+          <!-- <div id="alert-mesage"
+            class= "w3-container i-text-h1 w3-left"
+            style="font-size:90%; line-height:1px; color:rgb(255,235,50); text-align:right">
+          <p> Alert information goes here <b>!</b></p>
+          <p> Alert information goes here <b>!</b></p>
+          <p> Alert information goes here <b>!</b></p>
+          <p> Alert information goes here bla bla bla <b>!</b></p>
+          </div> -->
+        </div>
+      </div>
     <!-- </div> -->
 
 
@@ -143,27 +167,40 @@
  -->
 
         <!-- BOTTOM BAR -->
-        <div class="w3-bar i-text-h3"
-          style = "vertical-align: sub;"
-          >
-          <div class="w3-bar-item w3-left "
-              style= "text-align: left;
-              max-width: 40%;
-              text-overflow: clip;
-              ">
-            <b class=" w3-responsive"
-              style='font-size:70%'>
-              log:
-            </b>shorted version from what came from the log in the server
+        <div class="w3-bar "
+          style = "vertical-align: sub;
+          ">
 
+          <div class="w3-bar-item w3-left i-text-h3"
+              style= "text-align: left;
+              max-width: 60%;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: clip;
+              /* font-family:  'Courier New'; */
+              /* font-style: normal; */
+              /* font-weight: bolder; */
+              ">
+            <b>log:</b>
+            <div class="w3-container" style="font-size:80%;margin-top: 0px; line-height:50%;">
+
+            <p>* latest comments from the log book</p>
+            <p>* latest comments from the log book</p>
+            <p>* latest comments from the log book</p>
+            </div>
           </div>
-          <div class="w3-bar-item w3-right i-title-h2">
+          <!-- ETA BANNER -->
+          <div id="ETA_banner"
+              class="w3-bar-item w3-right i-title-h2">
                   <div class="w3-container" style = "
                     position:absolute;
                     bottom:8px;
                     right:5px;
                     text-align: justify;
                     max-width: 48%;
+                    max-height:100px;
+                    overflow: hidden;
+                    text-overflow: clip;
                   ">
                   <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
                 </div>
@@ -177,8 +214,13 @@
 
 
     <!-- Header -->
+    <!-- BELT -->
+    <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center"
+      style="font-size:20%; z-index:-4 ">将</div>
+  </div>
+
     <header class="w3-container" style="padding-top:22px">
-      <h5><b><i class="fa fa-dashboard"></i> Control Panel</b></h5>
+      <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
     </header>
 
     <div class="w3-row-padding w3-margin-bottom">
@@ -194,7 +236,7 @@
       </div>
       <div class="w3-quarter">
         <div class="w3-container i-osg-dark w3-padding-16">
-          <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
+          <div class="w3-left"><i class="fa fa-tasks w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>99</h3>
           </div>
@@ -203,18 +245,8 @@
         </div>
       </div>
       <div class="w3-quarter">
-        <div class="w3-container i-osg-light w3-padding-16">
-          <div class="w3-left"><i class="fa fa-building w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>23</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>DOJO</h4>
-        </div>
-      </div>
-      <div class="w3-quarter">
         <div class="w3-container i-warning2 w3-padding-16">
-          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-left"><i class="fa fa-briefcase w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>50</h3>
           </div>
@@ -222,6 +254,17 @@
           <h4>TOOLBOX</h4>
         </div>
       </div>
+      <div class="w3-quarter">
+        <div class="w3-container i-osg-light w3-padding-16">
+          <div class="w3-left"><i class="fa fa-support w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>23</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>DOJO</h4>
+        </div>
+      </div>
+
       <div class="w3-quarter">
         <div class="w3-container i-osg-dark w3-padding-16">
           <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
@@ -234,7 +277,7 @@
       </div>
       <div class="w3-quarter">
         <div class="w3-container i-osg-light w3-padding-16">
-          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-left"><i class="fa fa-ship w3-xxxlarge"></i></div>
           <div class="w3-right">
             <h3>50</h3>
           </div>
