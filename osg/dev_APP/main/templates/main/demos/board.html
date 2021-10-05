@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<title>iSURVEYOR : home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="osg_light.css" type="text/css">
+  <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="tickerwrapper.css">
+  <link rel="stylesheet" href="loader.css">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+
+
+</head>
+
+<body class="i-osg-light">
+
+  <!-- Top container -->
+
+  <div id"head_band" class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
+    <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+      <i class="fa fa-bars w3-hide-large"></i>
+      <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
+    </button>
+    <!-- icon -->
+    <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
+        height: inherit;
+        max-width:5%;
+        overflow: hidden;
+        display:inline;
+        white-space:
+        padding-top:5px;
+        ">
+    </img>
+    <!-- ICON WARNI -->
+    <div class="w3-bar-item w3-hide-mobile w3-right">
+      <div class="i-warning" style="font-size:50%;
+            display:inline;
+            ">
+        <blink3>
+          <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest">
+            <blink><b>!</b>
+              <blink>
+          </i>
+        </blink3>
+      </div>
+    </div>
+
+    <!-- BELT -->
+    <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center" style="font-size:20%; z-index:-4 ">将
+    </div>
+    <!-- BANNER CALENDAR -->
+    <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+      <div class="marquee w3-center i-text-h1">
+        <div class="marquee__content">
+          <ul class="list-inline" style="text-align: right;">
+            <li> . . surveys calendar info: </li>
+            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Sidebar/menu -->
+  <!-- Sidebar/menu -->
+  <nav class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container">
+      <h5>Control Panel</h5>
+      <hr>
+    </div>
+    <!-- TITLE -->
+    <div class="w3-container w3-row">
+      <div class="w3-col s4">
+        <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right" style="width:46px">
+      </div>
+      <div class="w3-col s8 w3-bar">
+        <span>Welcome, <strong>Surveyor</strong></span><br>
+      </div>
+
+
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button">
+          <blink><i class="fa fa-warning"></i></blink>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-user"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-cog"></i>
+        </a>
+      </div>
+    </div>
+    <hr>
+
+    <div class="w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
+        <i class="fa fa-remove fa-fw"></i>  Close panel</a>
+
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-envelope fa-fw"></i>  Mail <u class="i-text-h3 w3-right">(52)</u>
+        <blink class="fa fa-circle w3-text-red w3-right"></blinK>
+      </a>
+      <a href="#"
+      class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-bars fa-fw"
+        onclick="location.href='mail_demo_1.html';"
+        ></i>  Case</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-calendar fa-fw"
+        onclick="location.href='case.html';"
+        ></i>  Calendar Board</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-suitcase fa-fw"
+        onclick="location.href='board.html';"
+        ></i>  Toolbox</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-coffee fa-fw"
+        onclick="location.href='demo_blog.html';"
+        ></i>  Blog</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-ship fa-fw"
+        onclick="location.href='board.html';"
+        ></i>  Tracker</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-binoculars fa-fw"
+        onclick="location.href='dojo.html';"
+        ></i>  Finder</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-bullseye fa-fw"
+        onclick="location.href='dojo.html';"
+        ></i>  DOJO</a><br><br>
+    </div>
+  </nav>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
+  </div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:50px;">
+    <!-- TOP BAR -->
+    <div class = "w3-bar">
+      <div class="w3-bar-item w3-btn">
+        <div class="w3-container w3-black">
+          <div class="w3-left"><i class="fa fa-list w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>7</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>FILTERS</h4>
+        </div>
+      </div>
+
+      <div class="w3-bar-item w3-btn">
+        <div class="w3-container w3-black">
+          <div class="w3-center"><i class="fa fa-history w3-xxxlarge"></i></div>
+          <div class="w3-clear"></div>
+          <h5>HISTORY</h5>
+        </div>
+      </div>
+
+      <div class="w3-bar-item w3-btn">
+        <div class="w3-container w3-black">
+          <div class="w3-left"><i class="fa fa-clipboard w3-xxxlarge"></i></div>
+          <div class="w3-clear"></div>
+          <h4>CASE</h4>
+        </div>
+      </div>
+
+      <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+        <div class="w3-container i-osg-dark">
+          <div class="w3-center">
+            <i class="fa fa-globe w3-xxxlarge">
+          </i>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>MAP</h4>
+        </div>
+      </div>
+
+      <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+        <div class="w3-container i-warning2">
+          <div class="w3-center">
+            <i class="fa fa-ship w3-xxxlarge"></i></div>
+          <div class="w3-clear"></div>
+          <h6>TRACKER</h6>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="w3-animate-bottom w3-bar">
+
+      <!-- Header -->
+
+
+      <header id="menu_panel" class="w3-container w3-display-container w3-black" style="padding-top:22px">
+        <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
+
+
+        <!-- <div class="w3-row-padding w3-margin-bottom"> -->
+        <div class="w3-main">
+
+
+
+
+
+          <!-- JOB POOL -->
+          <div id="job_pool" class="w3-main w3-white" style="display:block">
+
+
+            <div class="w3-main ">
+              <!-- FILTER -->
+              <div>
+                <!-- PORTS  -->
+
+                <div id="filters" class="w3-quarter w3-padding w3-white">
+                  <div id = ports_filter >
+                    <h3>FINDER<i class="fa fa-search"></i></h3>
+                    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                      <tr>
+                        <td>Spain</td>
+                        <td>65%</td>
+                      </tr>
+                      <tr>
+                        <td>US</td>
+                        <td>15.7%</td>
+                      </tr>
+                      <tr>
+                        <td>ARA</td>
+                        <td>2.1%</td>
+                      </tr>
+                      <tr>
+                        <td>Nort Africa</td>
+                        <td>1.9%</td>
+                      </tr>
+                      <tr>
+                        <td>Sout America</td>
+                        <td>1.5%</td>
+                      </tr>
+                    </table><br>
+                    <button class="w3-button w3-right w3-dark-grey">filter  
+                      <i class="fa fa-arrow-right"></i></button>
+                  </div>
+
+
+
+                  <!-- <div > -->
+                  <div style="font-family:'Courier'; ">
+                    <form class="w3-container w3-white">
+                      <div class="w3-section">
+                        <label>id:</label>
+                        <input class="w3-input" type="text" required>
+                      </div>
+                      <!-- <div class="w3-section">
+                        <label>Vessel:</label>
+                        <input class="w3-input" type="text" required>
+                      </div>
+                      <div class="w3-section">
+                        <label>Port:</label>
+                        <input class="w3-input" type="text" required>
+                      </div>
+                      <div class="w3-section">
+                        <label>Agent:</label>
+                        <input class="w3-input" type="text" required>
+                      </div>
+                      <div class="w3-section">
+                        <label>Surveyor:</label>
+                        <input class="w3-input" type="text" required>
+                      </div> -->
+
+                      <!-- <div class="w3-row"> -->
+                      <!-- <div class="w3-half"> -->
+                      <input id="milk" class="w3-check" type="checkbox">
+                      <label>CASE#</label>
+                      <br>
+                      <input id="sugar" class="w3-check" type="checkbox">
+                      <label>Vessel</label>
+                      <br>
+                      <input id="lemon" class="w3-check" type="checkbox" disabled>
+                      <label>Port</label>
+                      <br>
+                      <input id="milk" class="w3-check" type="checkbox">
+                      <label>Agent</label>
+                      <br>
+                      <input id="milk" class="w3-check" type="checkbox">
+                      <label>Surveyor</label>
+                      <br>
+                      <!-- </div> -->
+
+
+                      <!-- </div> -->
+                      <hr>
+                    </form>
+
+                    <button class="w3-bar w3-button w3-theme"
+                    onclick="move()">
+                      <i class="fa fa-search"></i>
+                      search</button>
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <!-- SEARCH CASE END -->
+              </div>
+
+
+
+
+            </div>
+
+            <!-- CALENDAR -->
+            <div id="calendar_title" class="w3-rest w3-black w3-padding">
+              <h6 class="w3-left">SURVEY BOARD</h6>
+              <!-- <div class = "w3-bar"> -->
+              <!-- <div > -->
+              <p style="text-align:right; font-weight:lighter; font-family:monospace; line-height:10%;">Latest Update</p>
+              <!-- </div> -->
+              <!-- </div> -->
+              <table class="w3-table w3-white w3-striped">
+                <tr>
+                  <td>-</td>
+                  <td><b>VESSEL</b></td>
+                  <td><b>AGENT</b></td>
+                  <td>LOCATION</td>
+                  <td>STATUS</td>
+                  <td>ETA</td>
+                  <td>-</td>
+                </tr>
+                <hr>
+
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>BULK PRIDE</td>
+                  <td><i>DIPROINDUCA</i></td>
+                  <td><i>EL DEKHEILA</i></td>
+                  <td><i>Hired</i></td>
+                  <td>26-SEP</td>
+                  <td><i>10 mins</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-users w3-text-gray w3-large"></i></td>
+                  <td>JPS PORTO</td>
+                  <td><i>ETS</i></td>
+                  <td><i>ESCOMBRERAS</i></td>
+                  <td><i>Un-Hired</i></td>
+                  <td>27-SEP</td>
+                  <td><i>2 hrs</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+                  <td>BULK PRIDE</td>
+                  <td><i>DIPROINDUCA</i></td>
+                  <td><i>EL DEKHEILA</i></td>
+                  <td><i>Hired</i></td>
+                  <td>26-SEP</td>
+                  <td><i>10 mins</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+                  <td>BULK PRIDE</td>
+                  <td><i>DIPROINDUCA</i></td>
+                  <td><i>EL DEKHEILA</i></td>
+                  <td><i>Un-Hired</i></td>
+                  <td>26-SEP</td>
+                  <td><i>10 mins</i></td>
+                </tr>
+
+              </table>
+            </div>
+            <!-- MAP -->
+            <div id = "map" class=" w3-rest w3-container"
+            style="padding-top: 15px;">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1BMZ4SrzRD2xWRyb3kr296vR8jS9PcYt7"
+            style=" min-height:400px; height:100%; width:100%;"></iframe>
+            </div>
+            <!-- END OF BOARD -->
+
+          </div>
+          <hr>
+          <!-- END OF SURVEY BOARD -->
+          <div class="w3-panel">
+            <!-- SEARCH CASE -->
+
+
+
+            <!-- MAP -->
+            <div>
+              <div>
+
+                <div class="w3-quarter w3-btn">
+                  <div class="w3-container w3-black w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-history w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <div class="w3-mobile w3-xlarge">
+                      </div>
+
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>HISTORY</h4>
+                  </div>
+                </div>
+                <div class="w3-quarter w3-btn">
+                  <div class="w3-container w3-black w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-list w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <h3>7</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>BLOG</h4>
+                  </div>
+                </div>
+                <div class="w3-quarter w3-btn">
+                  <div class="w3-container w3-black w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-clipboard w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <h3>7%</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>CASE</h4>
+                  </div>
+                </div>
+                <div class="w3-quarter w3-btn">
+                  <div class="w3-container i-warning2 w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-ship w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                      <h3>50</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>TRACKER</h4>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="w3-container i-text-h3 w3-center">
+                <br><br>
+              </div>
+      </header>
+
+    </div>
+  </div>
+
+
+
+  <div class="w3-container w3-white">
+    <h5>Recent LOG Entries</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-dark-grey w3-padding-32">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">Mailing</h5>
+        <p>Inbox</p>
+        <p>Out</p>
+        <p>Temp</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">Log</h5>
+        <p>Case Profile</p>
+        <p>Report</p>
+        <p>Submission</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">Apps</h5>
+        <p>Scan</p>
+        <p>Drone</p>
+        <p>Trim</p>
+        <p>Volumes</p>
+        <p>Lashing</p>
+        <p>Math</p>
+        <p>DOJO</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-bar w3-center w3-red i-text-h3" style="line-height:0%; font-size:50%">
+    <!-- <h4>FOOTER</h4> -->
+    <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
+  </footer>
+
+  <!-- End page content -->
+  </div>
+
+  <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+
+    var mybtn = document.getElementsByClassName("testbtn")[0];
+    mybtn.click();
+
+    // Accordions
+    function myAccFunc(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Slideshows
+    var slideIndex = 1;
+
+    function plusDivs(n) {
+      slideIndex = slideIndex + n;
+      showDivs(slideIndex);
+    }
+
+    function showDivs(n) {
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      };
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+    showDivs(1);
+
+    // Progress Bars
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 5;
+      var id = setInterval(frame, 10);
+
+      function frame() {
+        if (width == 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          elem.innerHTML = width * 1 + '%';
+        }
+      }
+    }
+
+    function rgbToHex(r, g, b) {
+      return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function toggle_cases_summary(toggle) {
+      if (toggle == 0) {
+        document.getElementById('case_off').style.display = "block";
+        document.getElementById('head2').style.display = "none";
+      } else {
+        document.getElementById('case_off').style.display = "none";
+        document.getElementById('head2').style.display = "block";
+
+      }
+      console.log("COMAND")
+    }
+
+
+    function handleMarquee() {
+      const marquee = document.querySelectorAll('.marquee');
+      let speed = 4;
+      let lastScrollPos = 0;
+      let timer;
+      marquee.forEach(function(el) {
+        const container = el.querySelector('.inner');
+        const content = el.querySelector('.inner > *');
+        //Get total width
+        const elWidth = content.offsetWidth;
+        //Duplicate content
+        let clone = content.cloneNode(true);
+        container.appendChild(clone);
+        let progress = 1;
+
+        function loop() {
+          progress = progress - speed;
+          if (progress <= elWidth * -1) {
+            progress = 0;
+          }
+          container.style.transform = 'translateX(' + progress + 'px)';
+          container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+          window.requestAnimationFrame(loop);
+        }
+        loop();
+      });
+      window.addEventListener('scroll', function() {
+        const maxScrollValue = 12;
+        const newScrollPos = window.scrollY;
+        let scrollValue = newScrollPos - lastScrollPos;
+        if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+        else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+        speed = scrollValue;
+        clearTimeout(timer);
+        timer = setTimeout(handleSpeedClear, 10);
+      });
+
+      function handleSpeedClear() {
+        speed = 4;
+      }
+    };
+    handleMarquee();
+
+
+    var timer;
+
+    function setTimer() {
+      timer = setTimeout(showPage, 333);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

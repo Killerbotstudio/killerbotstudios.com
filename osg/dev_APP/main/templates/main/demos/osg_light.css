@@ -43,6 +43,7 @@
 .i-theme-dark {color:#fff !important; background-color:rgb(94, 215, 94) !important}
 .i-theme-green {color:#fff !important; background-color:rgb(4, 215, 54) !important}
 .i-green {color:rgb(134, 215, 94) !important; background-color:rgb(94, 215, 94) !important}
+.i-green2 {color:rgb(134, 215, 94) !important; !important}
 .i-theme-action {color:#fff !important; background-color:#303e45 !important}
 
 .i-warning {
@@ -59,6 +60,13 @@
    word-spacing: -2px;
    display: inline-block:
   }
+  .i-warning3 {
+    color:rgb(255, 165, 0);
+    background-color: rgb(15, 15, 80);
+    font-family:'Courier';
+    word-spacing: -2px;
+    display: inline-block:
+   }
 
 .i-osg {color:#fff !important; background-color:rgb(33, 33, 100) !important}
 .i-osg-light {color:rgb(10, 10, 50) !important; background-color:rgb(235, 240, 255) !important}
@@ -124,6 +132,7 @@
 
 }
 
+.text-overflow{overflow-wrap:break-word}
 .i-text-theme {color:#607d8b !important}
 .i-border-theme {border-color:#607d8b !important}
 
@@ -136,6 +145,12 @@ blink {
 
   -webkit-animation: 0.5s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
   animation: 0.5s linear infinite condemned_blink_effect;
+}
+
+blink1 {
+
+  -webkit-animation: 0.3s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+  animation: 0.3s linear infinite condemned_blink_effect;
 }
 
 blink2 {

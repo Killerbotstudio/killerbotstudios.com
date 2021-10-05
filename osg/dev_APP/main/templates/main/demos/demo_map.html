@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html>
+<title>iSURVEYOR : home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="osg_light.css" type="text/css">
+  <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="tickerwrapper.css">
+  <link rel="stylesheet" href="loader.css">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Raleway", sans-serif
+  }
+</style>
+
+
+</head>
+
+<body class="i-osg-light">
+
+  <!-- Top container -->
+  <div id"head_band"
+    class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
+    <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+      <i class="fa fa-bars w3-hide-large"></i>
+      <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
+    </button>
+      <!-- icon -->
+    <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile"
+      src="images/logos/osg_emblem_smooth.png"
+        style="
+        height: inherit;
+        max-width:5%;
+        overflow: hidden;
+        display:inline;
+        white-space:
+        padding-top:5px;
+        ">
+    </img>
+    <!-- ICON WARNI -->
+    <div class ="w3-bar-item w3-hide-mobile w3-right">
+      <div class="i-warning"
+            style="font-size:50%;
+            display:inline;
+            ">
+        <blink3>
+          <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest">
+            <blink><b>!</b><blink>
+          </i>
+        </blink3>
+      </div>
+    </div>
+
+    <!-- BELT -->
+    <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center"
+      style="font-size:20%; z-index:-4 ">将
+    </div>
+    <!-- BANNER CALENDAR -->
+    <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+      <div class="marquee w3-center i-text-h1">
+        <div class="marquee__content">
+          <ul class="list-inline" style="text-align: right;">
+            <li> . . surveys calendar info: </li>
+            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+      <div class="w3-col s4">
+        <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right"
+        style="width:46px">
+      </div>
+      <div class="w3-col s8 w3-bar">
+        <span>Welcome, <strong>Surveyor</strong></span><br>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-user"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <i class="fa fa-cog"></i>
+        </a>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h5>Control Panel</h5>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    </div>
+  </nav>
+
+<!-- BUTTON: CASES CONTAINER-->
+  <div class="w3-right">
+    <span id="case_off" class="w3-button" onclick="toggle_cases_summary(1)" style="color:white">
+      <i class="fa fa-caret-down"></i>
+    </span>
+  </div>
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+
+
+
+
+
+sadasd
+</div>asdasdasd
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:50px;">
+    <!-- TOP BAR -->
+    <div class="w3-animate-bottom w3-bar i-osg-dark">
+      <!-- TITLE -->
+      <div id="top_bar" class="w3-bar">
+        <div class="w3-bar-item w3-twothird w3-left i-title-h2"
+        style="
+        text-overflow: clip;
+        word-wrap: break-word;
+        max-height:50px;
+        max-width:90%;
+        padding-top:5px;
+        ">
+        IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING
+        <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
+        <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
+        </div>
+        <div class= "w3-rest">
+          <!--  EXAND BUTTON -->
+          <div id="case_off" class=" w3-rest w3-right">
+            <div class"w3-bar-item">
+              <i class="fa fa-caret-down w3-button"
+                onclick="toggle_cases_summary(1)"
+                style = "
+                vertical-align:super;
+                font-size:150%;
+
+                ">
+              </i>
+              <blink>!</blink>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div id = "info_panel">
+      <div class="w3-container i-osg-dark"
+        style = "vertical-align: sub;
+        ">
+
+          <!-- ETA BANNER -->
+          <div id="ETA_banner"
+            class="w3-bar-item w3-right i-title-h2">
+                <div class="w3-container" style = "
+                  /* position:absolute; */
+                  bottom:8px;
+                  right:5px;
+                  text-align: justify;
+                  max-width: 48%;
+                  max-height:100px;
+                  overflow: hidden;
+                  text-overflow: clip;
+                ">
+                <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+
+      <!-- CONTENT -->
+      <!-- <div class = "w3-bar">
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+      </div>
+ -->
+
+        <!-- BOTTOM BAR -->
+        <div class="w3-container i-osg-dark">
+          <!-- LOG -->
+          <div id="info_log" class="w3-bar-item w3-left i-text-h3"
+              style= "text-align: left;
+              max-width: 60%;
+              ">
+            <b>log:</b>
+            <div class="w3-container"
+            style="
+              font-size:80%;
+              margin-top: 0px;
+              line-height:30%;
+              white-space: nowrap;
+              overflow:  hidden;
+              text-overflow: ellipsis;
+              font-weight: normal;
+            ">
+
+            <p>* latest comments from the log bookda sdas das das das da saddasdd dasd addas d dasd a</p>
+            <p>* latest comments from the log book</p>
+            <p>* latest comments from the log book</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- END OF FOOTER -->
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
+
+    <div id="head2" class="w3-bar" style="display:none">
+      <div class="w3-bar">
+        <!-- CASE CONTAINER -->
+        <div >
+          <div  class="w3-padding w3-white w3-display-container" style="display:sh">
+            <span onclick="toggle_cases_summary(0)" class="w3-button w3-display-topright">
+              <i class="fa fa-remove">
+              </i>
+            </span>
+
+
+            <div id="active_case_content" class="w3-padding-32 w3-rest">
+
+
+              <div class=" w3-container ">
+                <div class=" white">
+                  <div class="w3-theme">
+                    <p class="w3-right">SEA SHEPARD</p>
+                    <h3>VESSEL</h3>
+                  </div>
+                  <div class="w3-container">
+                    <p class="w3-right">Motril, ES</p>
+                    <h3 class="w3-text-theme">PORT: </h3>
+                  </div>
+                  <ul class="w3-ul w3-border-top">
+                    <li>
+                      <p class="w3-right">Bunker Survey</p>
+                      <h3>CASE</h3>
+
+                    </li>
+                    <li>
+                      <p class="w3-right">16:00 28/09/2021</p>
+                      <h3>ETA</h3>
+                    </li>
+
+                    <li>
+                      <div class="w3-container">
+                        <div class="w3-half">
+                          <h5>REMARKS</h5>
+                          <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 1</button>
+                          <div id="Demo1" class="w3-hide">
+                            <div class="w3-center w3-container">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                          </div>
+                          <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 2</button>
+                          <div id="Demo2" class="w3-hide">
+                            <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
+                            <a href="#" class="w3-button w3-block w3-left-align">Link 2</a>
+                            <a href="#" class="w3-button w3-block w3-left-align">Link 3</a>
+                          </div>
+                          <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 3</button>
+                          <div id="Demo3" class="w3-hide w3-black">
+                            <div class="w3-container">
+                              <p>Accordion with Images:</p>
+                              <img src="images/Gallery/DJI_0807.jpg" style="width:30%;" class="w3-animate-zoom">
+                              <p>French Alps</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="w3-half">
+                          <table class="w3-table w3-striped w3-bordered">
+                            <thead>
+                              <tr class="w3-theme">
+                              <tr>
+                                <th>Event</th>
+                                <th>Detail</th>
+                                <th>Time</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Jill</td>
+                                <td>Smith</td>
+                                <td>50</td>
+                              </tr>
+                              <tr>
+                                <td>Eve</td>
+                                <td>Jackson</td>
+                                <td>94</td>
+                              </tr>
+                              <tr>
+                                <td>Adam</td>
+                                <td>Johnson</td>
+                                <td>67</td>
+                              </tr>
+                              <tr>
+                                <td>Adam</td>
+                                <td>Johnson</td>
+                                <td>67</td>
+                              </tr>
+                              <tr>
+                                <td>Adam</td>
+                                <td>Johnson</td>
+                                <td>67</td>
+                              </tr>
+                              <tr>
+                                <td>Adam</td>
+                                <td>Johnson</td>
+                                <td>67</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                  <div class="w3-container w3-theme w3-large"><span class="w3-right">Next</span></div>
+                </div>
+              </div>
+            </div>
+              <div class="w3-container">
+
+
+                <!-- LIST -->
+                <div class="w3-half w3-theme" style="font-family:'Courier'; ">
+                  <p class="w3-right">time:time</p>
+                  <!-- <div class="w3-theme"> -->
+                  <h3>Input LOG</h3>
+
+
+                  <!-- </div> -->
+
+
+                  <form class="w3-container w3-white">
+
+
+                    <div class="w3-section">
+                      <label>Subject:</label>
+                      <input class="w3-input" type="text" required>
+                    </div>
+                    <div class="w3-section">
+                      <label>Comments:</label>
+                      <input class="w3-input w3-border w3-margin-bottom" style="height:200px" placeholder="What's on your mind?">
+
+                    </div>
+                    <br>
+
+                    <div class="w3-row">
+                      <div class="w3-half">
+                        <input id="milk" class="w3-check" type="checkbox">
+                        <label>Vessel</label>
+                        <br>
+                        <input id="sugar" class="w3-check" type="checkbox">
+                        <label>Port</label>
+                        <br>
+                        <input id="lemon" class="w3-check" type="checkbox" disabled>
+                        <label>Crew</label>
+                        <br>
+                        <input id="milk" class="w3-check" type="checkbox">
+                        <label>Weather</label>
+                        <br>
+                        <input id="milk" class="w3-check" type="checkbox">
+                        <label>Captain</label>
+                        <br>
+                        <br>
+                      </div>
+                      <div class="w3-half">
+                        <input id="milk" class="w3-check" type="checkbox">
+                        <label>Agency</label>
+                        <br>
+                        <input id="sugar" class="w3-check" type="checkbox">
+                        <label>Logistics</label>
+                        <br>
+                        <input id="milk" class="w3-check" type="checkbox">
+                        <label>Stibators</label>
+                        <br>
+                        <input id="lemon" class="w3-check" type="checkbox" disabled>
+                        <label>Resources</label>
+                        <br>
+                        <input id="milk" class="w3-check" type="checkbox" checked="checked">
+                        <label>Annotation</label>
+                        <br><br>
+                      </div>
+
+
+                    </div>
+                    <button class="w3-full-width w3-btn w3-theme" onclick="move()">
+                      send to log</button>
+
+                  </form>
+                </div>
+
+                <div class="w3-container w3-half ">
+
+
+                  Hey HO! LETS GO!
+
+
+
+                  <h2>#CASEHASH</h2>
+                  <p>London is the capital city of England. It is the most populous city in the United Kingdom,
+                    with a metropolitan area of over 13 million inhabitants.</p>
+                  <p>Standing on the River Thames, London has been a major settlement for two millennia,
+                    its history going back to its  by the Romans, who named it Londinium.</p>
+                  <p>By the way, you can add a close icon to all  if you want the ability to hide them. Look to your right!</p>
+                  <p>The , you  add a close icon to all  if you want the ability to hide them. Look to your right!</p>
+                  <p>By  way, you can add a  icon to all containers if you want the ability to hide them. Look to your right!</p>
+                  <p>By the way, you can add a close icon to all containers if you want the ability to hide them. Look to your right!</p>
+                  <p>By the , you can add a  icon to all containers if you want the ability to hide them. Look to your right!</p>
+                  <p>By the way, you can  a  icon to all  if you want the ability to hide them. Look to your right!</p>
+
+
+                </div>
+
+              </div>
+              <button class="w3-btn w3-theme" onclick="move()">Click Me</button>
+              <hr>
+              <button class="w3-btn w3-theme" onclick="move()">Click Me</button>
+              <h2 class="w3-center">Progress Bars</h2>
+
+            </div>
+            <div class="w3-container">
+              <h5>General Stats</h5>
+              <p>Complition</p>
+              <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding w3-red" style="width:25%">+25%</div>
+              </div>
+
+              <p>Report Log</p>
+              <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding i-osg" style="width:50%">50%</div>
+              </div>
+
+              <p>Images Log</p>
+              <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding i-osg" style="width:75%">75%</div>
+              </div>
+            </div>
+            <hr>
+
+            <footer id="alertPanel" class="w3-orange w3-footers">
+            </footer>
+            <div class="w3-orange">
+              <div style="text-align:right; font-family:'Courier'; font-size:200%">
+                <blink>
+                  <i class="fa fa-exclamation-triangle w3-text-theme"></i>
+                </blink>
+                MISSING REQUIREMENTS
+                <div style="font-size:50%">
+                  <p class="w3-blink">Image from hull</p>
+                  <p class="w3-blink">Trim calcualtion</p>
+                  <p class="w3-blink">Comments on deck conditions</p>
+                  <p class="w3-blink">Coments on levels for TANK # 3</p>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+
+          </div>
+
+
+
+          <!-- <hr>
+        </div>
+
+      </div> -->
+    </div>
+    <!-- </div> -->
+    <div style="background-color:black">
+      <div id="myBar" class="w3-theme " style=" vertical-align: baseline; max-height: 5px; font-size:5px; width:5%; color:black; background-color:white;"><br></br>
+      </div>
+    </div>
+    <!-- Header -->
+
+
+    <header class="w3-container" style="padding-top:22px">
+      <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
+    </header>
+
+    <!-- <div class="w3-row-padding w3-margin-bottom"> -->
+    <div class="w3-padding">
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-osg w3-padding-16">
+          <div class="w3-left"><i class="fa fa-envelope w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>52</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>MAIL</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-osg-dark w3-padding-16">
+          <div class="w3-left"><i class="fa fa-tasks w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>99</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>LOG</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-warning2 w3-padding-16">
+          <div class="w3-left"><i class="fa fa-briefcase w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TOOLBOX</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-osg-light w3-padding-16">
+          <div class="w3-left"><i class="fa fa-calendar w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>23</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>CALENDAR</h4>
+        </div>
+      </div>
+
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-osg-dark w3-padding-16">
+          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>FINDER</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-osg-light w3-padding-16">
+          <div class="w3-left"><i class="fa fa-ship w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TRACKER</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container i-warning w3-padding-16">
+          <div class="w3-left"><i class="fa fa-coffee w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>BLOG</h4>
+        </div>
+      </div>
+      <div class="w3-quarter w3-btn">
+        <div class="w3-container w3-red w3-padding-16">
+          <div class="w3-left"><i class="fa fa-support w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>DOJO</h4>
+        </div>
+      </div>
+    </div>
+    <!-- CALENDAR -->
+    <div class="w3-panel">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <!-- MAP -->
+        <div class="w3-third">
+          <h5>Map</h5>
+          <div style = "min_height: 350px">
+            <script>
+            var mst_width="100%";
+            var mst_height="350px";
+            var mst_border="0";
+            var mst_map_style="terrain";
+            var mst_mmsi="";
+            var mst_show_track="";
+            var mst_show_info="";
+            var mst_fleet="";
+            var mst_lat="37.230";
+            var mst_lng="35.220";
+            var mst_zoom="5";
+            var mst_show_names="0";
+            var mst_scroll_wheel="true";
+            var mst_show_menu="true";
+          </script>
+          <script id="myshiptrackingscript"
+          src="//www.myshiptracking.com/js/widgetApi.js"
+          async defer>
+          </script>
+            <!-- <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map"> -->
+          </div>
+        </div>
+        <!-- JOB POOL -->
+        <div class="w3-twothird">
+          <div id = "calendar_title" class = "w3-bar">
+            <div class="w3-half w3-left">
+            <h5>CALENDAR</h5>
+            </div>
+            <div class="w3-half w3-right" style="text-align:right">
+              <p>Latest Update</p>
+            </div>
+          </div>
+          <table class="w3-table w3-striped w3-white">
+            <tr>
+              <td><i class="fa fa-user w3-text-green w3-large"></i></td>
+              <td>BULK PRIDE - EL DEKHEILA - DIPROINDUCA</td>
+              <td><i>10 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+              <td>JPS PORTO - ESCOMBRERAS - ETS</td>
+              <td><i>15 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
+              <td>VECTIS EAGLE - MOTRIL - ETS</td>
+              <td><i>17 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
+              <td>SIKANIA - ADABIYA - DIPROINDUCA</td>
+              <td><i>25 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+              <td>PARIS TRADER - BILBAO - ETS</td>
+              <td><i>28 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
+              <td>PANOCEANIS - GIBRALATAR - CENTURION</td>
+              <td><i>35 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
+              <td>BBC LAGOS - MOTRIL - ETS</td>
+              <td><i>39 mins</i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTS  -->
+    <div class="w3-container">
+      <h5>PORTS</h5>
+      <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+        <tr>
+          <td>Spain</td>
+          <td>65%</td>
+        </tr>
+        <tr>
+          <td>US</td>
+          <td>15.7%</td>
+        </tr>
+        <tr>
+          <td>ARA</td>
+          <td>2.1%</td>
+        </tr>
+        <tr>
+          <td>Nort Africa</td>
+          <td>1.9%</td>
+        </tr>
+        <tr>
+          <td>Sout America</td>
+          <td>1.5%</td>
+        </tr>
+      </table><br>
+      <button class="w3-button w3-right w3-dark-grey">Other Ports  <i class="fa fa-arrow-right"></i></button>
+    </div>
+
+
+    <div class="w3-container">
+      <h5>Recent LOG Entries</h5>
+      <div class="w3-row">
+        <div class="w3-col m2 text-center">
+          <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+        </div>
+        <div class="w3-col m10 w3-container">
+          <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+        </div>
+      </div>
+
+      <div class="w3-row">
+        <div class="w3-col m2 text-center">
+          <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
+        </div>
+        <div class="w3-col m10 w3-container">
+          <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+
+    <div class="w3-container w3-dark-grey w3-padding-32">
+      <div class="w3-row">
+        <div class="w3-container w3-third">
+          <h5 class="w3-bottombar w3-border-green">Mailing</h5>
+          <p>Inbox</p>
+          <p>Out</p>
+          <p>Temp</p>
+        </div>
+        <div class="w3-container w3-third">
+          <h5 class="w3-bottombar w3-border-red">Log</h5>
+          <p>Case Profile</p>
+          <p>Report</p>
+          <p>Submission</p>
+        </div>
+        <div class="w3-container w3-third">
+          <h5 class="w3-bottombar w3-border-orange">Apps</h5>
+          <p>Scan</p>
+          <p>Drone</p>
+          <p>Trim</p>
+          <p>Volumes</p>
+          <p>Lashing</p>
+          <p>Math</p>
+          <p>DOJO</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w3-animate-bottom w3-container i-osg-dark">
+      <b class="w3-container i-title-h2"
+      style="max-width:50%;">IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING</b>
+      <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
+      <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
+
+
+      <!--  EXAND BUTTON -->
+      <div class="w3-bar-item w3-right">
+        <i class="fa fa-caret-down"
+          style = "vertical-align:super;font-size:150%">
+          <blink>!</blink>
+        </i>
+      </div>
+
+      <div class = "w3-bar">
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-title-h4 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h1 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h2 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+        <div
+          class="w3-bar-item w3-half w3-left i-text-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 came here
+        </div>
+
+        <div
+          class="w3-bar-item  i-text-h3 w3-xlarge "
+          style="text-overflow: clip">
+          CAME HERE 123 sdcame here
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="w3-bar i-text-h3"
+          style = "vertical-align: sub;"
+          >
+          <div class="w3-bar-item w3-left "
+              style= "text-align: left;
+              max-width: 40%;
+              text-overflow: clip;
+              ">
+            <b class=" w3-responsive"
+              style='font-size:70%'>
+              log:
+            </b>shorted version from what came from the log in the server
+
+          </div>
+          <div class="w3-bar-item w3-right i-title-h2">
+                  <div class="w3-container" style = "
+                    position:absolute;
+                    bottom:8px;
+                    right:5px;
+                    text-align: justify;
+                    max-width: 48%;
+                  ">
+                  <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
+                </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-light-grey">
+      <h4>FOOTER</h4>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <!-- End page content -->
+  </div>
+
+  <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+
+    var mybtn = document.getElementsByClassName("testbtn")[0];
+    mybtn.click();
+
+    // Accordions
+    function myAccFunc(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Slideshows
+    var slideIndex = 1;
+
+    function plusDivs(n) {
+      slideIndex = slideIndex + n;
+      showDivs(slideIndex);
+    }
+
+    function showDivs(n) {
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      };
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+    showDivs(1);
+
+    // Progress Bars
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 5;
+      var id = setInterval(frame, 10);
+
+      function frame() {
+        if (width == 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          elem.innerHTML = width * 1 + '%';
+        }
+      }
+    }
+
+    function rgbToHex(r, g, b) {
+      return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function toggle_cases_summary(toggle) {
+      if (toggle == 0) {
+        document.getElementById('case_off').style.display = "block";
+        document.getElementById('head2').style.display = "none";
+      } else {
+        document.getElementById('case_off').style.display = "none";
+        document.getElementById('head2').style.display = "block";
+
+      }
+      console.log("COMAND")
+    }
+
+
+    function handleMarquee() {
+      const marquee = document.querySelectorAll('.marquee');
+      let speed = 4;
+      let lastScrollPos = 0;
+      let timer;
+      marquee.forEach(function(el) {
+        const container = el.querySelector('.inner');
+        const content = el.querySelector('.inner > *');
+        //Get total width
+        const elWidth = content.offsetWidth;
+        //Duplicate content
+        let clone = content.cloneNode(true);
+        container.appendChild(clone);
+        let progress = 1;
+
+        function loop() {
+          progress = progress - speed;
+          if (progress <= elWidth * -1) {
+            progress = 0;
+          }
+          container.style.transform = 'translateX(' + progress + 'px)';
+          container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+          window.requestAnimationFrame(loop);
+        }
+        loop();
+      });
+      window.addEventListener('scroll', function() {
+        const maxScrollValue = 12;
+        const newScrollPos = window.scrollY;
+        let scrollValue = newScrollPos - lastScrollPos;
+        if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+        else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+        speed = scrollValue;
+        clearTimeout(timer);
+        timer = setTimeout(handleSpeedClear, 10);
+      });
+
+      function handleSpeedClear() {
+        speed = 4;
+      }
+    };
+    handleMarquee();
+
+
+    var timer;
+
+    function setTimer() {
+      timer = setTimeout(showPage, 333);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>

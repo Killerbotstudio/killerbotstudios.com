@@ -118,27 +118,29 @@
       </div>
     </div>
     <hr>
-    <!-- MENU BAR -->
+
     <div class="w3-bar-block">
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
         <i class="fa fa-remove fa-fw"></i>  Close panel</a>
 
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-envelope fa-fw"></i>  Mail</a>
+        <i class="fa fa-envelope fa-fw"></i>  Mail <u class="i-text-h3 w3-right">(52)</u>
+        <blink class="fa fa-circle w3-text-red w3-right"></blinK>
+      </a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-bars fa-fw"></i>  LOG</a>
+        <i class="fa fa-bars fa-fw" onclick="location.href='mail_demo_1.html';"></i>  Case</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-calendar fa-fw"></i>  Calendar</a>
+        <i class="fa fa-calendar fa-fw" onclick="location.href='case.html';"></i>  Calendar Board</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-suitcase fa-fw"></i>  Toolbox</a>
+        <i class="fa fa-suitcase fa-fw" onclick="location.href='board.html';"></i>  Toolbox</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-coffee fa-fw"></i>  Blog</a>
+        <i class="fa fa-coffee fa-fw" onclick="location.href='demo_blog.html';"></i>  Blog</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-ship fa-fw"></i>  Tracker</a>
+        <i class="fa fa-ship fa-fw" onclick="location.href='board.html';"></i>  Tracker</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-binoculars fa-fw"></i>  Finder</a>
+        <i class="fa fa-binoculars fa-fw" onclick="location.href='dojo.html';"></i>  Finder</a>
       <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-bullseye fa-fw"></i>  DOJO</a><br><br>
+        <i class="fa fa-bullseye fa-fw" onclick="location.href='dojo.html';"></i>  DOJO</a><br><br>
     </div>
   </nav>
 
@@ -148,93 +150,10 @@
 
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px;margin-top:50px;">
-    <!-- TOP BAR -->
-    <div class="w3-animate-bottom w3-bar i-osg-dark">
-      <!--  EXAND BUTTON -->
-      <div id="case_off" class=" w3-rest w3-right">
-        <div class"w3-bar-item">
-          <i class="fa fa-caret-down w3-button" onclick="toggle_cases_summary(1)" style="
-            vertical-align:super;
-            font-size:150%;
-            "><blink>!</blink>
-          </i>
 
-        </div>
-      </div>
-
-      <!-- TITLE -->
-      <div id="current_case_bar" class="w3-rest ">
-        <div class="w3-row w3-twothird w3-left i-title-h2" style="
-          text-overflow: ellipsis;
-          word-wrap: break-word;
-          /* max-height:30px; */
-          max-width:99%;
-          /* padding-bottom:10px; */
-          padding-top:20px;
-          ">
-          IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING
-          <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
-          <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
-        </div>
-      </div>
-        <!--
-        <div class="w3-rest">
-
-asdasd
-        </div> -->
-
-
-        <div id="case_summay_panel"
-        class="w3-mobile w3-container i-osg-dark">
-            <!-- <div class="w3-container"> -->
-            <!-- INFO LOG -->
-              <div id="info_log" class="w3-twothird w3-left i-text-h3"
-                style="text-align: left;
-                    font-size:70%;
-                    max-width: 70%;
-                    ">
-                  <b>log:</b>
-                  <div class="w3-container" style="
-                      font-size:120%;
-                      margin-top: 0px;
-                      line-height:30%;
-                      white-space: nowrap;
-                      word-wrap: break-word;
-                      overflow:  hidden;
-                      text-overflow: ellipsis;
-                      font-weight: normal;
-                    ">
-                    <p>* latest comments from the log bookda sdas das das das da saddasdd dasd addas d dasd a</p>
-                    <p>* latest comments from the log book</p>
-                    <p>* latest comments from the log book</p>
-                  </div>
-
-              </div>
-              <div class="w3-rest">
-                <!-- ETA BANNER -->
-                <div id="ETA_banner" class="w3-bar-item w3-rest i-title-h2">
-                  <div class="w3-container" style="
-                          /* position:absolute; */
-                          bottom:8px;
-                          right:5px;
-                          text-align: justify;
-                          /* max-width: 48%; */
-                          max-height:100px;
-                          overflow: hidden;
-                          text-overflow: clip;
-                        ">
-                    <b class="i-title-h2" style='font-size:70%'>ETASSS:</b>
-                    <b style="font-size: 120%;">19:43|29SEP</b>
-                  </div>
-                </div>
-              </div>
-            <!-- </div> -->
-
-        </div>
-      </div>
-    </div>
-    <!-- CONTENT -->
-    <!-- <div class = "w3-bar">
+  </div>
+  <!-- CONTENT -->
+  <!-- <div class = "w3-bar">
         <div
           class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
           style="text-overflow: clip">
@@ -248,17 +167,297 @@ asdasd
       </div>
  -->
 
-    <!-- BOTTOM BAR -->
-    <div class="w3-container i-osg-dark">
-      <!-- LOG -->
+  <!-- BOTTOM BAR -->
+  <div class="w3-container i-osg-dark">
+    <!-- LOG -->
+  </div>
+  <!-- END OF FOOTER -->
+  </div>
+  </div>
+  </div>
+
+  </div>
+
+  <header id="menu_panel" class="w3-container w3-display-container i-osg-light" style="padding-top:22px">
+    <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
+
+
+    <!-- <div class="w3-row-padding w3-margin-bottom"> -->
+    <div class="w3-main" style="margin-left:300px; display:block">
+      <div id="menu_calcs" onclick="myAccFunc('cacls_tools')">
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning2 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-calculator w3-xxxlarge"></i>
+            </div>
+
+            <h4 class="w3-left">CALCS</h4>
+            <div class="w3-clear">
+
+              <div class="w3-right">
+                <i class="fa fa-th"></i>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="calcs_tools" class="w3-bar" style=" display: none; ">
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-pie-chart w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">VOLUMES</h4>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-thermometer w3-xxxlarge"></i>
+
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">TEMPERATURES</h4>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-tachometer w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">SPEEDS</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu_mechs" onclick="myAccFunc('forces_tools')">
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning2 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-wrench w3-xxxlarge"></i>
+            </div>
+
+            <h4 class="w3-left">MECHS</h4>
+            <div class="w3-clear">
+
+              <div class="w3-right">
+                <i class="fa fa-th"></i>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="forces_tools" class="w3-bar" style="display: none">
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-cogs w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">FORCES</h4>
+          </div>
+        </div>
+
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-link w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">LASH</h4>
+          </div>
+        </div>
+
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-signal w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">RESISTANCE</h4>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="menu_naval" onclick="myAccFunc('ship_tools')">
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning2 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-ship w3-xxxlarge"></i>
+            </div>
+
+            <h4 class="w3-left">NAVAL</h4>
+            <div class="w3-clear">
+
+              <div class="w3-right">
+                <i class="fa fa-th"></i>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ship_tools" class="w3-bar" style="display:none">
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-terminal w3-xxxlarge"></i>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4 class="w3-left">TRIM</h4>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning3 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-globe w3-xxxlarge">
+              </i>
+              <h4>TRACKERS</h4>
+            </div>
+            <div class="w3-right">
+              <h3>50</h3>
+            </div>
+            <div class="w3-clear "></div>
+
+          </div>
+        </div>
+
+      </div>
+      <div id="menu_drone">
+        <div class="w3-quarter w3-btn">
+          <div class="w3-container i-warning2 w3-padding-16">
+            <div class="w3-left">
+              <i class="fa fa-times-circle-o w3-xxxlarge"></i>
+            </div>
+
+            <h4 class="w3-left">DRONE</h4>
+            <div class="w3-clear">
+
+              <div class="w3-right">
+                <blink1>
+                  <a class="i-text-h3 w3-center text-overflow"></a>
+                  <i class="fa fa-dot-circle-o"></i>
+                  <i class="fa fa-compass"></i>
+                  <i class="fa fa-exchange"></i>
+                  <i class="fa fa-wifi"></i>
+                </blink1>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-    <!-- END OF FOOTER -->
-  </div>
-  </div>
+
+  </header>
+<div id = "body" class="w3-main" style="margin-left:300px; display:block">
+  <div class="w3-quarter w3-btn" onclick="myAccFunc('files_tools')">
+    <div class="w3-container i-warning w3-padding-16">
+      <div class="w3-left">
+        <i class="fa fa-clipboard w3-xxxlarge"></i>
+      </div>
+      <div class="w3-right">
+        <div class="w3-mobile w3-xlarge">
+          <blink3>
+            <a class="i-text-h3 w3-center text-overflow"></a>
+            <i class="fa fa-exchange i-green2"></i>
+          </blink3>
+        </div>
+
+      </div>
+      <div class="w3-clear"></div>
+      <h4>FILES</h4>
+    </div>
   </div>
 
+  <div id="files_tools" class="w3-bar w3-black" style="display:none;">
+    <div class="w3-twothird w3-btn">
+      <div class="w3-container i-warning3 w3-padding-16">
+        <div class="w3-left"><i class="fa fa-upload w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>50</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6 class="w3-left">UPLOADS</h6>
+      </div>
+    </div>
+    <div class="w3-rest w3-btn">
+      <div class="w3-container i-warning3 w3-padding-16">
+        <div class="w3-left"><i class="fa fa-download w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <!-- <h3>7</h3> -->
+        </div>
+        <div class="w3-clear"></div>
+        <h6 class="w3-left">DOWNLOAD</h6>
+      </div>
+    </div>
+    <div class="w3-bar w3-btn">
+      <div class="w3-container i-warning3 w3-padding-16">
+        <div class="w3-left"><i class="fa fa-server w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>7%</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4 class="w3-left">FILES</h4>
+      </div>
+    </div>
   </div>
 
+
+
+
+
+  <div class="w3-bar i-osg-dark w3-center w3-button">
+
+    <i class="fa fa-search w3-medium"></i>
+    <h4>SEARCH</h4>
+
+  </div>
   <div id="head2" class="w3-main" style="margin-left:300px; display:none;">
     <div class="w3-bar">
       <!-- CASE CONTAINER -->
@@ -630,181 +829,16 @@ asdasd
     </div>
   </div>
 
-<!-- PROGRESS BARR -->
-  <div class="w3-bar" style="background-color:black">
-    <div id="progress_bar" class="w3-theme " style=" vertical-align: baseline; max-height: 5px; font-size:5px; width:5%; color:black; background-color:white;">
-      <br>
-    </div>
-  </div>
-  <!-- Header -->
-
-
-  <header id="menu_panel" class="w3-container w3-display-container" style="padding-top:22px">
-    <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
-
-
-    <!-- <div class="w3-row-padding w3-margin-bottom"> -->
-    <div class="w3-main" style="margin-left:300px; display:block">
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg w3-padding-16">
-          <div class="w3-left"><i class="fa fa-envelope w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>52</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>MAIL</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg-dark w3-padding-16">
-          <div class="w3-left"><i class="fa fa-tasks w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>99</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>LOG</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-warning2 w3-padding-16">
-          <div class="w3-left"><i class="fa fa-briefcase w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>TOOLBOX</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg-light w3-padding-16">
-          <div class="w3-left"><i class="fa fa-calendar w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>23</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>CALENDAR</h4>
-        </div>
-      </div>
-
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg-dark w3-padding-16">
-          <div class="w3-left"><i class="fa fa-binoculars w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>FINDER</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg-light w3-padding-16">
-          <div class="w3-left"><i class="fa fa-ship w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>TRACKER</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-warning w3-padding-16">
-          <div class="w3-left"><i class="fa fa-coffee w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>BLOG</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-red w3-padding-16">
-          <div class="w3-left"><i class="fa fa-bullseye w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>DOJO</h4>
-        </div>
-      </div>
-    </div>
-  </header>
-  </br></br></hr>
-  <!-- JOB POOL -->
-  <div class="w3-main i-osg-dark" style="margin-left:300px;">
-    </br>
-    <h6>SURVEY BOARD</h6>
-    <div class="w3-container">
-      <!-- CALENDAR -->
-      <div id="calendar_title" class="w3-twothird">
-        <!-- <div class = "w3-bar"> -->
-        <!-- <div > -->
-        <p style="text-align:right; font-weight:lighter; font-family:monospace; line-height:10%;">Latest Update</p>
-        <!-- </div> -->
-        <!-- </div> -->
-        <table class="w3-table w3-striped w3-white">
-          <tr>
-            <td><i class="fa fa-user w3-text-green w3-large"></i></td>
-            <td>BULK PRIDE - EL DEKHEILA - DIPROINDUCA</td>
-            <td><i>10 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>JPS PORTO - ESCOMBRERAS - ETS</td>
-            <td><i>15 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-            <td>VECTIS EAGLE - MOTRIL - ETS</td>
-            <td><i>17 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-            <td>SIKANIA - ADABIYA - DIPROINDUCA</td>
-            <td><i>25 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-            <td>PARIS TRADER - BILBAO - ETS</td>
-            <td><i>28 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-            <td>PANOCEANIS - GIBRALATAR - CENTURION</td>
-            <td><i>35 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-            <td>BBC LAGOS - MOTRIL - ETS</td>
-            <td><i>39 mins</i></td>
-          </tr>
-        </table>
-      </div>
-      <!-- END OF BOARD -->
-      <!-- MAP -->
-      <div class=" w3-rest w3-container" style="padding-top: 15px;"><iframe src="https://www.google.com/maps/d/embed?mid=1BMZ4SrzRD2xWRyb3kr296vR8jS9PcYt7" style=" min-height:250px; height:100%; width:100%;"></iframe>
-      </div>
-      <!-- END OF MAP -->
-    </div>
-    <!-- END OF SURVEY BOARD -->
-
-
-
-
-
-
-
-
-
-
-    <div class="w3-panel">
-      <div class="w3-row-padding" style="margin:0 -16px">
-
-
+  <div id="body" style="display:block; ">
+    <!-- PROGRESS BARR -->
+    <div id="progress_bar" class="w3-bar" style="background-color:black; display:none; ">
+      <div class="w3-theme " style=" vertical-align: baseline; max-height: 5px; font-size:5px; width:5%; color:black; background-color:white;">
+        <br>
       </div>
     </div>
 
     <!-- PORTS  -->
-    <div class="w3-container">
+    <div id="panel_1" class="w3-container w3-black" style="display:block; ">
       <h5>PORTS</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
         <tr>
@@ -830,32 +864,6 @@ asdasd
       </table><br>
       <button class="w3-button w3-right w3-dark-grey">Other Ports  <i class="fa fa-arrow-right"></i></button>
     </div>
-
-
-    <div class="w3-container">
-      <h5>Recent LOG Entries</h5>
-      <div class="w3-row">
-        <div class="w3-col m2 text-center">
-          <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
-        </div>
-        <div class="w3-col m10 w3-container">
-          <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-        </div>
-      </div>
-
-      <div class="w3-row">
-        <div class="w3-col m2 text-center">
-          <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-        </div>
-        <div class="w3-col m10 w3-container">
-          <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-        </div>
-      </div>
-    </div>
-    <br>
-
 
 
     <div class="w3-container w3-dark-grey w3-padding-32">
@@ -885,85 +893,15 @@ asdasd
       </div>
     </div>
 
-    <div class="w3-animate-bottom w3-container i-osg-dark">
-      <b class="w3-container i-title-h2" style="max-width:50%;">IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING</b>
-      <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
-      <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
 
 
-      <!--  EXAND BUTTON -->
-      <div class="w3-bar-item w3-right">
-        <i class="fa fa-caret-down" style="vertical-align:super;font-size:150%">
-          <blink>!</blink>
-        </i>
-      </div>
-
-      <div class="w3-bar">
-        <div class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-title-h3 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-title-h4 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-text-h1 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-text-h2 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div class="w3-bar-item w3-half w3-left i-text-h3 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-
-        <div class="w3-bar-item  i-text-h3 w3-xlarge " style="text-overflow: clip">
-          CAME HERE 123 sdcame here
-        </div>
-
-        <!-- BOTTOM BAR -->
-        <div class="w3-bar i-text-h3" style="vertical-align: sub;">
-          <div class="w3-bar-item w3-left " style="text-align: left;
-              max-width: 40%;
-              text-overflow: clip;
-              ">
-            <b class=" w3-responsive" style='font-size:70%'>
-              log:
-            </b>shorted version from what came from the log in the server
-
-          </div>
-          <div class="w3-bar-item w3-right i-title-h2">
-            <div class="w3-container" style="
-                    position:absolute;
-                    bottom:8px;
-                    right:5px;
-                    text-align: justify;
-                    max-width: 48%;
-                  ">
-              <b class="i-title-h2" style='font-size:70%'>ETA:</b><b style="font-size: 120%;">19:43|29SEP</b>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-
+</div>
   <!-- Footer -->
   <footer class="w3-bar w3-center w3-red i-text-h3" style="line-height:0%; font-size:50%">
     <!-- <h4>FOOTER</h4> -->
-    <p >Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
+    <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
   </footer>
 
   <!-- End page content -->
