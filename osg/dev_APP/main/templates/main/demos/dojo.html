@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <style>
     html,
@@ -26,99 +27,76 @@
     h5 {
       font-family: "Raleway", sans-serif
     }
+
+    ,
   </style>
 
 
 </head>
 
-<body class="i-osg-light">
+<body class="i-osg-light w3-red" onload="document.getElementById('id02').style.display='block'">
 
   <!-- Top container -->
-
-  <div id"head_band" class="w3-bar w3-top w3-red w3-large i-tiny" style="z-index:4; display:inline; ">
-    <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
-      <i class="fa fa-bars w3-hide-large"></i>
-      i<b class="i-title-h1 i-tiny-hide">DOJO</b>
-
-    </button>
-    <!-- icon -->
-    <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
-        height: inherit;
-        max-width:5%;
-        overflow: hidden;
-        display:inline;
-        white-space:
-        padding-top:5px;
-        ">
-    </img>
-    <!-- ICON WARNI -->
-    <!-- <div class="w3-bar-item w3-hide-mobile w3-right">
-      <div class="i-warning" style="font-size:50%;
-            display:inline;
-            ">
-        <blink3>
-          <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest">
-            <blink><b>!</b>
-              <blink>
-          </i>
-        </blink3>
+  <header class="w3-animate-bottom w3-red">
+    <div id"head_band" class=" w3-bar w3-top w3-red w3-large i-tiny " style="z-index:4; display:inline; ">
+      <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey   " onclick="w3_open();">
+        <i class="fa fa-bars w3-hide-large"></i>
+        i<b class="i-title-h1 i-tiny-hide">DOJO</b>
+      </button>
+      <!-- icon -->
+      <img class=" w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
+          height: inherit;
+          max-width:5%;
+          overflow: hidden;
+          display:inline;
+          white-space:
+          padding-top:5px;
+          ">
+      </img>
+      <!-- BELT -->
+      <div id="belt" class=" w3-bar w3-black i-text-h1 w3-center" style="font-size:100%; z-index:-4 ">
+        <b>将</b>
       </div>
-    </div> -->
-
-    <!-- BELT -->
-    <div id="belt" class="w3-bar w3-black i-text-h1 w3-animate-left w3-center" style="font-size:100%; z-index:-4 ">将
-    </div>
-    <!-- BANNER CALENDAR -->
-    <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
-      <div class="marquee w3-center i-text-h1">
-        <div class="marquee__content">
-          <ul class="list-inline" style="text-align: right;">
-            <li> . . surveys calendar info: </li>
-            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-          </ul>
+      <!-- BANNER CALENDAR -->
+      <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+        <div class="marquee w3-center i-text-h1">
+          <div class="marquee__content">
+            <ul class="list-inline" style="text-align: right;">
+              <li> . . surveys calendar info: </li>
+              <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+              <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ACTKVE CASE -->
+      <div class="w3-bar w3-center " style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+        <div class="marquee w3-center i-text-h1 i-osg-dark">
+          <div class="marquee__content ">
+            <ul class="list-inline" style="text-align: right;">
+              <li style="color:lightgreen"> . . active case . . </li>
+              <li>ETA : 16:00 28-SEP</li>
+              <li>¡ IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING !</li>
+              <li style="color: white">¡ log: Trucks delayed - 13:49am !</li>
+              <li style="color:orange">
+                <blink2>! message cc: "invoice # 333as0-"!</blink2>
+              </li>
+              <li style="color:white">. . end of message . .</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- ACTKVE CASE -->
-    <div class="w3-bar w3-center " style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
-      <div class="marquee w3-center i-text-h1 i-osg-dark">
-        <div class="marquee__content ">
-          <ul class="list-inline" style="text-align: right;">
-            <li style="color:lightgreen"> . . active case . . </li>
-            <!-- <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li> -->
-            <li>ETA : 16:00 28-SEP</li>
-            <li>¡ IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING !</li>
-            <li style="color: white">¡ log: Trucks delayed - 13:49am !</li>
-            <li style="color:orange">
-              <blink2>! message cc: "invoice # 333as0-"!</blink2>
-            </li>
-            <li style="color:white">. . end of message . .</li>
-
-            <!-- <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li> -->
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
+  </header>
   <!-- Sidebar/menu -->
-  <nav class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <nav id="mySidebar" class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
     <div class="w3-container">
       <h5>Control Panel</h5>
       <hr>
@@ -131,8 +109,6 @@
       <div class="w3-col s8 w3-bar">
         <span>Welcome, <strong>Surveyor</strong></span><br>
       </div>
-
-
       <div class="w3-bar">
         <a href="#" class="w3-bar-item w3-button">
           <blink><i class="fa fa-warning"></i></blink>
@@ -171,306 +147,212 @@
         <i class="fa fa-bullseye fa-fw" onclick="location.href='dojo.html';"></i>  DOJO</a><br><br>
     </div>
   </nav>
-
   <!-- Overlay effect when opening sidebar on small screens -->
   <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
   </div>
-
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px;margin-top:50px;">
     <!-- TOP BAR -->
-    <div class="w3-animate-bottom w3-bar i-osg-dark">
-
+    <div class=" w3-bar i-osg-dark">
     </div>
-    <!-- CONTENT -->
-    <!-- <div class = "w3-bar">
-        <div
-          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
-          style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div
-          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
-          style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-      </div>
- -->
-
     <!-- BOTTOM BAR -->
     <div class="w3-container i-osg-dark" style="margin-top:20px">
 
       <!-- LOG -->
     </div>
-    <!-- END OF FOOTER -->
-  </div>
-  <!-- </div> -->
-  </div>
 
-  </div>
+    <div id="main_panel" class="w3-red w3-container w3-display-container i-osg-light" style="padding-top:22px;  display:show">
+      <div id="btn_tatami" class="w3-main">
+        <div id="logo_tatami " class="w3-panel " style="
+        margin-top: 150px;
+        padding-top: 22px;
+        position: absolute;
+        /* top: 50%; */
+        left: 50%;
+        /* bottom: 50%; */
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        vertical-align: middle;
+        opacity: 10%;
 
+        ">
+          <div style="
+            margin-top:450px;
+            top: 50%;
+            /* vertical-align: middle; */
 
-  <!-- Header -->
+          ">
+            <bkg class="fa fa-ban w3-text-red " style="
+                z-index:0;
+                font-size: 45vw;
+                line-height: 0%;
+                /* vertical-align: middle; */
 
+                ">
+              <bkg class="w3-center fa fa-asterisk w3-text-red w3-spin" style="
+                      /* position:relative; */
+                      /* opacity:50%; */
+                      z-index:2;
+                      line-height: 0%;
+                      font-size: 100%;
+                      vertical-align: text-top;
+                      ">
+              </bkg>
 
-  <header id="menu_panel" class="w3-red w3-container w3-display-container i-osg-light" style="padding-top:22px margin-left:300px; display:block">
-    <div id="btn_tatami" class="w3-main">
+            </bkg>
+          </div>
+        </div>
 
+        <div class=" w3-padding-64 i-osg" style="width:100%; min-height:400px; z-index:100">
+          <div id="content_tatami" class="w3-container  " style="margin-top:5%; ">
 
-      <div class=" w3-padding-64 i-osg" style="width:100%; min-height:400px">
-        <div class="w3-container  " style="margin-top:5%">
+            <div id="buttons" style="z-index:2;">
+              <button class="w3-padding-64 w3-half w3-btn" onclick="document.getElementById('sempai').style.display='block'" style="height:100%">
+                <div class="w3-container  w3-padding-32">
+                  <div class="w3-center">
+                    <i class="fa fa-square-o w3-xxxlarge"></i>
+                  </div>
+                  <div class="w3-right">
+                  </div>
+                  <div class="w3-clear"></div>
+                  <h4>SEMAPI</h4>
+                </div>
+              </button>
 
-          <button class="w3-padding-64 w3-third w3-row w3-btn" onclick="document.getElementById('id01').style.display='block'" style="height:100%">
-            <div class="w3-container  w3-padding-32">
-              <div class="w3-center">
-                <i class="fa fa-square-o w3-xxxlarge"></i>
-              </div>
-              <div class="w3-right">
-              </div>
-              <div class="w3-clear"></div>
-              <h4>SEMAPI</h4>
+              <button class="w3-half w3-btn w3-padding-64" onclick="document.getElementById('sensei').style.display='block'">
+                <div class="w3-center w3-padding-32">
+                  <i class="fa fa-bars w3-xxxlarge"></i>
+                </div>
+                <div class="w3-right">
+                </div>
+                <div class="w3-clear"></div>
+                <h4>SENSEI</h4>
+              </button>
+
 
             </div>
-          </button>
-
-
-          <div class="w3-third  w3-padding-64">
-            <div class="w3-container">
-              <orb style="  left: 50% ; top: 50%; z-index:9;" class="w3-center fa fa-circle w3-text-red"></orb>
-
-              <bkg style=" left: 50% ; top: 50% ;z-index:0; position:absolute;" class="w3-center fa fa-eercast w3-xlarge"></bkg>
 
 
 
 
-            </div>
+
+
 
           </div>
 
-          <button class="w3-third w3-btn w3-padding-64" onclick="document.getElementById('id01').style.display='block'">
+        </div>
 
-            <div class="w3-center w3-padding-32">
-              <i class="fa fa-bars w3-xxxlarge"></i>
+        <div class="l2 w3-bar w3-black">
+          <h5 id="b_off">
+            <i class="w3-left w3-btn w3-text-red fa fa-circle" onclick="myAccFunc('stats')"></i>
+          </h5>
+          <h5>LEADERBOARDS</h5>
+          <div id = "stats" class="w3-container w3-black w3-padding-16" style="display:none">
+
+            <div class="w3-center">
+              <div class="w3-container w3-black" >
+
+                <i class="fa fa-bar-chart w3-xxxlarge"></i>
+
+                <table class="w3-twothird w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                  <tr>
+
+                    <td><i class="fa fa-circle"></i>John</td>
+                    <td>65%</td>
+                  </tr>
+                  <tr>
+                    <td>Giovani</td>
+                    <td>15.7%</td>
+                  </tr>
+                  <tr>
+                    <td>Jane</td>
+                    <td>2.1%</td>
+                  </tr>
+                  <tr>
+                    <td>Manuel</td>
+                    <td>1.9%</td>
+                  </tr>
+                  <tr>
+                    <td>Marta</td>
+                    <td>1.5%</td>
+                  </tr>
+                </table><br>
+                <button class="w3-button w3-right w3-dark-grey">Other stats  
+                  <i class="fa fa-arrow-right"></i></button>
+              </div>
             </div>
             <div class="w3-right">
+              <!-- <h3>7</h3> -->
             </div>
             <div class="w3-clear"></div>
-            <h4>SENSEI</h4>
-          </button>
-
-
-        </div>
-      </div>
-
-
-      <div class="l2 w3-bar w3-black">
-        <h5 id="b_off">
-          <i class="w3-left w3-btn w3-text-red fa fa-circle" onclick="myAccFunc('stats')"></i>
-
-        </h5>
-        <h5>LEADERBOARDS</h5>
-        <div class="w3-container w3-black w3-padding-16">
-
-
-
-
-          <div class="w3-center">
-
-            <!-- PORTS  -->
-
-            <div id="stats" class="w3-container w3-black" style="display:none">
-              <i class="fa fa-star-o w3-xxxlarge"></i>
-
-              <table class="w3-twothird w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-                <tr>
-
-                  <td><i class="fa fa-circle"></i>John</td>
-                  <td>65%</td>
-                </tr>
-                <tr>
-                  <td>Giovani</td>
-                  <td>15.7%</td>
-                </tr>
-                <tr>
-                  <td>Jane</td>
-                  <td>2.1%</td>
-                </tr>
-                <tr>
-                  <td>Manuel</td>
-                  <td>1.9%</td>
-                </tr>
-                <tr>
-                  <td>Marta</td>
-                  <td>1.5%</td>
-                </tr>
-              </table><br>
-              <button class="w3-button w3-right w3-dark-grey">Other stats  <i class="fa fa-arrow-right"></i></button>
-            </div>
           </div>
-          <div class="w3-right">
-            <!-- <h3>7</h3> -->
-          </div>
-          <div class="w3-clear"></div>
-
         </div>
-      </div>
+        <div class="l2 w3-bar w3-white">
+          <h5 id="b_off">
+            <i class="w3-left w3-btn w3-text-red fa fa-circle" onclick="myAccFunc('dojo_blog')"></i>
+          </h5>
+          <h5>DOJO BLOG</h5>
+          <div class="w3-container w3-white w3-padding-16">
 
-
-
-
-
-
-
-
-
-
-      <div class="l2 w3-bar w3-white">
-        <h5 id="b_off">
-          <i class="w3-left w3-btn w3-text-red fa fa-circle" onclick="myAccFunc('dojo_blog')"></i>
-
-        </h5>
-        <h5>DOJO BLOG</h5>
-        <div class="w3-container w3-white w3-padding-16">
-
-
-
-
-          <div id="dojo_blog" class=" w3-container  w3-white" style="display:none">
-            <!-- PORTS  -->
-
-
-            <div id="blog_content" class="w3-white ">
-              <div class="w3-container ">
-
-
-                <div class="w3-row">
-                  <div class="w3-col m2 ">
-                    <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+            <div id="dojo_blog" class=" w3-container  w3-white" style="display:none">
+              <div id="blog_content" class="w3-white ">
+                <div class="w3-container ">
+                  <div class="w3-row">
+                    <div class="w3-col m2 ">
+                      <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+                    </div>
+                    <div class="w3-col m10 w3-container">
+                      <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+                      <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+                    </div>
                   </div>
-                  <div class="w3-col m10 w3-container">
-                    <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-                    <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+
+                  <div class="w3-row">
+                    <div class="w3-col m2 ">
+                      <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
+                    </div>
+                    <div class="w3-col m10 w3-container">
+                      <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+                      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+                    </div>
                   </div>
+
+
+
+
                 </div>
+                <hr>
+                <div id="blog_input" class="w3-container">
+                  <button class="w3-button w3-right w3-dark-grey"> Send <i class="fa fa-arrow-up"></i></button>
 
-                <div class="w3-row">
-                  <div class="w3-col m2 ">
-                    <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-                  </div>
-                  <div class="w3-col m10 w3-container">
-                    <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-                  </div>
+                  <input class="w3-bar" placeholder="Whats in your mind?"></input>
                 </div>
-
-
-
-
+                <hr>
               </div>
-              <hr>
-              <div id="blog_input" class="w3-container">
-                <button class="w3-button w3-right w3-dark-grey"> Send <i class="fa fa-arrow-up"></i></button>
 
-                <input class="w3-bar" placeholder="Whats in your mind?"></input>
-
-
-
-              </div>
-              <hr>
             </div>
+            <div class="w3-right">
+              <!-- <h3>7</h3> -->
+            </div>
+            <div class="w3-clear"></div>
 
           </div>
-          <div class="w3-right">
-            <!-- <h3>7</h3> -->
-          </div>
-          <div class="w3-clear"></div>
-
         </div>
-      </div>
 
-
-      <!-- <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-black w3-padding-32">
-          <div class="w3-center">
-            <i class="fa fa-sun-o w3-xxxlarge w3-text-red "></i>
-          </div>
-          <div class="w3-right">
-          </div>
-          <div class="w3-clear"></div>
-          <h4>SHIHAN</h4>
-        </div>
-      </div> -->
-
-      <!-- <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-black w3-padding-32">
-          <div class="w3-center">
-            <i class="fa fa-bullseye w3-xxxlarge w3-text-red"></i>
-          </div>
-          <div class="w3-right">
-          </div>
-          <div class="w3-clear"></div>
-          <h4>SHOGUN</h4>
-        </div>
-      </div> -->
-
-
-  </header>
-  </div>
-
-
-
-  <div class="w3-container w3-dark-grey w3-padding-32">
-    <div class="w3-row">
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Mailing</h5>
-        <p>Inbox</p>
-        <p>Out</p>
-        <p>Temp</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-red">Log</h5>
-        <p>Case Profile</p>
-        <p>Report</p>
-        <p>Submission</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-orange">Apps</h5>
-        <p>Scan</p>
-        <p>Drone</p>
-        <p>Trim</p>
-        <p>Volumes</p>
-        <p>Lashing</p>
-        <p>Math</p>
-        <p>DOJO</p>
       </div>
     </div>
-  </div>
-
-
 
   </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-bar w3-center w3-red i-text-h3" style="line-height:0%; font-size:50%">
-    <!-- <h4>FOOTER</h4> -->
-    <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
-  </footer>
 
 
-  <!-- The Modal -->
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-        <p>Some text in the Modal..</p>
-        <p>Some text in the Modal..</p>
-      </div>
-    </div>
-  </div>
+
+
+
 
   <!-- End page content -->
   </div>
+
 
   <script>
     // Get the Sidebar
@@ -624,5 +506,391 @@
   </script>
 
 </body>
+
+<!-- Footer -->
+<footer class="w3-bar w3-center w3-red w3-animate-top">
+  <!-- <h4>FOOTER</h4> -->
+  <div class="w3-container w3-dark-grey w3-padding-64" onclick="myAccFunc('search_panel')">
+    SEARCH<a class="w3-right fa fa-search i-text-h1"></a>
+    <div id="search_panel" class="w3-row" style="display:none">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">Mailing</h5>
+        <p>Inbox</p>
+        <p>Out</p>
+        <p>Temp</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">Log</h5>
+        <p>Case Profile</p>
+        <p>Report</p>
+        <p>Submission</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">Apps</h5>
+        <p>Scan</p>
+        <p>Drone</p>
+        <p>Trim</p>
+        <p>Volumes</p>
+        <p>Lashing</p>
+        <p>Math</p>
+        <p>DOJO</p>
+      </div>
+    </div>
+  </div>
+  <p class="i-text-h3" style="height:100%;font-size:50%; line-height:0%; ">Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
+</footer>
+
+
+<!-- The Modal -->
+<div id="sempai" class="w3-modal i-osg-dark i-text-h1" style="">
+  <div class="w3-modal-content">
+    <div class="w3-panel w3-black">
+      <header>
+        <span onclick="document.getElementById('sempai').style.display='none'" class="w3-closebtn w3-large">&times;
+        </span>
+        <p class="w3-right">SEMPAI</p>
+
+        <div id="info_panel" class="w3-bar w3-small i-text-h3" style="line-height:90%">
+          <p>
+            <blink>将 </blink>
+            Select weather the image contains any object refering to the title tag.
+          </p>
+          <p>
+            <blink2>将 </blink2>
+            If train for a while you plan, wifi you better use
+          </p>
+
+        </div>
+        <div id="image_tag" class=" w3-xlarge i-title-h1 i-warning3 w3-center">This is tag </div>
+      </header>
+
+
+
+      <div id="image_display" class="w3-center w3-container">
+        <div style=" height: 400px; margin:2px;left:0;">
+          <!-- <img src="images/gallery/IMG_20200112_090154.jpg"
+          style=" max-width: 100%;z-index: -10;
+          background-image: url('images/gallery/IMG_20200112_090154.jpg');
+          ">
+          </img> -->
+
+
+          <div id = "IMAGE"
+          style="
+          position:absolute;
+          left:5%;
+
+          height:400px; width:100%;z-index: 1;
+          background-image: url('images/gallery/IMG_20200112_090154.jpg');
+          background-size: 90% 90%;
+          background-repeat: no-repeat;
+          ">
+
+          <div id="panel_selector" style= "height:100%">
+            <div id="left_selector" class=" w3-half w3-left w3-animate-left" style= "top: 50%">
+              <button class="w3-bar-item w3-btn w3-text-red" >
+                <i class="fa fa-close w3-jumbo" ></i>
+              </button>
+            </div>
+            <div id="right_selector" class="w3-half w3-right w3-animate-right" style= "top: 50%">
+              <button class=" fa fa-check w3-jumbo w3-bar-item w3-btn  i-green2">
+                <i class="w3-jumbo" ></i>
+              </button>
+            </div>
+          </div>
+
+
+
+<!-- OLD CONTAINERS -->
+          <!-- <div class = "w3-half i-osg-dark w3-animate-left" style= "height:100%; ">LEFT
+          </div>
+          <div class = "w3-half i-osg-dark w3-animate-right" style= "height:100%; ">RIGHT
+          </div> -->
+
+
+
+
+        </div>
+
+          <!-- <image src="images/gallery/IMG_20200112_090154.jpg"
+          style=" max-width: 100%;z-index: -10;
+          ">
+        </image> -->
+
+
+
+
+        </div>
+
+        <!-- END OF CONTAINER -->
+
+
+        <div>
+          <div>
+
+
+
+            <div id="panel" >
+
+
+            </div>
+
+
+          </div>
+        </div>
+        <div id="info_panel" style="line-height:100%">
+          <hr>
+          <p>With every selection, you will earn points.</p>
+          <p>This will be used later for rewards,
+            as well as advanced features and upgrades inside the DOJO!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="sensei" class="w3-modal i-osg-dark i-text-h1" style="">
+  <div class="w3-modal-content">
+    <div class="w3-panel w3-black">
+      <header>
+        <span onclick="document.getElementById('sensei').style.display='none'" class="w3-closebtn w3-large">&times;
+        </span>
+        <p class="w3-right">SENSEI</p>
+        <div id="info_panel" class="w3-bar w3-small i-text-h3" style="line-height:90%">
+          <p>
+            <blink>将 </blink>
+            Select weather the image contains any object refering to the title tag.
+          </p>
+          <p>
+            <blink2>将 </blink2>
+            If train for a while you plan, wifi you better use
+          </p>
+        </div>
+        <!-- <div id="image_tag" class=" w3-xlarge i-title-h1 i-warning3 w3-center">
+          This is tag </div> -->
+      </header>
+      <div id="image_display" class="w3-center w3-container">
+        <div style=" height: 400px; margin:2px;left:0;">
+          <div id = "IMAGE"
+          style="
+          position:absolute;
+          left:5%;
+
+          height:400px; width:100%;z-index: 1;
+          background-image: url('images/gallery/IMG_20200112_090154.jpg');
+          background-size: 90% 90%;
+          background-repeat: no-repeat;
+          ">
+
+          <div id="panel_selector" style= "height:100%">
+            <!-- <div id="selector" class="w3-bottom w3-animate-opacity"
+            style= "top: 50%">
+              <button class="w3-bar-item w3-btn i-green2" >
+                <i class="fa fa-arrow-right w3-jumbo" ></i>
+              </button>
+            </div> -->
+            <div id="right_selector" class="w3-half w3-right w3-animate-right"
+            style= "top: 50%">
+              <button class=" fa fa-arrow-right w3-jumbo w3-bar-item w3-btn  i-green2">
+                <i class="w3-jumbo" ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- TAGS PANEL -->
+        <div id= "tags_panel">
+          <div class="w3-container i-warning3" style="line-height:120%">
+
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+            <button class="w3-quater w3-button">
+              THIS IS A TAG
+            </button>
+
+
+          </div>
+
+        </div>
+        <!-- END OF CONTAINER -->
+
+
+        <div>
+          <div>
+
+
+
+            <div id="panel" >
+
+
+            </div>
+
+
+          </div>
+        </div>
+        <div id="info_panel" style="line-height:100%">
+          <hr>
+          <p>With every selection, you will earn points.</p>
+          <p>This will be used later for rewards,
+            as well as advanced features and upgrades inside the DOJO!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Shihan Modal -->
+  <div id="shihan" class="w3-modal i-osg-dark i-text-h1" style="">
+    <div class="w3-modal-content">
+      <div class="w3-panel w3-black">
+        <header>
+          <span onclick="document.getElementById('shihan').style.display='none'" class="w3-closebtn w3-large">&times;
+          </span>
+          <p class="w3-right">SHIHAN</p>
+
+          <div id="info_panel" class="w3-bar w3-small i-text-h3" style="line-height:90%">
+            <p>
+              <blink>将 </blink>
+              Select weather the image contains any object refering to the title tag.
+            </p>
+            <p>
+              <blink2>将 </blink2>
+              If train for a while you plan, wifi you better use
+            </p>
+
+          </div>
+          <div id="image_tag" class=" w3-xlarge i-title-h1 i-warning3 w3-center">This is tag </div>
+        </header>
+
+
+
+        <div id="image_display" class="w3-center w3-container">
+          <div style=" height: 400px; margin:2px;left:0;">
+            <!-- <img src="images/gallery/IMG_20200112_090154.jpg"
+            style=" max-width: 100%;z-index: -10;
+            background-image: url('images/gallery/IMG_20200112_090154.jpg');
+            ">
+            </img> -->
+
+
+            <div id = "IMAGE"
+            style="
+            position:absolute;
+            left:5%;
+
+            height:400px; width:100%;z-index: 1;
+            background-image: url('images/gallery/IMG_20200112_090154.jpg');
+            background-size: 90% 90%;
+            background-repeat: no-repeat;
+            ">
+
+            <div id="panel_selector" style= "height:100%">
+              <div id="left_selector" class=" w3-half w3-left w3-animate-left" style= "top: 50%">
+                <button class="w3-bar-item w3-btn w3-text-red" >
+                  <i class="fa fa-close w3-jumbo" ></i>
+                </button>
+              </div>
+              <div id="right_selector" class="w3-half w3-right w3-animate-right" style= "top: 50%">
+                <button class=" fa fa-check w3-jumbo w3-bar-item w3-btn  i-green2">
+                  <i class="w3-jumbo" ></i>
+                </button>
+              </div>
+            </div>
+
+
+
+  <!-- OLD CONTAINERS -->
+            <!-- <div class = "w3-half i-osg-dark w3-animate-left" style= "height:100%; ">LEFT
+            </div>
+            <div class = "w3-half i-osg-dark w3-animate-right" style= "height:100%; ">RIGHT
+            </div> -->
+
+
+
+
+          </div>
+
+            <!-- <image src="images/gallery/IMG_20200112_090154.jpg"
+            style=" max-width: 100%;z-index: -10;
+            ">
+          </image> -->
+
+
+
+
+          </div>
+          <!-- TAGS PANEL -->
+          <div id= "tags_panel">
+            <div class="w3-container i-warning3" style="line-height:120%">
+              <div class="w3-quater w3-button ">
+                THIS IS A TAG
+              </div>
+              <div class="w3-rest w3-button">
+                TAG B
+              </div>
+              <div class="w3-quater w3-button ">
+                THIS IS A TAG
+              </div>
+              <div class="w3-rest w3-button">
+                TAG B
+              </div>
+              <div class="w3-quater w3-button ">
+                TAG A
+              </div>
+              <div class="w3-rest w3-button">
+                THIS IS A TAG
+              </div>
+              <div class="w3-quater w3-button ">
+                TAG A
+              </div>
+              <div class="w3-rest w3-button">
+                THIS IS A TAG
+              </div>
+
+            </div>
+
+          </div>
+          <!-- END OF CONTAINER -->
+
+
+          <div>
+            <div>
+
+
+
+              <div id="panel" >
+
+
+              </div>
+
+
+            </div>
+          </div>
+          <div id="info_panel" style="line-height:100%">
+            <hr>
+            <p>With every selection, you will earn points.</p>
+            <p>This will be used later for rewards,
+              as well as advanced features and upgrades inside the DOJO!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </html>

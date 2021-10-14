@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<title>iSURVEYOR : home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="osg_light.css" type="text/css">
+  <link rel="stylesheet" href="osg_3D.css" tyle="text/css">
+  <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="tickerwrapper.css">
+  <link rel="stylesheet" href="loader.css">
+
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="KBS_load.css"> -->
+  <link rel="stylesheet" href="KBS_hub.css">
+
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+
+
+</head>
+
+
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Rotating elements</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css">
+
+<style>
+body {
+  --animation-duration: 16s;
+  --tile-width: 200px;
+  --tile-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+body .row {
+  display: flex;
+  flex-direction: row;
+}
+body .row > *:not(.row):not(.column), body .row .row > *:not(.row):not(.column), body .row .column > *:not(.row):not(.column) {
+  margin: 10px;
+}
+body .column {
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .rotate > *, body .square {
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.3);
+}
+body .wrapper .rotate > *:hover, body .square:hover {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+body .wrapper {
+  width: var(--width);
+  height: var(--height);
+  display: inline-block;
+  perspective: 0px;
+  perspective-origin: 50% 50%;
+  cursor: pointer;
+}
+body .wrapper .rotate {
+  position: relative;
+  width: var(--width);
+  transform-style: preserve-3d;
+  transform-origin: 0 calc(var(--height)/2);
+  -webkit-animation: spin var(--duration, var(--animation-duration)) infinite ease var(--offset, 0s);
+          animation: spin var(--duration, var(--animation-duration)) infinite ease var(--offset, 0s);
+}
+body .wrapper .rotate:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+body .wrapper .rotate > a {
+  color: inherit;
+  text-decoration: none;
+}
+body .wrapper .rotate .front {
+  background: #ED5565;
+  transform: translateZ(calc(var(--height)/2));
+}
+body .wrapper .rotate .bottom {
+  background: #FFCE54;
+  transform: rotateX(-90deg) translateY(calc(var(--height)/2));
+  transform-origin: bottom center;
+}
+body .wrapper .rotate .back {
+  background: #2ECC71;
+  transform: translateZ(calc(var(--height)/-2)) rotateX(180deg);
+}
+body .wrapper .rotate .top {
+  background: #5D9CEC;
+  transform: rotateX(-270deg) translateY(calc(var(--height)/-2));
+  transform-origin: top center;
+}
+body .wrapper .rotate > * {
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  transition: 0.25s -0.1s;
+}
+body .wrapper .rotate > *.t-white {
+  color: white;
+}
+body .wrapper .rotate > *.image-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .wrapper .rotate > *.image-banner > *:not(img) {
+  flex-grow: 1;
+}
+body .wrapper .rotate > *.image-banner > * {
+  margin: 10px 0 10px 10px;
+}
+body .wrapper .rotate > *.image-banner > *:first-child {
+  margin-left: 10px;
+}
+body .wrapper .rotate > *.image-banner > *:last-child {
+  margin-right: 10px;
+}
+body .wrapper .rotate > *.image-banner img {
+  height: calc(100% - 20px);
+}
+body .wrapper .rotate > *.image-banner .text {
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .rotate > *.image-banner .text .b {
+  font-weight: bold;
+}
+body .wrapper .rotate > *.backgroundimage {
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .wrapper .rotate > *.icon {
+  line-height: var(--height);
+  text-align: center;
+}
+body .square {
+  background: #CCD1D9;
+  width: var(--tile-height);
+  height: var(--tile-height);
+  cursor: pointer;
+  transition: 0.25s -0.1s;
+}
+body .square.small {
+  width: calc(var(--tile-height)/2 - 10px);
+  height: calc(var(--tile-height)/2 - 10px);
+}
+body .square.long {
+  width: calc(var(--tile-height) * 2 + 20px);
+  height: var(--tile-height);
+}
+
+@-webkit-keyframes spin {
+  10.001%, 15%, 35.001%, 40%, 60.001%, 65%, 85.001%, 90% {
+    pointer-events: none;
+  }
+  0%, 10% {
+    transform: rotateX(0);
+    pointer-events: initial;
+  }
+  15.001%, 25%, 35% {
+    transform: rotateX(90deg);
+    pointer-events: initial;
+  }
+  40.001%, 50%, 60% {
+    transform: rotateX(180deg);
+    pointer-events: initial;
+  }
+  65.001%, 75%, 85% {
+    transform: rotateX(270deg);
+    pointer-events: initial;
+  }
+  90.001%, 100% {
+    transform: rotateX(360deg);
+    pointer-events: initial;
+  }
+}
+
+@keyframes spin {
+  10.001%, 15%, 35.001%, 40%, 60.001%, 65%, 85.001%, 90% {
+    pointer-events: none;
+  }
+  0%, 10% {
+    transform: rotateX(0);
+    pointer-events: initial;
+  }
+  15.001%, 25%, 35% {
+    transform: rotateX(90deg);
+    pointer-events: initial;
+  }
+  40.001%, 50%, 60% {
+    transform: rotateX(180deg);
+    pointer-events: initial;
+  }
+  65.001%, 75%, 85% {
+    transform: rotateX(270deg);
+    pointer-events: initial;
+  }
+  90.001%, 100% {
+    transform: rotateX(360deg);
+    pointer-events: initial;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" class="none">
+  <div class="row">
+	<div class="wrapper" style="--width:220px; --height:100px;--duration: 14s; --offset:-6s">
+		<div class="rotate">
+			<a href="https://open.spotify.com/track/6oDjm30FUtB8GcckQEh3Tr?si=1s6UXE3qQr23q1Cs80ZR3A" target="_blank" class="front image-banner t-white">
+				<img src="https://i.scdn.co/image/b36667408f857642df1af7b2279eec5aadf51d0c" alt="">
+				<div class="text">
+					<div class="b">Breakfast In Bed</div>
+					<div>Dntel</div>
+				</div>
+			</a>
+			<a href="https://open.spotify.com/track/0OvhFCkLYdLSypCNHITORc?si=8J_B3MIgTQKUYhJCUOUFuQ" target="_blank" class="bottom image-banner">
+				<div class="text">
+					<div class="b">Harrison Ford</div>
+					<div>Darlingside</div>
+				</div>
+				<img src="https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314" alt="">
+			</a>
+			<a href="https://open.spotify.com/track/7FSqGltIongF1SGwvVXlzm?si=tdf5H1r8RJKhYcc5YI6-Mw" target="_blank" class="back image-banner t-white">
+				<img src="https://i.scdn.co/image/c8136476534c35d60569b0be9f01b4587640073b" alt="">
+				<div class="text">
+					<div class="b">Monster</div>
+					<div>Magic Bronson</div>
+				</div>
+			</a>
+			<a href="https://open.spotify.com/track/4ebsjAw316emhy51exMQdK?si=GFus0NQKR2atvHBpOFnz9Q" target="_blank" class="top image-banner t-white">
+				<div class="text">
+					<div class="b">HEY YOU!</div>
+					<div>Edu</div>
+				</div>
+				<img src="https://i.scdn.co/image/e77befa063c9f18a5710b56db88e9973b131a3da" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="square"></div>
+	<div class="square"></div>
+</div>
+<div class="row">
+	<div class="column">
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+	<div class="wrapper" style="--width:220px; --height:220px; --offset:-4s">
+		<div class="rotate">
+			<a href="https://codepen.io/z-/pen/XPQyMo" target="_blank" class="front backgroundimage" style="background-image:url(https://i.imgur.com/tyb17ct.png); background-color:#323133;"></a>
+			<a href="https://codepen.io/z-/pen/ZMbLNM" target="_blank" class="bottom backgroundimage" style="background-image:url(https://i.imgur.com/i9LrIoq.png); background-color:#4A89DC;"></a>
+			<a href="https://codepen.io/z-/pen/OBPJKK" target="_blank" class="back backgroundimage" style="background-image:url(https://i.imgur.com/Zj5MXDQ.png); background-color:#CCD1D9;"></a>
+			<a href="https://codepen.io/z-/pen/MJKNJZ" target="_blank" class="top backgroundimage" style="background-image:url(https://i.imgur.com/KRdYPi8.png); background-color:#8067B7;"></a>
+		</div>
+	</div>
+	<div class="column">
+		<div class="square"></div>
+		<div class="row">
+			<div class="square small"></div>
+			<div class="square small"></div>
+		</div>
+		<div class="row">
+			<div class="square small"></div>
+			<div class="square small"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="square long"></div>
+	<div class="square"></div>
+	<div class="wrapper" style="--width:100px; --height:100px; --offset:-14s; --duration: 20s;">
+		<div class="rotate">
+			<a href="https://codepen.io/z-" target="_blank" class="front icon t-white" style="font-size:3rem; background:#323133;"><i class="fab fa-codepen"></i></a>
+			<a href="#thirdbottom" class="bottom icon t-white" style="font-size:3rem; background:#7289da;"><i class="fab fa-discord"></i></a>
+			<a href="#thirdback" class="back icon t-white" style="font-size:3rem; background:#ff0000;"><i class="fab fa-youtube"></i></a>
+			<a href="https://twitter.com/Osorpenke" target="_blank" class="top icon t-white" style="font-size:3rem; background:#1da1f2;"><i class="fab fa-twitter"></i></a>
+		</div>
+	</div>
+</div>
+
+  <script src="https://codepen.io/z-/pen/jvReOb.js"></script><link href="https://codepen.io/z-/pen/a8e37caf2a04602ea5815e5acedab458.css" rel="stylesheet"><div style="position:fixed;bottom:-5rem;right:-5rem;" id="user-button"><div class="u-icons" style="position:absolute;z-index:950;top:50%;left:50%;width:0;height:0%;opacity:0;"><a id="socialbutton-twitter" href="https://twitter.com/Osorpenke" target="_blank"><div class="u-card fab fa-twitter"></div></a><a href="https://codepen.io/z-" target="_blank"><div class="u-card fab fa-codepen"></div></a><a class="u-random" href="https://codepen.io/z-/details/pJjOGW" target="_blank" style="background:white"><div class="u-card fas fa-dice-five"></div></a></div><div class="u-card u-main" style="position:relative;z-index:1000;width:4rem;height:4rem;display:grid;place-items:center;background:var(--user-button-background)"><a href="https://codepen.io/z-" target="_blank"><img src="https://i.koya.io/rFml8y.webp" style="border-radius:100%; width:64px; height:64px;"></a></div></div>
+
+
+
+
+
+
+
+</body></html>
+
+</html>

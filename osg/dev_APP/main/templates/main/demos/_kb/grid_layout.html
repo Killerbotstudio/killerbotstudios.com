@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<head>
+    <title>Draw the Grid Lines on canvas In HTML5</title>
+    <!– Written by Hirendra sisodiya for
+    the authorcode.com–>
+
+
+
+
+</head>
+<body onload="displayGrid()">
+    <canvas id="myCanvas" width="600px" height="330px">
+    </canvas>
+    <br />
+    Choose color:
+    <select id="ddlcolor" onchange="changeColor()">
+        <option value="#f2f2f2">#f2f2f2</option>
+        <option value="#000">#000 </option>
+    </select>
+    Thickness of the lines:
+    <select id="ddlSize" onchange="changeSize()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    Grid Lines space:
+    <select id="ddlSpace" onchange="changeGridSpace()">
+        <option value="15">15</option>
+        <option value="10">10</option>
+        <option value="5">5</option>
+    </select>
+</body>
+</html>
+
+
+<script>
+    var gridOptions = {
+        color: '#f2f2f2',
+        GridSize: 15,
+        LinesSize: 1
+    };
+    var ctx, canvas;
+    function displayGrid() {
+        var i, Height, Width, GridSize;
+        canvas = document.getElementById("myCanvas");
+        if (canvas.getContext) {
+            ctx = canvas.getContext("2d");
+            var Height = canvas.height;
+            var Width = canvas.width;
+            ctx.strokeStyle = gridOptions.color;
+            ctx.lineWidth = parseInt(gridOptions.LinesSize);
+            GridSize = 0;
+            GridSize = parseInt(gridOptions.GridSize);
+            for (i = 0; i < Height; i += GridSize) {
+                ctx.moveTo(0, i);
+                ctx.lineTo(Width, i);
+                ctx.stroke();
+            }
+            for (i = 0; i < Width; i += GridSize) {
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, Height);
+                ctx.stroke();
+            }
+        }
+    }
+    function changeColor() {
+        var e = document.getElementById("ddlcolor");
+        var _color = e.options[e.selectedIndex].value;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        gridOptions.color = _color;
+        ctx.strokeStyle = _color;
+        ctx.stroke();
+    }
+    function changeSize() {
+        var e = document.getElementById("ddlSize");
+        var _size = e.options[e.selectedIndex].value;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        gridOptions.LinesSize = _size;
+        ctx.lineWidth = _size;
+        ctx.stroke();
+    }
+    function changeGridSpace() {
+        var e = document.getElementById("ddlSpace");
+        var _gridsize = e.options[e.selectedIndex].value;
+        canvas.width = canvas.width;
+        gridOptions.GridSize = _gridsize;
+        displayImage();
+    }
+</script>

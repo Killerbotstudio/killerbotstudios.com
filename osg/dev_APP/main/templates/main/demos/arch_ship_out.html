@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html>
+<title>iSURVEYOR : home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<head>
+    <link rel="stylesheet" href="osg_light.css" type="text/css">
+    <link rel="stylesheet" href="osg_ship_3D.css" tyle="text/css">
+    <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="tickerwrapper.css"> -->
+    <!-- <link rel="stylesheet" href="loader.css"> -->
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='./_arc/uimaster.js'></script>
+    <script src='./_arc/arcmaster.js'></script>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+
+</head>
+
+<body class="i-osg-light" onload="_init_Shipyard()">
+
+
+    <!-- Top container -->
+
+    <div id="head_band" class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
+        <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+      <i class="fa fa-bars w3-hide-large"></i>
+      <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
+    </button>
+        <!-- icon -->
+        <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
+        height: inherit;
+        max-width:5%;
+        overflow: hidden;
+        display:inline;
+        padding-top:5px;
+        ">
+        </img>
+        <!-- ICON WARNI -->
+        <div class="w3-bar-item w3-hide-mobile w3-right">
+            <div class="i-warning" style="font-size:50%;
+            display:inline;
+            ">
+                <blink3>
+                    <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest"></i>
+                    <blink><b>!</b></blink>
+                </blink3>
+            </div>
+        </div>
+
+        <!-- BELT -->
+        <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center" style="font-size:20%; z-index:-4 ">将
+        </div>
+        <!-- BANNER CALENDAR -->
+        <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+            <div class="marquee w3-center i-text-h1">
+                <div class="marquee__content">
+                    <ul class="list-inline" style="text-align: right;">
+                        <li> . . surveys calendar info: </li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <!-- Sidebar/menu -->
+
+
+
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div style="margin-top:50px;">
+        <!-- TOP BAR -->
+        <div class="w3-center w3-clear">
+            <div class="w3-bar ">
+
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <i class="fa fa-level-up w3-large"></i>
+                        </div>
+                        <b>BACK</b>
+                    </div>
+                </div>
+
+
+                <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                    <div class="w3-container ">
+                        <div class="w3-center">
+                            <i class="fa fa-file w3-large"></i>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+
+                <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                    <div class="w3-container i-green2">
+                        <div class="w3-center">
+                            <i class="fa fa-level-down w3-large">
+              </i>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>EXPLORE</b>
+                    </div>
+                </div>
+
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><i class="fa fa-cubes w3-large"></i></div>
+                        <div class="w3-clear"></div>
+                        <b>ITEMS</b>
+                    </div>
+                </div>
+
+
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><img src='./images/objects/drone-a.svg' style="max-width:35px"></img>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>DRONE</b>
+                    </div>
+                </div>
+
+
+
+            </div>
+            SCHEME DISPLAY
+            <div class="w3-bar">
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><img src='./images/arc/-arc-logo-b.png' style="max-width:35px"></img>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>ARC</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><img src='./images/arc/-arc-logo-b.png' style="max-width:35px"></img>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>ARC</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><img src='./images/arc/-arc-logo-b.png' style="max-width:35px"></img>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>modify scheme</b>
+                    </div>
+                </div>
+            </div>
+
+            <i-display id="display_overflow">
+
+                <i-container style="z-index:100 ;height:50px;">
+                    <i-plane>
+                        <i-aft class="i-aft"></i-aft>
+                        <i-hull>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-bridge></i-bridge>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-frame class="grid">
+                                <i-frame></i-frame>
+                                <i-frame></i-frame>
+                                <i-frame></i-frame>
+                                <i-frame></i-frame>
+                                <i-frame></i-frame>
+                            </i-frame>
+                        </i-hull>
+                        <i-for></i-for>
+                    </i-plane>
+                </i-container>
+            </i-display>
+
+        </div>
+
+        <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+        <input type="text" id="textInput" value="0"> DISPLAY DISCO stu
+        <i-display id="display_overflow">
+            SIDE VIEW
+            <i-container style="z-index:0 ">
+                <i-plane class="_DECK_upper">
+                    <i-aft> AFT</i-aft>
+                    <i-hull>
+                        <i-frame>FRAME</i-frame>
+                        <i-frame>FRAME</i-frame>
+                        <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                        <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                        <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                </i-plane>
+                <i-plane class="_DECK_lower">
+                    <i-aft> AFT</i-aft>
+                    <i-hull>
+                        <i-frame>FRAME</i-frame>
+                        <i-frame>FRAME</i-frame>
+                        <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                        <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                        <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                </i-plane>
+            </i-container>
+
+            TOP VIEW
+            <i-container style="z-index:100 ;height:150px;">
+                <i-plane>
+                    <i-aft> this is the first aft</i-aft>
+                    <i-hull>
+                        <i-frame>FRAME</i-frame>
+                        <i-frame>FRAME</i-frame>
+                        <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                        <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                        <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+
+        </i-display>
+
+
+        <!-- <input type="range" value=50/> -->
+
+        <hr> i-DISPLAY for you
+
+        <!-- <i-item>++++++ +++++ +++++++++</i-item> -->
+        <i-display id="overall_view" class="display_overflow" onload="CopyDiv()">
+
+
+            <i-container style="z-index:100 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <i-aft class="i-aft"> this is the first aft</i-aft>
+                    <i-hull>
+                        <i-frame>FRAME</i-frame>
+                        <i-frame>FRAME</i-frame>
+                        <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                        <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                        <!-- <i-frame>THIS IS A  LONGUER FRAME </i-frame> -->
+                        <!-- <i-frame>END OF THE LONG FRAME, YOU SHOULD BE ABLE TO READ ALL THIS TEXT </i-frame> -->
+                        <i-frame class="grid">
+                            <i-block>BLOCK A BLOCK A BLOCK A BLOCK A </i-block>
+                            <i-block>BLOCK B</i-block>
+                            <i-block>BLOCK C</i-block>
+                            <i-block>BLOCK D</i-block>
+                            <i-block>BLOCK D</i-block>
+                            <i-block>BLOCK D</i-block>
+                            <i-block>BLOCK A</i-block>
+                            <i-block>BLOCK B</i-block>
+                            <i-block>BLOCK C</i-block>
+                            <i-block>BLOCK D</i-block>
+                            <i-block>BLOCK D</i-block>
+                            <i-block>BLOCK D</i-block>
+
+
+                        </i-frame>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+            <i-container style="z-index:100 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <!-- <i-aft> this is the first aft</i-aft> -->
+                    <i-hull>
+                        <i-block>BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK </i-block>
+                        <i-block>BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK </i-block>
+                        <i-block>BLOCKBLOCKBLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK </i-block>
+                        <i-block>BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK </i-block>
+                        <i-block>BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK BLOCK </i-block>
+
+                    </i-hull>
+                    <!-- <i-for>FOR</i-for> -->
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+            <i-container style="z-index:100 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <!-- <i-aft> this is the first aft</i-aft> -->
+                    <i-hull>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                    </i-hull>
+                    <!-- <i-for>FOR</i-for> -->
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+            <i-container style="z-index:100 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <!-- <i-aft> this is the first aft</i-aft> -->
+                    <i-hull>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                    </i-hull>
+                    <!-- <i-for>FOR</i-for> -->
+                    <!-- </ i -plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+
+        </i-display>DISPLAY DISCO
+
+
+        <button onclick="CopyDiv()">Copy</button>
+        <i-display id="side_view">New Display</i-display>
+
+
+
+        <hr>
+        <hr>
+        <hr>
+        <hr> !!NEW SCHEME
+        <i-display>
+            <i-container style="z-index:0 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <i-aft> this is the first aft</i-aft>
+                    <i-hull>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+            <i-container style="z-index:100 ;height:300px;">
+                <i-plane>
+                    <!-- <i-plane> -->
+                    <i-aft> this is the first aft</i-aft>
+                    <i-hull>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                        <p>another content in this space</p>
+                    </i-hull>
+                    <i-for>FOR</i-for>
+                    <!-- </i-plane> -->
+                </i-plane>
+                <!-- this is a container -->
+            </i-container>
+
+        </i-display>
+        <hr>
+
+        <i-plane>this is a plne</i-plane>
+
+        <i-sec>this is a sec</i-sec>
+
+        <i-block>this is a block</i-block>
+        <p>CONTAINED</p>
+        <i-container id="side">
+
+            <i-sec>
+
+                <i-aft>AFT</i-aft>
+                <i-body>
+                    <!-- <i-aft >AFT</i-aft> -->
+                    <i-block></i-block>
+                    <i-block class="_bridge"></i-block>
+                    <i-block class="_hatch"></i-block>
+                    <i-block></i-block>
+                    <i-block class="_hatch">
+
+                    </i-block>
+                    <i-block></i-block>
+                    <i-block class="_hatch"></i-block>
+                    <i-block></i-block>
+                </i-body>
+                <i-for>FOR</i-for>
+
+            </i-sec>
+        </i-container>
+        <div style='display:none'>
+            <i-sec>
+
+                <i-aft>AFT</i-aft>
+                <i-body>
+                    <!-- <i-aft >AFT</i-aft> -->
+                    <i-block></i-block>
+                    <i-block class="_bridge"></i-block>
+                    <i-block class="_hatch"></i-block>
+                    <i-block></i-block>
+                    <i-block class="_hatch">
+
+                    </i-block>
+                    <i-block></i-block>
+                    <i-block class="_hatch"></i-block>
+                    <i-block></i-block>
+                </i-body>
+                <i-for>FOR</i-for>
+
+            </i-sec>
+        </div>
+
+        <div class="w3-container w3-center">
+
+
+            <div></div>
+            <p> wgat > ! </p>
+            <i-bridge>A</i-bridge>
+            <!-- <i-for></i-for> -->
+            <i-bridge>A</i-bridge>
+            <i-bridge>A</i-bridge>
+
+
+            <p>OTHER SCHEME</p>
+            <!-- <i-aft>AFT</i-aft>CONTENT OUT AND FREE<i-for>FOR</i-for> -->
+
+            <i-container id="top" style="color:white">
+                <!-- <i-aft>AFT</i-aft>CONTENT OUT PLANE BUT IN CONTAINER<i-for>FOR</i-for> -->
+
+                <i-plane>
+                    <!-- <i-aft>AFT</i-aft>ALL CONTENT OUT SEC BUT INSIDE PLANE<i-for>FOR</i-for> -->
+
+
+                    <i-sec>
+                        <!-- <i-aft>AFT</i-aft>ALL CONTENT IN SEC AND PLANE<i-for>FOR</i-for> -->
+
+
+                        <!-- <i-block></i-block> -->
+
+
+                        <!-- <i-deck> -->
+                        <!-- <i-block>pre bridge</i-block> -->
+                        <!-- <i-block></i-block> -->
+                        <!-- aft deck -->
+
+                        <!-- </i-deck>
+          <i-bridge>BRIDGE</i-bridge>
+          <i-deck>
+            <i-block></i-block>
+            <i-block></i-block>
+            <i-block></i-block>
+            <i-block></i-block>
+            <i-block></i-block> -->
+
+                        <!-- for deck -->
+
+                        <!-- </i-deck> -->
+
+
+                    </i-sec>
+
+
+
+
+                </i-plane>
+
+                <hr>
+
+                <hr>
+                <i-sec>
+
+                    <i-aft>AFT</i-aft>
+                    <i-body>ASdDdddddddddddddddd
+                        <!-- <i-aft >AFT</i-aft> -->
+                        <i-block></i-block>
+                        <i-block class="_bridge"></i-block>
+                        <i-block class="_hatch"></i-block>
+                        <i-block></i-block>
+                        <i-block class="_hatch">
+
+                        </i-block>
+                        <i-block></i-block>
+                        <i-block class="_hatch"></i-block>
+                        <i-block></i-block>
+                    </i-body>
+                    <i-for>FOR</i-for>
+
+                </i-sec>
+                <!-- </i-plane> -->
+            </i-container>
+            OTHER SCHEME
+            <i-container id="top" style="color:white">
+                <i-plane>
+                    <i-sec>
+                        <i-aft>AFT</i-aft>
+                        <i-body>
+                            <!-- <i-aft >AFT</i-aft> -->
+                            <i-block></i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch">
+
+                            </i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>FOR</i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+
+
+            SCHEME
+            <i-container id="-scheme" style="color:white">
+                <i-plane id="TOP">
+                    <i-sec class "LOWER_DECK" id="TOP">
+                        <i-aft>AFT</i-aft>
+                        <i-body>
+                            <i-block></i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>FOR</i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+
+            <i-sec>
+                <i-block>SIDEVIEW</i-block>
+            </i-sec>
+            <i-container id="side_rect" style="color:white">
+
+                <i-plane class="upper_DECK">
+                    <i-sec>
+                        <i-aft></i-aft>
+                        <i-body>
+                            <i-block></i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for></i-for>
+                    </i-sec>
+                </i-plane>
+                <i-plane class="lower_DECK">
+                    <i-sec>
+                        <i-aft></i-aft>
+                        <i-body>
+                            <i-block></i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for></i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+
+
+            ARC+++
+            <!-- TOP VIEW -->
+            <i-container id="top_rect" style="color:white">
+                <i-plane class="top__view">
+                    <i-sec class="DECK">
+                        <i-aft>AFT</i-aft>
+                        <i-body>
+                            <i-block>DECK (top)</i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>FOR</i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+            +++ARC
+            <!-- SIDE VIEW -->
+            <i-container id="side" style="color:white">
+                <i-sec class="upper_DECK">
+                    <i-aft></i-aft>
+                    <i-body>
+                        <i-block></i-block>
+                        <i-block class="_bridge"></i-block>
+                        <i-block class="_hatch"></i-block>
+                        <i-block></i-block>
+                        <i-block class="_hatch"></i-block>
+                        <i-block></i-block>
+                        <i-block class="_hatch"></i-block>
+                        <i-block></i-block>
+                    </i-body>
+                    <i-for></i-for>
+                    <!-- <i-sec >
+
+    </i-sec> -->
+                </i-sec>
+                <!-- HULL LOWER DECK -->
+                <i-plane class="lower_DECK">
+                    <i-sec>
+                        <i-aft>RUDDER</i-aft>
+                        <i-body>
+                            <i-block>HULL</i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for></i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+
+            <hr> SIDE
+            <i-container id="side" style="color:white">
+                <i-plane id="TOP">
+                    <i-sec class="DECK" id="TOP">
+                        <i-aft>AFT</i-aft>
+                        <i-body>
+                            <i-block>DECK (top)</i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>FOR</i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+            <hr> SCHEME
+            <i-container id="-scheme" style="color:white">
+                <i-plane id="TOP">
+                    <i-sec class "LOWER_DECK" id="TOP">
+                        <i-aft>aft</i-aft>
+                        <i-body>
+
+                            <i-block></i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>for</i-for>
+                    </i-sec>
+                </i-plane>
+            </i-container>
+            <hr> GOOD
+            <i-container id="side" style="color:white">
+                <i-plane>
+                    <i-sec class="lower_DECK">
+                        <i-aft>RUDDER</i-aft>
+                        <i-body>
+                            <i-block>HULL</i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for class="lower_DECK"></i-for>
+                    </i-sec>
+                </i-plane>
+
+            </i-container>
+
+            <hr>
+            <i-container id="side" style="color:white">
+                <i-plane>
+                    <i-sec class="lower_DECK2">
+                        <i-aft>RUDDER</i-aft>
+                        <i-body>
+                            <i-block>HULL</i-block>
+                            <i-block class="_bridge"></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                            <i-block class="_hatch"></i-block>
+                            <i-block></i-block>
+                        </i-body>
+                        <i-for>AFT</i-for>
+                    </i-sec>
+                </i-plane>
+
+            </i-container>
+
+            END OF PLANE AND CONTAINER
+
+            <hr>
+            <hr> _________
+            <hr>
+
+            <div id="cube">3D VIEW OF HOLD
+                <div class="scene" style="box-shadow: red;">
+                    <div class="box">
+                        <!-- PORT -->
+                        <div id="port_container" class="box__face box__face--front w3-container" style="line-height:100%;">
+
+                            <!--
+            <div class= "face_lad" style="z-index:-1; background-color:red; position:absolute;">
+              <div class= "face_lad" style="background-color:yellow">
+                <div class= "face_lad" style="background-color:orange">
+                  <div class= "face_lad" style="color:blue">===</div>
+                </div>
+              </div>
+
+            </div> -->
+
+                            <div class="w3-container" style="z-index:-5; position:absolute;
+            top:10%;
+            bottom:10%;
+
+            /* width: 100%; */
+            /* height: 90%; */
+
+
+            transform: rotate(0deg) translateZ(110px);
+            ">
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+
+
+
+
+
+                            </div>
+
+
+
+
+
+                            <head class="w3-panel w3-header" style="max-height:33%; opacity:20%;">
+                                <div class="w3-row i-blur w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-panel w3-btn">
+
+                                    PORT
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+
+                        </div>
+
+                        <!-- STAR -->
+                        <div id="start_container" class="box__face box__face--back w3-container w3-animate-opacity" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    STAR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                        <!-- FOR -->
+                        <div id="for_container" class="box__face box__face--right w3-container w3-animate-opacity" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn w3-text-black">
+                                    FOR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                        <!-- AFT -->
+                        <div id="aft_container" class="box__face box__face--left w3-text-black w3-animate-opacity">AFT
+
+                            <div class="face_lad"></div>
+                            <div id="aft_container2" class=" box__face--left3 w3-animate-bottom" style="position:absolute; display:none">
+
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- AFT 2 LADDER-->
+
+                        <!-- AFT 3 PIPING-->
+                        <div id="aft_piping" class="box__face--left2 w3-animate-top" style="position:absolute; display:block;">
+                            <p style="
+          float:left;
+          width: 15%;
+          height: 100%;
+          margin-left: 100px;
+          line-height: 100%;
+          "></p>
+                            <div class="face_col">1 st</div>
+                            <div class="face_col">1 st</div>
+
+                            <p style="
+            float:left;
+            width: 10%;
+            height: 100%;
+            margin-left: 100px;
+            line-height: 100%;
+            "></p>
+                            <div class="face_lad"></div>
+
+                            <div class="face_col">2 nd</div>
+                        </div>
+
+
+
+
+
+
+                        <!-- TOP -->
+                        <div id="top_container" class="box__face box__face--top  w3-container" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    TOP
+                                    <div style="position:fixed; z-index:5;">aa
+                                        <h1>A</h1>
+                                    </div>
+                                    <div style="position:relative; z-index:5;">bb
+                                        <h1>B</h1>
+                                    </div>
+                                    <div style="position:absolute; z-index:5;">cc
+                                        <h1>D</h1>
+                                    </div>
+                                    <div style="position:sticky; z-index:5;">dd
+                                        <h1>C</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+
+
+                        </div>
+
+                        <!-- FLOOR -->
+                        <div id="floor_container" class="box__face box__face--bottom  w3-container" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    FLOOR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>AAA
+                <p class="radio-group">
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="front" /> PORT
+          </label>
+
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="back" /> STAR
+          </label>
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="right" /> FOR
+          </label>
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="left" checked /> AFT
+          </label>
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="top" /> TOP
+          </label>
+                    <label>
+            <input type="radio" name="rotate-cube-side" value="bottom" /> FLOOR
+          </label>
+                </p>
+
+
+
+
+            </div>
+
+
+
+
+
+            <div class="w3-animate-bottom w3-bar" style="display:none">
+                <!-- Header -->
+                <header id="menu_panel" class="w3-container w3-display-container w3-black" style="padding-top:22px;">
+
+                    <!-- Side Navigation -->
+
+
+
+
+                    <!-- Overlay effect when opening the side navigation on small screens -->
+                    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+                    <!-- Page content -->
+                    <div class="w3-main" style="margin-left:320px;">
+                        <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+                        <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('mail_write').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+                        <div id="Borge" class="w3-container person">
+                            <br>
+                            <img class="w3-round  w3-animate-top" src="images/Gallery/DJI_0807.jpg" style="width:20%;">
+                            <h5 class="w3-opacity">Subject: Remember Me</h5>
+                            <h4><i class="fa fa-clock-o"></i> From Borge Refsnes, Sep 27, 2015.</h4>
+                            <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+                            <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+                            <hr>
+                            <p>Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Best Regards, <br>Borge Refsnes</p>
+                        </div>
+
+                        <div id="Jane" class="w3-container person">
+                            <br>
+                            <img class="w3-round w3-animate-top" src="/w3images/avatar5.png" style="width:20%;">
+                            <h5 class="w3-opacity">Subject: None</h5>
+                            <h4><i class="fa fa-clock-o"></i> From Jane Doe, Sep 25, 2015.</h4>
+                            <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+                            <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Forever yours,<br>Jane</p>
+                        </div>
+
+                        <div id="John" class="w3-container person">
+                            <br>
+                            <img class="w3-round w3-animate-top" src="/w3images/avatar2.png" style="width:20%;">
+                            <h5 class="w3-opacity">Subject: None</h5>
+                            <h4><i class="fa fa-clock-o"></i> From John Doe, Sep 23, 2015.</h4>
+                            <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+                            <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+                            <hr>
+                            <p>Welcome.</p>
+                            <p>That's it!</p>
+                        </div>
+
+                    </div>
+                </header>
+            </div>
+            <!-- END OF MAIL -->
+            <!-- SEARCH PANEL -->
+            <div id="site_tree" class="w3-main">
+                <div class="w3-container w3-dark-grey w3-padding-32">
+                    <div class="w3-row">
+                        <div class="w3-container w3-third">
+                            <h5 class="w3-bottombar w3-border-green">Mailing</h5>
+                            <p>Inbox</p>
+                            <p>Out</p>
+                            <p>Temp</p>
+                        </div>
+                        <div class="w3-container w3-third">
+                            <h5 class="w3-bottombar w3-border-red">Log</h5>
+                            <p>Case Profile</p>
+                            <p>Report</p>
+                            <p>Submission</p>
+                        </div>
+                        <div class="w3-container w3-third">
+                            <h5 class="w3-bottombar w3-border-orange">Apps</h5>
+                            <p>Scan</p>
+                            <p>Drone</p>
+                            <p>Trim</p>
+                            <p>Volumes</p>
+                            <p>Lashing</p>
+                            <p>Math</p>
+                            <p>DOJO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-bar w3-center w3-red i-text-h3" style=" line-height:0%; font-size:50%">
+        <!-- <h4>FOOTER</h4> -->
+        <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
+    </footer>
+
+    <!-- End page content -->
+    </div>
+
+
+</body>
+
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="mail_write" class="w3-modal" style="z-index:4">
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-padding w3-red">
+            <span onclick="document.getElementById('mail_write').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+            <h2>Send Mail</h2>
+        </div>
+        <div class="w3-panel">
+            <label>To</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>From</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>Subject</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
+            <div class="w3-section">
+                <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+                <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

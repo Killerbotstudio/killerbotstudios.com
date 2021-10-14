@@ -1,0 +1,315 @@
+// MIXINS
+//Dummy Variable
+$x = false;
+// The top, left, right, and bottom are optional
+setup(display, position, margin, top = null, right = null, bottom = null, left = null)
+    display display
+    position position
+    margin margin
+    top top
+    left left
+    right right
+    bottom bottom
+
+//Mixin for the loop that assigns the animations to the individual squares
+cubeThingy(thing) {animation: thing 3.5s cubic-bezier(0.75, 0, 0.2, 1) infinite}
+
+// GENERAL CLASSES AND SETUP STUFF
+* {box-sizing: border-box; transition: 0.35s ease;}
+
+// class to perfectly center absolutely positioned elements
+.abs-center
+    setup($x, absolute, $x, 50%, $x, $x, 50%)
+    transform translate(-50%, -50%)
+    text-align center
+    width 88%
+
+// --- PAGE STYLINGS ---
+body {background-color: #262626;}
+$size = 60; // *** Controls the size of the cubes ***
+@media screen and (max-width:600px) {.container{transform: translate(-50%,-50%) scale(0.55)}}
+
+.container
+    width ($size)px
+    height ($size)px
+    perspective 6000px
+
+.cube
+    position absolute
+    height 100%
+    width 100%
+    transform-style preserve-3d
+    transform: rotateX(-30deg) rotateY(45deg)
+    &.cube1  {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)  translateZ(-($size - 1)px) }
+    &.cube2  {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(($size - 1)px)  translateZ(-($size - 1)px) }
+    &.cube3  {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)  translateZ(0px)            }
+    &.cube4  {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(($size - 1)px)  translateZ(-($size - 1)px) }
+    &.cube5  {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(($size - 1)px)  translateZ(0px)            }
+    &.cube6  {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)  translateZ(($size - 1)px)  }
+    &.cube7  {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(($size - 1)px)  translateZ(0px)            }
+    &.cube8  {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(($size - 1)px)  translateZ(($size - 1)px)  }
+    &.cube9  {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(($size - 1)px)  translateZ(($size - 1)px)  }
+    &.cube10 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px)            translateZ(-($size - 1)px) }
+    &.cube11 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(0px)            translateZ(-($size - 1)px) }
+    &.cube12 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px)            translateZ(0px)            }
+    &.cube13 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(0px)            translateZ(-($size - 1)px) }
+    &.cube14 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(0px)            translateZ(0px)            }
+    &.cube15 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px)            translateZ(($size - 1)px)  }
+    &.cube16 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(0px)            translateZ(0px)            }
+    &.cube17 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(0px)            translateZ(($size - 1)px)  }
+    &.cube18 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(0px)            translateZ(($size - 1)px)  }
+    &.cube19 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px) translateZ(-($size - 1)px) }
+    &.cube20 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(-($size - 1)px) translateZ(-($size - 1)px) }
+    &.cube21 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px) translateZ(0px)            }
+    &.cube22 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(-($size - 1)px) translateZ(-($size - 1)px) }
+    &.cube23 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(-($size - 1)px) translateZ(0px)            }
+    &.cube24 {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px) translateZ(($size - 1)px)  }
+    &.cube25 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(-($size - 1)px) translateZ(0px)            }
+    &.cube26 {transform: rotateX(-30deg) rotateY(45deg) translateX(0px)            translateY(-($size - 1)px) translateZ(($size - 1)px)  }
+    &.cube27 {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px) translateY(-($size - 1)px) translateZ(($size - 1)px)  }
+
+// Loop assigning the animations
+for num in (1..27)
+    .cube:nth-child({num})
+        cubeThingy(cubeAnimation+num)
+
+.cube div     { position: absolute; width: 100%; height: 100%; }
+.cube .front  { transform: rotateY(   0deg ) translateZ(($size/2)px); background-color: #e7Ac20; }
+.cube .left   { transform: rotateY( -90deg ) translateZ(($size/2)px); background-color: #d53a33; }
+.cube .top    { transform: rotateX(  90deg ) translateZ(($size/2)px); background-color: #1d9099; }
+
+// --- ANIMATIONS ---
+@keyframes cubeAnimation1 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation2 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation3 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation4 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY((1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation5 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation6 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(($size - 1)px)     translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation7 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY((1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation8 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(($size - 1)px)     translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation9 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY((1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(($size - 1)px)     translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation10 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation11 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation12 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(0px)}
+}
+@keyframes cubeAnimation13 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation15 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(0px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation16 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(0px)}
+}
+@keyframes cubeAnimation17 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(0px) translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation18 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(0px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(0px) translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation19 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation20 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation21 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation22 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-($size - 1)px)     translateZ(-(2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(-(2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(-($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(-($size - 1)px)}
+}
+@keyframes cubeAnimation23 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation24 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX((2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(($size - 1)px)  translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation25 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-($size - 1)px)     translateZ(0px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(0px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(0px)}
+}
+@keyframes cubeAnimation26 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(0px) translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+}
+@keyframes cubeAnimation27 {
+    0%      {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+    16.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    33.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-($size - 1)px)     translateZ((2 * $size)px)}
+    50%     {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ((2 * $size)px)}
+    66.666% {transform: rotateX(-30deg) rotateY(45deg) translateX(-(2 * $size)px)  translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    83.333% {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-(1.675 * $size)px) translateZ(($size - 1)px)}
+    100%    {transform: rotateX(-30deg) rotateY(45deg) translateX(-($size - 1)px)  translateY(-($size - 1)px)     translateZ(($size - 1)px)}
+}

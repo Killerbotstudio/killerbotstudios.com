@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>URL-encoder for SVG</title>
+    <link rel="stylesheet" href="sliders.css">
+
+    <script>
+      $.extend( $.ui.slider.prototype.options, {
+          animate: 300
+      });
+
+      $("#flat-slider")
+          .slider({
+              max: 50,
+              min: 0,
+              range: true,
+              values: [15, 35]
+          })
+          .slider("pips", {
+              first: "pip",
+              last: "pip"
+          });
+
+      $("#flat-slider-vertical-1")
+          .slider({
+              max: 25,
+              min: 0,
+              range: "min",
+              value: 25,
+              orientation: "vertical"
+          });
+
+          $("#flat-slider-vertical-2")
+          .slider({
+              max: 25,
+              min: 0,
+              range: "max",
+              value: 12,
+              orientation: "vertical"
+          });
+
+      $("#flat-slider-vertical-3")
+          .slider({
+              max: 25,
+              min: 0,
+              range: "min",
+              value: 0,
+              orientation: "vertical"
+          });
+
+          $("#flat-slider-vertical-1, #flat-slider-vertical-2, #flat-slider-vertical-3")
+          .slider("pips", {
+              first: "pip",
+              last: "pip"
+          })
+          .slider("float");
+    </script>
+
+</head>
+
+<body>
+
+<div class="stuff">
+
+    <h1>Modern, Cute, Usable Sliders.</h1>
+
+    <main>
+        <div id="flat-slider"></div>
+        <div id="flat-slider-vertical-1"></div>
+        <div id="flat-slider-vertical-2"></div>
+        <div id="flat-slider-vertical-3"></div>
+    </main>
+
+    <p>Check them out and even more at: <a href="https://simeydotme.github.io/jQuery-ui-Slider-Pips/#styling-flat" target="_blank">https://simeydotme.github.io/</a></p>
+
+    <p>Heavily inspired by <a target="_blank" href="https://codepen.io/thebabydino/pen/RNEEZP">Ana Tudor's Codepen</a> where she does some amazing (and way too complicated for me) css tricks to style HTML5 range inputs in a similar style.</p>
+
+</div>
+</body>
+
+
+</html>

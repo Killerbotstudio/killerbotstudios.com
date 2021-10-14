@@ -1,0 +1,171 @@
+/*
+
+CUBE: A "zero-element" CSS-only demo
+
+
+Features:
+
+ * Single element "6 sided" cube with lighting
+ * Revolving text ticker
+ * Post-process esq interlace/interference effect
+
+
+*/
+
+$speed: 5s;            // duration of the animation
+$size: 25vmin;          // size of the cube
+$hs1: -$speed/4;        // precalculate the per-face shading animation offset
+$hs2: -$speed/6;        // precalculate the per-face
+$text-width: 9.15em;
+
+@font-face {
+  font-family: 'Courier';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Courier'), local('Courier') );
+   /* src: local('Courier'), local('Courier'), url(https://fonts.gstatic.com/s/sharetechmono/v6/RQxK-3RA0Lnf3gnnnNrAsVlgUn8GogvcKKzoM9Dh-4E.woff2) format('woff2'); */
+}
+
+html {
+  height: 100%;
+  perspective: 550px;
+  overflow: hidden;
+  background: #000;
+}
+head {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display: block;
+  background: radial-gradient(ellipse farthest-corner, #32444a, #222);
+}
+body {
+  width: $size;
+  height: $size;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -$size/2;
+  transform-origin: 50% 50% $size/2;
+  animation: $speed spinXY linear infinite, $speed shade linear infinite, 5s scale  ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+body:before, body:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+body:before {
+  transform: translateX($size/2) translateZ($size/2) rotateY(90deg);
+  animation: $speed $hs1 shade linear infinite;
+}
+
+body:after {
+  transform: translateY(-$size/2) translateZ($size/2) rotateX(90deg);
+  animation: $speed $hs2 shade linear infinite;
+}
+
+html::before {
+  font: 5vh / 1.5 "Courier";
+  position: absolute;
+  bottom: 10vh;
+  left: 10vh;
+  content: 'bot             An exclusive KBS site               @killerbotstudios  ';
+  color: #fff;
+  overflow: hidden;
+  animation: 3s 2s text-fade infinite alternate backwards, 18s 2s text steps(3) infinite;
+  z-index:1;
+  text-shadow: 0 0 5px #fff;
+  width: $text-width - 1em;
+  white-space: pre;
+  z-index: 2;
+}
+html::after {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left:0;
+  bottom: -3px;
+  right:0;
+  background-image: linear-gradient(
+    rgba(0,0,0,.2) 0px,
+    rgba(0,0,0,0) 1px,
+    rgba(0,0,0,.5) 2px,
+    rgba(0,0,0,.1) 5px
+  );
+  background-size: 100% 3px;
+  animation: .1s interference steps(4) infinite;
+  z-index:1;
+  transform:translateZ($size);
+}
+
+@keyframes interference {
+  to {
+    transform: translateY(-1em) translateZ($size*1.02);
+  }
+}
+@keyframes text {
+  to {
+    text-indent: -$text-width * 3;
+  }
+}
+@keyframes text-fade {
+  0%, 25% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform-origin: 50% 50% -200px;
+  }
+}
+@keyframes spinXY {
+  0% {
+    transform: rotateY(-90deg) rotateX(90deg) scaleZ(-1);
+  }
+  24.999% {
+    transform: rotateY(-180deg) rotateX(180deg) scaleZ(-1);
+  }
+  25% {
+    transform: rotateY(180deg) rotateX(-180deg) scaleX(-1) scaleY(-1) scaleZ(-1);
+  }
+  49.999% {
+    transform: rotateY(90deg) rotateX(-90deg) scaleX(-1) scaleY(-1) scaleZ(-1);
+  }
+  50% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  74.999% {
+    transform: rotateY(-180deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(180deg) rotateX(0deg) scaleX(-1) scaleY(-1);
+  }
+  100% {
+    transform: rotateY(90deg) rotateX(-90deg) scaleX(-1) scaleY(-1);
+  }
+}
+
+@keyframes shade {
+  0%, 50%, 100% {
+    background-color: hsl(220, 30%, 15%);
+    box-shadow: 0 0 8px hsl(220, 30%, 15%);
+  }
+  22%, 28%, 72%, 78% {
+    background-color: hsl(220, 100%, 85%);
+    box-shadow: 0 0 8px hsl(220, 100%, 85%);
+  }
+  25%, 75% {
+    background-color: hsl(220, 100%, 100%);
+    box-shadow: 0 0 8px hsl(220, 100%, 100%);
+  }
+}

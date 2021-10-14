@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+<html>
+<title>ARC : Shipyard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<head>
+    <link rel="stylesheet" href="osg_light.css" type="text/css">
+    <link rel="stylesheet" href="osg_ship_3D.css" tyle="text/css">
+    <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- <link rel="stylesheet" href="tickerwrapper.css"> -->
+    <!-- <link rel="stylesheet" href="loader.css"> -->
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='./_arc/uimaster.js'></script>
+    <script src='./_arc/arcmaster.js'></script>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+
+</head>
+
+<body class="i-osg-light" onload="_init_Shipyard()">
+    <div style=" position:fixed; top:0; right: 0; width: 100%; z-index: 1000; background-color:rgba(0,0,0,0.1); height:100px; display:flex; filter:blur(8px); "></div>
+
+    <!-- Top container -->
+
+    <div id="head_band" class="w3-bar w3-top w3-clear w3-large i-tiny" style="background-color: rgba(0, 0, 0, 0.01);z-index:4; display:inline; ">
+
+        <!-- BELT -->
+        <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center" style="font-size:20%; z-index:4 ">将
+        </div>
+        <!-- BANNER CALENDAR -->
+        <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+            <div class="marquee w3-center i-text-h1">
+                <div class="marquee__content">
+                    <ul class="list-inline" style="text-align: right;">
+                        <li> . . surveys calendar info: </li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+      <i class="fa fa-bars w3-hide-large"></i>
+      <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
+    </button>
+        <!-- icon -->
+        <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
+        height: inherit;
+        max-width:5%;
+        overflow: hidden;
+        display:inline;
+        padding-top:5px;
+        ">
+        </img>
+        <!-- ICON WARNI -->
+        <div class="w3-bar-item w3-hide-mobile w3-right">
+            <div class="i-warning" style="font-size:50%;
+        display:inline;
+        ">
+                <blink3>
+                    <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest"></i>
+                    <blink><b>!</b></blink>
+                </blink3>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
+
+    </div>
+
+
+
+
+    <!-- !PAGE CONTENT! -->
+    <div style="margin-top:150px;margin-bottom:150px;">
+
+        <div class="w3-container w3-red" style="display:sticky;">
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container ">
+                    <div class="w3-center"><img class="i-hover-invert" src='./images/arc/-arc-logo-w.png' style="max-width:25px; filter:invert()"></img>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <b>SCHEME</b>
+                </div>
+            </div>
+
+
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/parts/bridge-side.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>BRIDGE</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/parts/engine.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>ENGINE</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/parts/crane.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>CRANES</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/arc/lifeboat.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>LIFEBOAT</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/arc/wrench-top.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>WRENCH</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/arc/hold-side-alt.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>HOLDS</b>
+                </div>
+            </div>
+
+            <div class="w3-bar-item w3-btn ">
+                <div class="w3-container">
+                    <div class="w3-center">
+                        <img src='./images/arc/hatch_cover-top.png' style="max-width:25px; filter:invert();"></img>
+                    </div>
+                    <b>HATCH</b>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TOP BAR -->
+        <div class="w3-center w3-clear">
+            <div class="w3-bar ">
+
+
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <i class="fa fa-level-up w3-large"></i>
+                        </div>
+                        <b>BACK</b>
+                    </div>
+                </div>
+
+
+
+
+                <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                    <div class="w3-container i-green2">
+                        <div class="w3-center">
+                            <i class="fa fa-level-down w3-large">
+              </i>
+                        </div>
+                        <div class="w3-clear"></div>
+                        <b>EXPLORE</b>
+                    </div>
+                </div>
+
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container ">
+                        <div class="w3-center"><i class="fa fa-cubes w3-large"></i></div>
+                        <div class="w3-clear"></div>
+                        <b>ITEMS</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">analytics</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">all_inbox</span>
+                        </div>
+                        <b>STACK</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">api</span>
+                        </div>
+                        <b>LOCK</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">all_out</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">architecture</span>
+                        </div>
+                        <b>ARC</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">assessment</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">aspect_ratio</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">explore</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">balance</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">build_circle</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">sports_bar</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">fire_extinguisher</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">escalator</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">support_agent</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">account_tree</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">switch_right</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">switch_left</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">more_vert</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+                <div class="w3-bar-item w3-btn">
+                    <div class="w3-container w3-clear">
+                        <div class="w3-center">
+                            <span class="material-icons">more_horiz</span>
+                        </div>
+                        <b>REPORT</b>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">miscellaneous_services</span>
+                    </div>
+                    <b>REPORT</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">sailing</span>
+                    </div>
+                    <b>REPORT</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">route</span>
+                    </div>
+                    <b>REPORT</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">rate_review</span>
+                    </div>
+                    <b>REPORT</b>
+                </div>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">navigation</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">near_me</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">layers</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">attractions</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">360</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">texture</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">filter_center_focus</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">filter_tilt_shift</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">camera_rear</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">keyboard_command_key</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">schema</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">phishing</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">playlist_add_check</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">library_add_check</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">error_outline</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">error</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">warning_amber</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">warning</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">add_alert</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">anchor</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">notification_important</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">perm_device_information</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">perm_scan_wifi</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">info</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">feedback</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">view_in_ar</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">swap_horiz</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">satellite_alt</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">new_label</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">dashboard</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn">
+            <div class="w3-container w3-clear">
+                <div class="w3-center">
+                    <span class="material-icons">assignment</span>
+                </div>
+                <b>REPORT</b>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+    <hr>
+    <div>
+        SCHEME DISPLAY
+        <i-display id="display_overflow">
+            <i-container id="main_box" style="z-index:100 ;height:50px;">
+                <i-plane>
+                    <i-aft class="i-aft"><i class="fa fa-caret-left w3-xlarge"></i></i-aft>
+                    <i-hull>
+                        <i-frame></i-frame>
+                        <i-frame></i-frame>
+                        <i-bridge></i-bridge>
+                        <i-frame></i-frame>
+                        <i-frame></i-frame>
+                        <i-frame></i-frame>
+                        <i-frame class="grid">
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                            <i-frame></i-frame>
+                        </i-frame>
+                    </i-hull>
+                    <i-for><i class="fa fa-caret-right w3-xlarge"></i></i-for>
+                </i-plane>
+            </i-container>
+        </i-display>
+    </div>
+    <hr>
+    <div class="w3-container">
+
+        <div class="w3-bar">
+            <div class="w3-bar-item w3-btn w3-left">
+
+                <i class="fa fa-caret-left w3-xlarge"></i>
+
+                <div class="w3-clear"></div>
+                <b>previous</b>
+
+            </div>
+            <!-- <div class="w3-bar-item w3-btn w3-center">
+                    <i class="fa fa-caret-down w3-xlarge"></i>
+                    <div class="w3-clear"></div>
+                </div> -->
+            <div class="w3-bar-item w3-btn w3-right">
+
+                <i class="fa fa-caret-right w3-xlarge"></i>
+
+                <div class="w3-clear"></div>
+                <b>next</b>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="box-controls w3-bar w3-center">
+        <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'display_overflow');">
+        <input type="range" name="rangeInput" min="0" max="100" onchange="updateBoxHeight(this.value, 'main_box');">
+        <input type="text" id="textInput" value="0">
+        <!-- TOP AND SIDE  -->
+
+
+        <hr style="border-bottom:1px solid salmon">
+
+        <div class="radio-group w3-center">
+            <label><input type="radio" name="rotate-cube-side" value="front" /> PORT</label>
+
+            <label><input type="radio" name="rotate-cube-side" value="back" /> STAR</label>
+            <label><input type="radio" name="rotate-cube-side" value="right" /> FOR</label>
+            <label><input type="radio" name="rotate-cube-side" value="left" checked /> AFT</label>
+            <label><input type="radio" name="rotate-cube-side" value="top" /> TOP</label>
+            <label><input type="radio" name="rotate-cube-side" value="bottom" /> FLOOR</label>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- End page content -->
+    </div>
+
+
+</body>
+THis is the main body
+<div id="vessel_scheme">
+    <i-display id="display_overflow" style="border:2px solid; ">
+        SIDE VIEW
+        <i-container style="z-index:0 ; resize: both; overflow:auto">
+            <i-plane class="_DECK_upper">
+                <i-aft> AFT</i-aft>
+                <i-hull>
+                    <i-frame>FRAME</i-frame>
+                    <i-frame>FRAME</i-frame>
+                    <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                    <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                    <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                </i-hull>
+                <i-for>FOR</i-for>
+            </i-plane>
+            <i-plane class="_DECK_lower">
+                <i-aft> AFT</i-aft>
+                <i-hull>
+                    <i-frame>FRAME</i-frame>
+                    <i-frame>FRAME</i-frame>
+                    <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                    <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                    <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                </i-hull>
+                <i-for>FOR</i-for>
+            </i-plane>
+        </i-container>
+
+        TOP VIEW
+        <i-container style="z-index:100 ;height:150px;">
+            <i-plane>
+                <i-aft> this is the first aft</i-aft>
+                <i-hull>
+                    <i-frame>FRAME</i-frame>
+                    <i-frame>FRAME</i-frame>
+                    <i-bridge>THIS IS THE BRIDGE</i-bridge>
+                    <i-frame>THIS IS ANOTHER FRAME</i-frame>
+                    <i-frame>THIS IS A LONGUER FRAME </i-frame>
+                </i-hull>
+                <i-for>FOR</i-for>
+                <!-- </i-plane> -->
+            </i-plane>
+            <!-- this is a container -->
+        </i-container>
+
+    </i-display>
+    <div class="w3-center w3-orange">
+        <div class="w3-panel ">
+
+
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <i class="fa fa-level-up w3-large"></i>
+                    </div>
+                    <b>BACK</b>
+                </div>
+            </div>
+
+
+
+
+            <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                <div class="w3-container i-green2">
+                    <div class="w3-center">
+                        <i class="fa fa-level-down w3-large">
+        </i>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <b>EXPLORE</b>
+                </div>
+            </div>
+
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container ">
+                    <div class="w3-center"><i class="fa fa-cubes w3-large"></i></div>
+                    <div class="w3-clear"></div>
+                    <b>ITEMS</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">precision_manufacturing</span>
+                    </div>
+                    <b>MODIFY SCHEME</b>
+                </div>
+            </div>
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <span class="material-icons">ios_share</span>
+                    </div>
+                    <b>SAVE</b>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<hr> This is the 3D VIEW
+<div>
+    <iframe src="arc_box.html" name="iframe" width="100%" height="800vw" title="THE BOX">
+
+
+
+  </iframe>
+
+
+</div>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="mail_write" class="w3-modal" style="z-index:4">
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-padding w3-red">
+            <span onclick="document.getElementById('mail_write').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+            <h2>Send Mail</h2>
+        </div>
+        <div class="w3-panel">
+            <label>To</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>From</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>Subject</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
+            <div class="w3-section">
+                <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+                <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

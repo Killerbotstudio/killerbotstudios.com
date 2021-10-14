@@ -5,172 +5,157 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-  <link rel="stylesheet" href="osg_light.css" type="text/css">
-  <link rel="stylesheet" href="osg_layouts.css" type="text/css">
-  <link rel="stylesheet" href="demo.css">
-  <link rel="stylesheet" href="tickerwrapper.css">
-  <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="osg_light.css" type="text/css">
+    <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+    <link rel="stylesheet" href="osg_report.css" type="text/css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="tickerwrapper.css">
+    <link rel="stylesheet" href="loader.css">
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: "Raleway", sans-serif
-    }
-  </style>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
 
 
 </head>
 
 <body class="i-osg-light">
 
-  <!-- Top container -->
+    <!-- Top container -->
 
-  <div id"head_band" class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
-    <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+    <div id "head_band" class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
+        <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
       <i class="fa fa-bars w3-hide-large"></i>
       <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
     </button>
-    <!-- icon -->
-    <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
+        <!-- icon -->
+        <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
         height: inherit;
         max-width:5%;
         overflow: hidden;
         display:inline;
-        white-space:
         padding-top:5px;
         ">
-    </img>
-    <!-- ICON WARNI -->
-    <div class="w3-bar-item w3-hide-mobile w3-right">
-      <div class="i-warning" style="font-size:50%;
+        </img>
+        <!-- ICON WARNI -->
+        <div class="w3-bar-item w3-hide-mobile w3-right">
+            <div class="i-warning" style="font-size:50%;
             display:inline;
             ">
-        <blink3>
-          <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest">
+                <blink3>
+                    <i class="fa fa-exclamation-triangle w3-button i-warning w3-rest">
             <blink><b>!</b>
               <blink>
           </i>
-        </blink3>
-      </div>
-    </div>
-
-    <!-- BELT -->
-    <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center" style="font-size:20%; z-index:-4 ">将
-    </div>
-    <!-- BANNER CALENDAR -->
-    <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
-      <div class="marquee w3-center i-text-h1">
-        <div class="marquee__content">
-          <ul class="list-inline" style="text-align: right;">
-            <li> . . surveys calendar info: </li>
-            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-            <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
-          </ul>
+                </blink3>
+            </div>
         </div>
-      </div>
+
+        <!-- BELT -->
+        <div class="w3-bar w3-red i-text-h1 w3-animate-left w3-center" style="font-size:20%; z-index:-4 ">将
+        </div>
+        <!-- BANNER CALENDAR -->
+        <div class="w3-bar w3-center" style="line-height:50%; min-width:400px; margin-top:0px; font-size:50%; ">
+            <div class="marquee w3-center i-text-h1">
+                <div class="marquee__content">
+                    <ul class="list-inline" style="text-align: right;">
+                        <li> . . surveys calendar info: </li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li style="color:red">¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                        <li>¡ NAME OF CASE @ LOCATION - 05/09 !</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
-
-  <!-- Sidebar/menu -->
-  <nav class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-    <div class="w3-container">
-      <h5>Control Panel</h5>
-      <hr>
     </div>
-    <!-- TITLE -->
-    <div class="w3-container w3-row">
-      <div class="w3-col s4">
-        <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right" style="width:46px">
-      </div>
-      <div class="w3-col s8 w3-bar">
-        <span>Welcome, <strong>Surveyor</strong></span><br>
-      </div>
+
+    <!-- Sidebar/menu -->
+    <nav class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <h5>Control Panel</h5>
+            <hr>
+        </div>
+        <!-- TITLE -->
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>Surveyor</strong></span><br>
+            </div>
 
 
-      <div class="w3-bar">
-        <a href="#" class="w3-bar-item w3-button">
-          <blink><i class="fa fa-warning"></i></blink>
-        </a>
-        <a href="#" class="w3-bar-item w3-button">
-          <i class="fa fa-user"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button">
-          <i class="fa fa-cog"></i>
-        </a>
-      </div>
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button">
+                    <blink><i class="fa fa-warning"></i></blink>
+                </a>
+                <a href="#" class="w3-bar-item w3-button">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="#" class="w3-bar-item w3-button">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
+                <i class="fa fa-remove fa-fw"></i>  Close panel</a>
+
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-envelope fa-fw"></i>  Mail <u class="i-text-h3 w3-right">(52)</u>
+                <blink class="fa fa-circle w3-text-red w3-right">
+                </blinK>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-bars fa-fw" onclick="location.href='mail_demo_1.html';"></i>  Case</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-calendar fa-fw" onclick="location.href='case.html';"></i>  Calendar Board</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-suitcase fa-fw" onclick="location.href='board.html';"></i>  Toolbox</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-coffee fa-fw" onclick="location.href='demo_blog.html';"></i>  Blog</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-ship fa-fw" onclick="location.href='board.html';"></i>  Tracker</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-binoculars fa-fw" onclick="location.href='dojo.html';"></i>  Finder</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-bullseye fa-fw" onclick="location.href='dojo.html';"></i>  DOJO</a><br><br>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
     </div>
-    <hr>
 
-    <div class="w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
-        <i class="fa fa-remove fa-fw"></i>  Close panel</a>
-
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-envelope fa-fw"></i>  Mail <u class="i-text-h3 w3-right">(52)</u>
-        <blink class="fa fa-circle w3-text-red w3-right"></blinK>
-      </a>
-      <a href="#"
-      class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-bars fa-fw"
-        onclick="location.href='mail_demo_1.html';"
-        ></i>  Case</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-calendar fa-fw"
-        onclick="location.href='case.html';"
-        ></i>  Calendar Board</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-suitcase fa-fw"
-        onclick="location.href='board.html';"
-        ></i>  Toolbox</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-coffee fa-fw"
-        onclick="location.href='demo_blog.html';"
-        ></i>  Blog</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-ship fa-fw"
-        onclick="location.href='board.html';"
-        ></i>  Tracker</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-binoculars fa-fw"
-        onclick="location.href='dojo.html';"
-        ></i>  Finder</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding">
-        <i class="fa fa-bullseye fa-fw"
-        onclick="location.href='dojo.html';"
-        ></i>  DOJO</a><br><br>
-    </div>
-  </nav>
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity"
-  onclick="w3_close()" style="cursor:pointer"
-  title="close side menu" id="myOverlay">
-  </div>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:300px;margin-top:50px; ">
-    <!-- TOP BAR -->
-    <div class="w3-animate-bottom w3-bar i-osg-dark">
-      <!--  EXAND BUTTON -->
-      <!-- <div id="case_off" class=" w3-rest w3-right">
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:50px; ">
+        <!-- TOP BAR -->
+        <div class="w3-animate-bottom w3-bar i-osg-dark">
+            <!--  EXAND BUTTON -->
+            <!-- <div id="case_off" class=" w3-rest w3-right">
         <div class"w3-bar-item">
           <i class="fa fa-caret-down w3-button" onclick="toggle_cases_summary(1)" style="
             vertical-align:super;
@@ -182,9 +167,9 @@
         </div>
       </div> -->
 
-      <!-- TITLE -->
-      <div id="current_case_bar" class="w3-rest ">
-        <div class="w3-row w3-twothird w3-left i-title-h2 w3-padding" style="
+            <!-- TITLE -->
+            <div id="current_case_bar" class="w3-rest ">
+                <div class="w3-row w3-twothird w3-left i-title-h2 w3-padding" style="
           text-overflow: ellipsis;
           word-wrap: break-word;
           /* max-height:30px; */
@@ -192,27 +177,27 @@
           /* padding-bottom:10px; */
           padding-top:20px;
           ">
-          IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING
-          <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
-          <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
-        </div>
-      </div>
-      <!--
+                    IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING
+                    <!-- IVY OCEAN - POINTE NOIRE - ASHLEY GLOBAL SHIPPING -->
+                    <!-- HEKLA - CASABLANCA - DIPROINDUCA -->
+                </div>
+            </div>
+            <!--
         <div class="w3-rest">
 
 asdasd
         </div> -->
 
 
-      <div id="case_summay_panel" class="w3-mobile w3-container i-osg-dark">
-        <!-- <div class="w3-container"> -->
-        <!-- INFO LOG -->
-        <div id="info_log" class="w3-twothird w3-left i-text-h3" style="text-align: left;
+            <div id="case_summay_panel" class="w3-mobile w3-container i-osg-dark">
+                <!-- <div class="w3-container"> -->
+                <!-- INFO LOG -->
+                <div id="info_log" class="w3-twothird w3-left i-text-h3" style="text-align: left;
                     font-size:70%;
                     max-width: 70%;
                     ">
-          <b>log:</b>
-          <div class="w3-container" style="
+                    <b>log:</b>
+                    <div class="w3-container" style="
                       font-size:120%;
                       margin-top: 0px;
                       line-height:30%;
@@ -222,16 +207,16 @@ asdasd
                       text-overflow: ellipsis;
                       font-weight: normal;
                     ">
-            <p>* latest comments from the log bookda sdas das das das da saddasdd dasd addas d dasd a</p>
-            <p>* latest comments from the log book</p>
-            <p>* latest comments from the log book</p>
-          </div>
+                        <p>* latest comments from the log bookda sdas das das das da saddasdd dasd addas d dasd a</p>
+                        <p>* latest comments from the log book</p>
+                        <p>* latest comments from the log book</p>
+                    </div>
 
-        </div>
-        <div class="w3-rest">
-          <!-- ETA BANNER -->
-          <div id="ETA_banner" class="w3-bar-item w3-rest i-title-h2">
-            <div class="w3-container" style="
+                </div>
+                <div class="w3-rest">
+                    <!-- ETA BANNER -->
+                    <div id="ETA_banner" class="w3-bar-item w3-rest i-title-h2">
+                        <div class="w3-container" style="
                           /* position:absolute; */
                           bottom:8px;
                           right:5px;
@@ -241,395 +226,712 @@ asdasd
                           overflow: hidden;
                           text-overflow: clip;
                         ">
-              <b class="i-title-h2" style='font-size:70%'>ETASSS:</b>
-              <b style="font-size: 120%;">19:43|29SEP</b>
+                            <b class="i-title-h2" style='font-size:70%'>ETA:</b>
+                            <b style="font-size: 120%;">19:43|29SEP</b>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+
             </div>
-          </div>
         </div>
-        <!-- </div> -->
-
-      </div>
     </div>
-  </div>
-  <!-- CONTENT -->
-  <!-- <div class = "w3-bar">
-        <div
-          class="w3-bar-item w3-half w3-left i-title-h1 w3-xlarge "
-          style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-        <div
-          class="w3-bar-item w3-half w3-left i-title-h2 w3-xlarge "
-          style="text-overflow: clip">
-          CAME HERE 123 came here
-        </div>
-      </div>
- -->
 
-  <!-- BOTTOM BAR -->
-  <div class="w3-container i-osg-dark">
-    <!-- LOG -->
-  </div>
-  <!-- END OF FOOTER -->
-  </div>
-  </div>
-  </div>
 
-  </div>
-
-  <div id="head2" class="w3-main" style="margin-left:300px; display:show;">
-    <div class="w3-bar">
-      <!-- CASE CONTAINER -->
-      <div class="w3-display-container">
-        <div class="w3-padding w3-white w3-display-container">
-          <span onclick="toggle_cases_summary(0)" class="w3-button w3-display-topright">
+    <div id="head2" class="w3-main" style="margin-left:300px; display:show;">
+        <h4>#OSG-E-CEN-21 10-405</h4>
+        <div class="w3-bar">
+            <!-- CASE CONTAINER -->
+            <div class="w3-display-container">
+                <div class="w3-padding w3-white w3-display-container">
+                    <!-- <span onclick="toggle_cases_summary(0)" class="w3-button w3-display-topright">
             <i class="fa fa-remove">
             </i>
-          </span>
+          </span> -->
+                    <div id="active_case_content" class="w3-rest">
+                        <div class=" w3-container " style="line-height:90%">
+                            <div class=" white">
+                                <div id="report-header" class="w3-bar w3-center i-osg-dark">
+                                    <table class="w3-table " style="border-top:1px solid lime">
+                                        <tr class="i-osg-dark" style="font-size: 80%; align-content: flex-end;">
+                                            <td>CASE</td>
+                                            <td>AGENCY</td>
+                                            <td>PORT</td>
+                                            <td style="text-align: right;">ETA</td>
+                                        </tr>
+                                        <tr class="i-text-h3 i-osg" style="vertical-align:super">
+                                            <td>BUNKER SURVEY</td>
+                                            <td>ASHELY GLOBAL SHIPPING</td>
+                                            <td>Malaga, ES</td>
+                                            <td style="text-align: right;">19:00 03/Dec
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <div class="i-osg-dark ">
+                                    <div onclick="myAccFunc('report-itinerary')" class=" w3-bar w3-btn" style="cursor:context-menu">
+                                        <div class="i-title-h2 w3-left">ITENERARY</div>
+                                        <hr>
+                                        <div class="w3-bar w3-center" style="text-align: left;">
+                                            <div class="w3-bar " style="text-align: right;">
+                                                <div>ETA
+                                                    <div class="i-text-h3">12:49 4-OCT</div>
+                                                </div>
+                                            </div>
+                                            <div class="w3-bar" style="text-align: left;">
+                                                <div>PORT:
+                                                    <div class="i-text-h3">Malaga, ES</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="report-itinerary" class="w3-bar w3-center i-osg-dark" style="display: none; z-index: 10;">
+                                        <table class="w3-table " style="border-top:1px solid lime;">
+                                            <tr style="text-align: left;">
+                                                <td>FROM
+                                                    <p class="i-text-h3"> Motril, ES</p>
+                                                </td>
+
+                                                <td style="text-align: right;">TO
+                                                    <p class="i-text-h3"> Gibraltar, UK</p>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <div class="w3-bar w3-center" style="width: 100%;">
+                                            <div class="itinerary-bar">
+                                                <div class="itinerary-indicator">
+                                                    <blink>
+                                                        <i class="fa fa-ship i-warning3 w3-hover-orange">
+                                          </i>
+                                                    </blink>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="w3-table " style="border-bottom:1px solid lime;">
+                                            <tr class="i-text-h3">
+                                                <td>DEPART:
+                                                    <p>12:00 29-Nov</p>
+
+                                                </td>
+                                                <td style="border-left:1px solid white;text-align: left;">DEPART
+                                                    <p>16:00 3-DEC</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="w3-theme w3-bar">
 
 
-          <div id="active_case_content" class="w3-padding-32 w3-rest">
-
-            <div class=" w3-container " style="line-height:20%">
-
-              <div class=" white">
-                <div class="w3-theme">
-                  <p class="w3-right">Bunker Survey</p>
-                  <h3>CASE</h3>
-                </div>
-                <hr>
-
-                <div class="w3-theme">
-                  <p class="w3-right">Ashely Global Shipping</p>
-                  <h3>AGENCY</h3>
-                </div>
-                <hr>
-
-                <div class="w3-theme">
-                  <p class="w3-right">12:49 4-OCT</p>
-                  <h3>ETA</h3>
-                </div>
-                <hr>
-
-                <div class="w3-theme">
-                  <p class="w3-right">Motril, Spain</p>
-                  <h3>PORT</h3>
-                </div>
-                <hr>
-
-                <div class="w3-theme">
-                  <p class="w3-right">SEA SHEPARD</p>
-                  <h3>VESSEL</h3>
-                </div>
-                <hr>
+                                    <div class="w3-bar w3-btn" onclick="myAccFunc('vessel_particulars')">
+                                        <div class="w3-bar-item w3-left">
+                                            <h3>VESSEL</h3>
+                                            PARTICULARS</div>
+                                        <div class="w3-bar-item w3-right">
+                                            <p><i>Name: </i>SUNY HORIZON<i class="fa fa-caret-down">
+                                      </i></p>
+                                        </div>
 
 
-                <div class="w3-theme">
-                  <div class="w3-half">
-                    <h3>CONTACT LIST</h3>
-                    <div class="w3-container ">
-                      <p>
-                      <table class="w3-table w3-striped w3-bordered">
-                        <thead>
-                          <tr class="i-osg-light">
-                            <th>Name</th>
-                            <th>Title</th>
-                            <th>#</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Jill</td>
-                            <td>Captain</td>
-                            <td>50</td>
-                          </tr>
-                          <tr>
-                            <td>Eve</td>
-                            <td>Chief</td>
-                            <td>94</td>
-                          </tr>
-                          <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                          </tr>
-                          <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                          </tr>
-                          <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                          </tr>
-                          <tr>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      </p>
 
-                    </div>
-                  </div>
 
-                  <div class="w3-half">
-                    <h3 class="w3-right">REMARKS</h3>
-                    <div>
-                      <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Sections</button>
-                      <div id="Demo1" class="w3-hide">
-                        <div class="w3-justify w3-container" style="line-height:100%">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</p>
+                                    </div>
+
+                                    <div id="vessel_particulars" class="w3-container" style="display: none; line-height: 80%;">
+                                        <!-- CALENDAR -->
+                                        <div> <i>Type: </i>
+                                            <b class="w3-right">Bulk Carrier
+                                          </b>
+                                        </div>
+                                        <div id="vessel_main" class="w3-third " style="border-top:1px solid red;">
+                                            <table class="w3-table w3-white w3-striped">
+                                                <tr>
+                                                    <td><i>Name: </i></td>
+                                                    <td>SUNY HORIZON</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>IMO Number: </i></td>
+                                                    <td>9597379</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Call Sign: </i></td>
+                                                    <td>VTKQ4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Flag: </i></td>
+                                                    <td>Hong Kong</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><i>Port Of Registry: </i></td>
+                                                    <td>Hong Kong</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Classification:</i></td>
+                                                    <td>RINA</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><i>Place Of Built: </i></td>
+                                                    <td>Xianmen Shipbuilding</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Year of Build: </i></td>
+                                                    <td>2012</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="vessel_metrics" class="w3-third ">
+
+                                            <table class="w3-table w3-white w3-striped w3-right" style="border-top:1px solid red;">
+                                                <tr>
+                                                    <td><i>Hatch Cover Type:</i></td>
+                                                    <td>Folding Type</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Cargo Holds:</i></td>
+                                                    <td>5</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><i>Cargo Gear:</i></td>
+                                                    <td>4 Cranes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>L.O.A: </i></td>
+                                                    <td>189.99m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Breath: </i></td>
+                                                    <td>32.26m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Depth: </i></td>
+                                                    <td>18.00 m</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Gross Tonnage:</i></td>
+                                                    <td>32987</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Net Tonnage:</i></td>
+                                                    <td>19225</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i>Summer Disp:</i></td>
+                                                    <td>67,681 Mt</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="w3-third" style="border:1px solid black; padding-left: 2px; background-image: url('./images/arc/-arc-logo-b.png'); height: max-content;">
+                                            IMAGE OF SHIP
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="report-THE-SURVEY">
+                                    <div class="w3-container w3-white">
+                                        <h4>#OSG-E-CEN-21 10-405</h4>
+                                        <h2 class="i-osg-dark i-title-h1">THE SURVEY</h2>
+                                        <div class="i-text-h3">
+
+                                            <p>Undersigned boarded the vessel on October 7th at 14:00 hrs LT in order to survey and determine general conditions of the vessel’s grabs.</p>
+                                            <p>According to the vessel’s Master and C/O during the loading operations at Batiliman Port, Turkey, the hoisting wire of crane number 4 broke due to rough practice of the stevedores which caused that the grab
+                                                No. 4 to fall down to the shore and some parts of the grabs were allegedly broken.
+                                            </p>
+                                            <hr>
+                                            <p>During the survey, the condition of all grabs was inspected in detail, compared between each other, and also checked if the damages occurred in grab #4 was done because of the mentioned incident at the loading
+                                                port. Photos of all grabs can be seen in the following pages:
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="w3-bar i-title-h1 i-osg-dark">
+                                    <dic class="w3-right w3-xlarge w3-padding">INSPECTIONS</div>
+                                <p class="i-text-h2">here whe can display some info text</p>
+                                <button onclick="myAccFunc('Tab1')" class="w3-padding-16 i-osg w3-button w3-block w3-left-align">INSPECTION</button>
+                                <div id="Tab1" style="line-height:100%">
+                                    <div id="Demo3" class=" w3-container">
+
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-medium" src="images/Gallery/DJI_0807.jpg"></img>
+
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-medium" src="images/Gallery/DJI_0807.jpg"></img>
+
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-medium" src="images/Gallery/DJI_0807.jpg"></img>
+
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-medium" src="images/Gallery/DJI_0807.jpg"></img>
+
+
+                                    </div>
+                                </div>
+                                <button onclick="myAccFunc('Log')" class="w3-padding-16 i-osg-light i-text-h3 w3-button w3-block w3-left-align"> >. Remarks</button>
+                                <div id="Tab4">
+                                    <div class="w3-justify w3-container" style="line-height:100%">
+                                        <p>Chief Officer informed that the hoisting wire jumped from the sheave to the shaft and this caused the wire to break off after. Nevertheless, undersigned observed that the shaft has excessively worn which indicates
+                                            the possibility that wire was running on the shaft and not on the sheave for a long time before the incident happened, and friction caused the breakage of wire and not stevedores mishandling.
+
+                                        </p>
+                                        <hr>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onclick="myAccFunc('Tab2')" class="w3-padding-16 i-osg w3-button w3-block w3-left-align">INSPECTION</button>
+                            <div id="Tab2" class="w3-hide">
+                                <div class="w3-justify w3-container" style="line-height:100%">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button onclick="myAccFunc('Tab3')" class="w3-padding-16 i-osg w3-button w3-block w3-left-align">INSPECTION</button>
+                            <div id="Tab4" class="w3-hide">
+                                <div class="w3-justify w3-container" style="line-height:100%">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                            </div>
+                            <button onclick="myAccFunc('Tab5')" class="w3-padding-16 i-osg w3-button w3-block w3-left-align">INSPECTION</button>
+                            <div id="Tab5" class="w3-hide">
+                                <div class="w3-justify w3-container" style="line-height:100%">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <button onclick="myAccFunc('Tab6')" class="w3-padding-16 i-osg w3-button w3-block w3-left-align">INSPECTION</button>
+                            <div id="Tab6" class="w3-hide">
+                                <div class="w3-justify w3-container" style="line-height:100%">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
-                      </div>
-                      <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Entries</button>
-                      <div id="Demo2" class="w3-hide">
-                        <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">Link 2</a>
-                        <a href="#" class="w3-button w3-block w3-left-align">Link 3</a>
-                      </div>
-                      <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Gallery</button>
-                      <div id="Demo3" class="w3-hide w3-black">
-                        <div class="w3-container">
-                          <p>Images:</p>
-                          <img src="images/Gallery/DJI_0807.jpg" style="width:30%;" class="w3-animate-zoom">
-                          <p>TOP VIEW</p>
-                          <p>Images:</p>
-                          <img src="images/Gallery/DJI_0807.jpg" style="width:30%;" class="w3-animate-zoom">
-                          <p>TOP VIEW</p>
+
+                        <div id="report-GENERAL-COMMENTS">
+                            <div class="w3-container w3-white">
+                                <h2 class="i-osg-dark i-title-h1">GENERAL COMMENTS ON INSPECTION</h2>
+                                <div class="i-text-h3">
+
+                                    <p>From the above photos, all four grabs found to be highly deteriorated, they were heavily rusted with very thick rust flakes and corrosion. Moreover, in grabs number 2 and 3 we could see evident deformations of the bucket’s
+                                        steel.
+                                    </p>
+                                    <p>
+                                        Grabs number 1, 2 and 4 have broken frames and plates since they have cracks from 5 to 25 centimeters which indicates that they were in very poor condition much before the incident at the loading port.
+                                    </p>
+                                    <p>
+                                        Grab number 2 has a very similar crack, in the same location as one of the claimed damages of grab 4 as seen below:
+                                    </p>
+                                    <div class="w3-container">
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-large" src="images/Gallery/DJI_0807.jpg"></img>
+                                        <img class="w3-container w3-padding w3-half w3-animate-zoom w3-large" src="images/Gallery/DJI_0807.jpg"></img>
+                                    </div>
+                                    <p>Revising the report done by SAM MARINE at loading port, after the grab was damaged, we could extract the below photo:
+                                    </p>
+                                    <div class="w3-container">
+                                        <img class=" w3-panel w3-small w3-padding " src="images/Gallery/DJI_0807.jpg" style="width: 100%" ;></img>
+                                    </div>
+                                    <p>
+                                        The above photo from SAM MARINE’s report shows that the surface of the crack in grab number 4 has two colors (blue area). Silver color which indicates a fresh cut, and orange color which indicates that the crack was there before the grab was used and
+                                        damaged. Most probably the original crack extended (green arrow) after the grab fell down when the wire was broken.
+                                    </p>
+                                    <p>
+                                        Undersigned requested all grabs certificates of maintenance records and the vessel was not able to provide them. They could only find two load test certificates dated from August 25th, 2015 (RINA) and from February 17th, 2012 (LLOYDS).
+                                    </p>
+                                    <p>
+                                        Undersigned also asked the Master and C/O about the possibility to repair the Grab No. 4 during the voyage to Ghana and they informed that they did not have the material, equipment and certified fitter to do the repairs. The vessel prefers a person from
+                                        a shore company that performs the job.
+                                    </p>
+                                    <p>
+                                        We were also informed that the vessel does not have a spare grab on board.
+                                    </p>
+                                    <p>
+                                        According to our findings, we should comment that the grabs were in very poor conditions and unsafe to be used during cargo operations.
+                                    </p>
+                                </div>
+
+
+
+
+                            </div>
                         </div>
-                      </div>
+                        <hr>
+                        <div id="report-CONCLUSION ">
+                            <div class="w3-container w3-white ">
+                                <h2 class="i-osg-dark i-title-h1 ">CONCLUSION FROM INSPECTION</h2>
+                                <div class="i-text-h3 ">
+
+                                    <p>Undersigned boarded the vessel on October 7th at 14:00 hrs LT in order to survey and determine general conditions of the vessel’s grabs.</p>
+                                    <p>According to the vessel’s Master and C/O during the loading operations at Batiliman Port, Turkey, the hoisting wire of crane number 4 broke due to rough practice of the stevedores which caused that the grab No. 4 to
+                                        fall down to the shore and some parts of the grabs were allegedly broken.
+                                    </p>
+                                    <p>During the survey, the condition of all grabs was inspected in detail, compared between each other, and also checked if the damages occurred in grab #4 was done because of the mentioned incident at the loading port.
+                                        Photos of all grabs can be seen in the following pages:
+                                    </p>
+
+                                    <div class="w3-bar ">
+                                        <h3 class="w3-right ">REMARKS</h3>
+                                        <div>
+                                            <button onclick="myAccFunc( 'Demo1') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Sections</button>
+                                            <div id="Demo1 " class="w3-hide ">
+                                                <div class="w3-justify w3-container " style="line-height:100% ">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                        aliquip ex ea commodo consequat.
+                                                    </p>
+                                                    <hr>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                        aliquip ex ea commodo consequat.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button onclick="myAccFunc( 'Demo2') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Entries</button>
+                                            <div id="Demo2 " class="w3-hide ">
+                                                <a href="# " class="w3-button w3-block w3-left-align ">Link 1</a>
+                                                <a href="# " class="w3-button w3-block w3-left-align ">Link 2</a>
+                                                <a href="# " class="w3-button w3-block w3-left-align ">Link 3</a>
+                                            </div>
+                                            <button onclick="myAccFunc( 'Demo3') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Gallery</button>
+                                            <div id="Demo3 " class="w3-hide w3-black ">
+                                                <div class="w3-container ">
+                                                    <p>Images:</p>
+                                                    <img src="images/Gallery/DJI_0807.jpg " style="width:30%; " class="w3-animate-zoom ">
+                                                    <p>TOP VIEW</p>
+                                                    <p>Images:</p>
+                                                    <img src="images/Gallery/DJI_0807.jpg " style="width:30%; " class="w3-animate-zoom ">
+                                                    <p>TOP VIEW</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        <div class="w3-theme ">
+                            <div class="w3-half ">
+                                <h3>CONTACT LIST</h3>
+                                <div class="w3-container ">
+                                    <p>
+                                        <table class="w3-table w3-striped w3-bordered ">
+                                            <thead>
+                                                <tr class="i-osg-light ">
+                                                    <th>Name</th>
+                                                    <th>Title</th>
+                                                    <th>#</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jill</td>
+                                                    <td>Captain</td>
+                                                    <td>50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Eve</td>
+                                                    <td>Chief</td>
+                                                    <td>94</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Adam</td>
+                                                    <td>Johnson</td>
+                                                    <td>67</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Adam</td>
+                                                    <td>Johnson</td>
+                                                    <td>67</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Adam</td>
+                                                    <td>Johnson</td>
+                                                    <td>67</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Adam</td>
+                                                    <td>Johnson</td>
+                                                    <td>67</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="w3-half ">
+                                <h3 class="w3-right ">REMARKS</h3>
+                                <div>
+                                    <button onclick="myAccFunc( 'Demo1') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Sections</button>
+                                    <div id="Demo1 " class="w3-hide ">
+                                        <div class="w3-justify w3-container " style="line-height:100% ">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                ex ea commodo consequat.
+                                            </p>
+                                            <hr>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button onclick="myAccFunc( 'Demo2') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Entries</button>
+                                    <div id="Demo2 " class="w3-hide ">
+                                        <a href="# " class="w3-button w3-block w3-left-align ">Link 1</a>
+                                        <a href="# " class="w3-button w3-block w3-left-align ">Link 2</a>
+                                        <a href="# " class="w3-button w3-block w3-left-align ">Link 3</a>
+                                    </div>
+                                    <button onclick="myAccFunc( 'Demo3') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Gallery</button>
+                                    <div id="Demo3 " class="w3-hide w3-black ">
+                                        <div class="w3-container ">
+                                            <p>Images:</p>
+                                            <img src="images/Gallery/DJI_0807.jpg " style="width:30%; " class="w3-animate-zoom ">
+                                            <p>TOP VIEW</p>
+                                            <p>Images:</p>
+                                            <img src="images/Gallery/DJI_0807.jpg " style="width:30%; " class="w3-animate-zoom ">
+                                            <p>TOP VIEW</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <!-- END OF INFO -->
+
+                <!-- <div class="w3-container w3-theme w3-large "><span class="w3-right ">EDIT REPORT</span></div> -->
+                <!-- </div> -->
+
             </div>
-            <!-- END OF INFO -->
 
-            <ul class="w3-ul w3-border-top">
-              <li>
-                <p class="w3-right">Gibraltar, UK</p>
-                <h3>FROM: </h3>
-              </li>
-              <li>
-                <p class="w3-right">Cartagena: Spain</p>
-                <h3>TO: </h3>
-              </li>
-              <li>
-                <p class="w3-right">16:00 28/11/2021</p>
-                <h3>DEPARTURE: </h3>
-              </li>
-            </ul>
-            <hr>
-            <!-- <div class="w3-container w3-theme w3-large"><span class="w3-right">EDIT REPORT</span></div> -->
-            <!-- </div> -->
+            <div class="w3-container ">
+                <!-- INPUT LOG -->
+                <div class="w3-half w3-theme " style="font-family: 'Courier'; ">
+                    <p class="w3-right ">time:time</p>
+                    <!-- <div class="w3-theme "> -->
+                    <h3>LOG ENTRY</h3>
+                    <form class="w3-container w3-white ">
+                        <div class="w3-section ">
+                            <label>Subject:</label>
+                            <input class="w3-input " type="text " required>
+                        </div>
+                        <div class="w3-section ">
+                            <label>Comments:</label>
+                            <input class="w3-input w3-border w3-margin-bottom text-overflow " style="height:200px; " placeholder="What 's on your mind?, What's on your mind?What 's on your mind?What's on your mind?What 's on your mind?What's on your
+                                            mind?What 's on your mind?What's on your mind?What 's on your mind?What's on your mind? ">
 
-          </div>
+                        </div>
+                        <br>
 
-          <div class="w3-container">
-            <!-- INPUT LOG -->
-            <div class="w3-half w3-theme" style="font-family:'Courier'; ">
-              <p class="w3-right">time:time</p>
-              <!-- <div class="w3-theme"> -->
-              <h3>LOG ENTRY</h3>
-              <form class="w3-container w3-white">
-                <div class="w3-section">
-                  <label>Subject:</label>
-                  <input class="w3-input" type="text" required>
-                </div>
-                <div class="w3-section">
-                  <label>Comments:</label>
-                  <input class="w3-input w3-border w3-margin-bottom text-overflow" style="height:200px;"
-                    placeholder="What's on your mind?, What's on your mind?What's on your mind?What's on your mind?What's on your mind?What's on your mind?What's on your mind?What's on your mind?What's on your mind?What's on your mind?">
+                        <div class="w3-row ">
+                            <div class="w3-half ">
+                                <input id="milk " class="w3-check " type="checkbox ">
+                                <label>Vessel</label>
+                                <br>
+                                <input id="sugar " class="w3-check " type="checkbox ">
+                                <label>Port</label>
+                                <br>
+                                <input id="lemon " class="w3-check " type="checkbox " disabled>
+                                <label>Crew</label>
+                                <br>
+                                <input id="milk " class="w3-check " type="checkbox ">
+                                <label>Weather</label>
+                                <br>
+                                <input id="milk " class="w3-check " type="checkbox ">
+                                <label>Captain</label>
+                                <br>
 
-                </div>
-                <br>
-
-                <div class="w3-row">
-                  <div class="w3-half">
-                    <input id="milk" class="w3-check" type="checkbox">
-                    <label>Vessel</label>
-                    <br>
-                    <input id="sugar" class="w3-check" type="checkbox">
-                    <label>Port</label>
-                    <br>
-                    <input id="lemon" class="w3-check" type="checkbox" disabled>
-                    <label>Crew</label>
-                    <br>
-                    <input id="milk" class="w3-check" type="checkbox">
-                    <label>Weather</label>
-                    <br>
-                    <input id="milk" class="w3-check" type="checkbox">
-                    <label>Captain</label>
-                    <br>
-
-                  </div>
-                  <div class="w3-half">
-                    <input id="milk" class="w3-check" type="checkbox">
-                    <label>Agency</label>
-                    <br>
-                    <input id="sugar" class="w3-check" type="checkbox">
-                    <label>Logistics</label>
-                    <br>
-                    <input id="milk" class="w3-check" type="checkbox">
-                    <label>Stibators</label>
-                    <br>
-                    <input id="lemon" class="w3-check" type="checkbox" disabled>
-                    <label>Resources</label>
-                    <br>
-                    <input id="milk" class="w3-check" type="checkbox" checked="checked">
-                    <label>Annotation</label>
-                    <br><br>
-                  </div>
+                            </div>
+                            <div class="w3-half ">
+                                <input id="milk " class="w3-check " type="checkbox ">
+                                <label>Agency</label>
+                                <br>
+                                <input id="sugar " class="w3-check " type="checkbox ">
+                                <label>Logistics</label>
+                                <br>
+                                <input id="milk " class="w3-check " type="checkbox ">
+                                <label>Stibators</label>
+                                <br>
+                                <input id="lemon " class="w3-check " type="checkbox " disabled>
+                                <label>Resources</label>
+                                <br>
+                                <input id="milk " class="w3-check " type="checkbox " checked="checked ">
+                                <label>Annotation</label>
+                                <br><br>
+                            </div>
 
 
-                </div>
-                <button class="w3-full-width w3-btn w3-theme" onclick="move()">
+                        </div>
+                        <button class="w3-full-width w3-btn w3-theme " onclick="move() ">
                   send to log</button>
 
-              </form>
-            </div>
-
-            <!-- REPORT LOG -->
-            <div class="w3-half" style="line-height:60%;">
-              <div class="w3-container">
-                <table class="w3-table w3-striped w3-bordered">
-                  <thead>
-                    <tr class="w3-theme">
-                    <tr>
-                      <th>Event</th>
-                      <th>Detail</th>
-                      <th>Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Surveyor</td>
-                      <td>Arrived at port</td>
-                      <td>11:01</td>
-                    </tr>
-                    <tr>
-                      <td>Log in</td>
-                      <td>Vessel</td>
-                      <td>11:30</td>
-                    </tr>
-                    <tr>
-                      <td>Stibators</td>
-                      <td>Arrived</td>
-                      <td>11:49</td>
-                    </tr>
-                    <tr>
-                      <td>Crane</td>
-                      <td>Maintenance Check</td>
-                      <td>12:01</td>
-                    </tr>
-                    <tr>
-                      <td>Weather</td>
-                      <td>Optimal</td>
-                      <td>13:59</td>
-                    </tr>
-                    <tr>
-                      <td>Logistics</td>
-                      <td>Truck delayed</td>
-                      <td>15:39</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="w3-center">
-                  <p></p>
-                  <button class="w3-btn" onclick="move()">OPEN LOG</button>
+                    </form>
                 </div>
 
-              </div>
-              <!-- END OF LOG TABLE CONTAINER -->
-              <!-- STATS BARS -->
-              <div class="w3-container" style="line-height: 5%">
-                <div>
-                  <p>Complition</p>
-                  <div class="w3-grey" style="line-height: 5%">
-                    <div class="w3-container w3-center w3-padding w3-red" style="width:25%">+25%</div>
-                  </div>
+                <!-- REPORT LOG -->
+                <div class="w3-half " style="line-height:60%; ">
+                    <div class="w3-container ">
+                        <table class="w3-table w3-striped w3-bordered ">
+                            <thead>
+                                <tr class="w3-theme ">
+                                    <tr>
+                                        <th>Event</th>
+                                        <th>Detail</th>
+                                        <th>Time</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Surveyor</td>
+                                    <td>Arrived at port</td>
+                                    <td>11:01</td>
+                                </tr>
+                                <tr>
+                                    <td>Log in</td>
+                                    <td>Vessel</td>
+                                    <td>11:30</td>
+                                </tr>
+                                <tr>
+                                    <td>Stibators</td>
+                                    <td>Arrived</td>
+                                    <td>11:49</td>
+                                </tr>
+                                <tr>
+                                    <td>Crane</td>
+                                    <td>Maintenance Check</td>
+                                    <td>12:01</td>
+                                </tr>
+                                <tr>
+                                    <td>Weather</td>
+                                    <td>Optimal</td>
+                                    <td>13:59</td>
+                                </tr>
+                                <tr>
+                                    <td>Logistics</td>
+                                    <td>Truck delayed</td>
+                                    <td>15:39</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="w3-center ">
+                            <p></p>
+                            <button class="w3-btn " onclick="move() ">OPEN LOG</button>
+                        </div>
 
+                    </div>
+                    <!-- END OF LOG TABLE CONTAINER -->
+                    <!-- STATS BARS -->
+                    <div class="w3-container " style="line-height: 5% ">
+                        <div>
+                            <p>Complition</p>
+                            <div class="w3-grey " style="line-height: 5% ">
+                                <div class="w3-container w3-center w3-padding w3-red " style="width:25% ">+25%</div>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <p>Report Log</p>
+                            <div class="w3-grey " style="line-height: 5% ">
+                                <div class="w3-container w3-center w3-padding i-osg " style="width:50% ">50%</div>
+                            </div>
+                        </div>
+
+                        <div style="line-height: 5% ">
+                            <p>Images Log</p>
+                            <div class="w3-grey " style="line-height: 5% ">
+                                <div class="w3-container w3-center w3-padding i-osg " style="width:75% ">75%</div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
                 </div>
+                <!-- END OF LOG TABLE HALF -->
 
-                <div>
-                  <p>Report Log</p>
-                  <div class="w3-grey" style="line-height: 5%">
-                    <div class="w3-container w3-center w3-padding i-osg" style="width:50%">50%</div>
-                  </div>
-                </div>
-
-                <div style="line-height: 5%">
-                  <p>Images Log</p>
-                  <div class="w3-grey" style="line-height: 5%">
-                    <div class="w3-container w3-center w3-padding i-osg" style="width:75%">75%</div>
-                  </div>
-                </div>
-
-
-
-
-
-              </div>
-            </div>
-            <!-- END OF LOG TABLE HALF -->
-
-
-
-          </div>
-          <button class="w3-btn w3-theme" onclick="move()">Click Me</button>
-          <hr>
-          <!-- REPORT LOG TABLE -->
-          <div>
-
-            <div class="w3-container w3-white">
-
-
-              Hey HO! LETS GO!
-
-
-
-              <h2>#CASEHASH</h2>
-              <p>London is the capital city of England. It is the most populous city in the United Kingdom,
-                with a metropolitan area of over 13 million inhabitants.</p>
-              <p>Standing on the River Thames, London has been a major settlement for two millennia,
-                its history going back to its by the Romans, who named it Londinium.</p>
-              <p>By the way, you can add a close icon to all if you want the ability to hide them. Look to your right!</p>
-              <p>The , you add a close icon to all if you want the ability to hide them. Look to your right!</p>
-              <p>By way, you can add a icon to all containers if you want the ability to hide them. Look to your right!</p>
-              <p>By the way, you can add a close icon to all containers if you want the ability to hide them. Look to your right!</p>
-              <p>By the , you can add a icon to all containers if you want the ability to hide them. Look to your right!</p>
-              <p>By the way, you can a icon to all if you want the ability to hide them. Look to your right!</p>
 
 
             </div>
-          </div>
+            <button class="w3-btn w3-theme " onclick="move() ">Click Me</button>
+            <hr>
+            <!-- REPORT LOG TABLE -->
+            <div id="report-THE-SURVEY ">
+                <div class="w3-container w3-white ">
+                    <h4>#CASEHASH</h4>
+                    <h2 class="i-osg-dark i-title-h1 ">THE SURVEY</h2>
+                    <div class="i-text-h3 ">
 
-          <hr>
+                        <p>Undersigned boarded the vessel on October 7th at 14:00 hrs LT in order to survey and determine general conditions of the vessel’s grabs.</p>
+                        <p>According to the vessel’s Master and C/O during the loading operations at Batiliman Port, Turkey, the hoisting wire of crane number 4 broke due to rough practice of the stevedores which caused that the grab No. 4 to fall down to
+                            the shore and some parts of the grabs were allegedly broken.
+                        </p>
+                        <p>During the survey, the condition of all grabs was inspected in detail, compared between each other, and also checked if the damages occurred in grab #4 was done because of the mentioned incident at the loading port. Photos of all
+                            grabs can be seen in the following pages:
+                        </p>
+                    </div>
 
-          <footer id="alertPanel" class="w3-orange w3-footers">
-          </footer>
-          <div class="w3-orange">
-            <div style="text-align:right; font-family:'Courier'; font-size:200%">
-              <blink>
-                <i class="fa fa-exclamation-triangle w3-text-theme"></i>
-              </blink>
-              MISSING REQUIREMENTS
-              <div style="font-size:50%">
-                <p class="w3-blink">Image from hull</p>
-                <p class="w3-blink">Trim calcualtion</p>
-                <p class="w3-blink">Comments on deck conditions</p>
-                <p class="w3-blink">Coments on levels for TANK # 3</p>
-              </div>
+
+
+                </div>
             </div>
 
-          </div>
+            <hr>
+
+            <footer id="alertPanel " class="w3-orange w3-footers ">
+            </footer>
+            <div class="w3-orange ">
+                <div style="text-align:right; font-family: 'Courier'; font-size:200% ">
+                    <blink>
+                        <i class="fa fa-exclamation-triangle w3-text-theme "></i>
+                    </blink>
+                    MISSING REQUIREMENTS
+                    <div style="font-size:50% ">
+                        <p class="w3-blink ">Image from hull</p>
+                        <p class="w3-blink ">Trim calcualtion</p>
+                        <p class="w3-blink ">Comments on deck conditions</p>
+                        <p class="w3-blink ">Coments on levels for TANK # 3</p>
+                    </div>
+                </div>
+
+            </div>
 
 
         </div>
@@ -637,447 +939,447 @@ asdasd
 
 
 
-      </div>
+    </div>
 
 
 
-      <!-- <hr>
+    <!-- <hr>
         </div>
 
       </div> -->
     </div>
-  </div>
-
-  <!-- PROGRESS BARR -->
-  <div class="w3-bar" style="background-color:black">
-    <div id="progress_bar" class="w3-theme " style=" vertical-align: baseline; max-height: 5px; font-size:5px; width:5%; color:black; background-color:white;">
-      <br>
     </div>
-  </div>
-  <!-- Header -->
+
+    <!-- PROGRESS BARR -->
+    <div class="w3-bar " style="background-color:black ">
+        <div id="progress_bar " class="w3-theme " style=" vertical-align: baseline; max-height: 5px; font-size:5px; width:5%; color:black; background-color:white; ">
+            <br>
+        </div>
+    </div>
+    <!-- Header -->
 
 
-  <header id="menu_panel" class="w3-container w3-display-container i-osg-light" style="padding-top:22px">
-    <!-- <h5><b><i class="fa fa-dashboard"></i> Tools Panel</b></h5> -->
+    <header id="menu_panel " class="w3-container w3-display-container i-osg-light " style="padding-top:22px ">
+        <!-- <h5><b><i class="fa fa-dashboard "></i> Tools Panel</b></h5> -->
 
 
-    <!-- <div class="w3-row-padding w3-margin-bottom"> -->
-    <div class="w3-main" style="margin-left:300px; display:block">
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-osg w3-padding-16" onclick="location.href='mail_demo.html';  ">
-          <div class="w3-left"><i class="fa fa-envelope w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <div class="w3-mobile ">
-              <blink>
-                <a class="i-text-h3">52</a>
-                <i class="fa fa-circle w3-text-red"></i>
-              </blink>
+        <!-- <div class="w3-row-padding w3-margin-bottom "> -->
+        <div class="w3-main " style="margin-left:300px; display:block ">
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container i-osg w3-padding-16 " onclick="location.href='mail_demo.html' ; ">
+                    <div class="w3-left "><i class="fa fa-envelope w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <div class="w3-mobile ">
+                            <blink>
+                                <a class="i-text-h3 ">52</a>
+                                <i class="fa fa-circle w3-text-red "></i>
+                            </blink>
+                        </div>
+
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>MAIL</h4>
+                </div>
+            </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container w3-black w3-padding-16 " onclick="location.href='board.html' ; ">
+                    <div class="w3-left "><i class="fa fa-tasks w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>7</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>BOARD</h4>
+                </div>
+            </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container w3-black w3-padding-16 " onclick="location.href='case.html' ; ">
+                    <div class="w3-left "><i class="fa fa-clipboard w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>7%</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>CASE</h4>
+                </div>
+            </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container i-warning2 w3-padding-16 " onclick="location.href='toolbox.html' ; ">
+                    <div class="w3-left "><i class="fa fa-briefcase w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>50</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>TOOLBOX</h4>
+                </div>
             </div>
 
-          </div>
-          <div class="w3-clear"></div>
-          <h4>MAIL</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-black w3-padding-16" onclick="location.href='board.html';  ">
-          <div class="w3-left"><i class="fa fa-tasks w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>7</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>BOARD</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-black w3-padding-16" onclick="location.href='case.html';  ">
-          <div class="w3-left"><i class="fa fa-clipboard w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>7%</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>CASE</h4>
-        </div>
-      </div>
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-warning2 w3-padding-16"  onclick="location.href='toolbox.html';  " >
-          <div class="w3-left"><i class="fa fa-briefcase w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>TOOLBOX</h4>
-        </div>
-      </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container w3-white w3-padding-16 " onclick="location.href='board.html' ; window.location.hash='toolbox.html.map' ; ">
+                    <div class="w3-left "><i class="fa fa-ship w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>50</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>TRACKER</h4>
+                </div>
+            </div>
 
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-white w3-padding-16" onclick="location.href='board.html';  window.location.hash='toolbox.html.map'; " >
-          <div class="w3-left"><i class="fa fa-ship w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>TRACKER</h4>
-        </div>
-      </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container i-warning w3-padding-16 " onclick="location.href='demo_blog.html' ; ">
+                    <div class="w3-left "><i class="fa fa-book w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3></h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>BLOG</h4>
+                </div>
+            </div>
 
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container i-warning w3-padding-16" onclick="location.href='demo_blog.html';   ">
-          <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3></h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>BLOG</h4>
-        </div>
-      </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container w3-red w3-padding-16 " onclick="location.href='dojo.html' ; ">
+                    <div class="w3-left "><i class="fa fa-eercast w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>50</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>DOJO</h4>
+                </div>
+            </div>
 
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-red w3-padding-16" onclick="location.href='dojo.html'; ">
-          <div class="w3-left"><i class="fa fa-eercast w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>DOJO</h4>
-        </div>
-      </div>
+            <div class="w3-quarter w3-btn ">
+                <div class="w3-container w3-white w3-padding-16 " onclick="window.location.hash='site_map' ; ">
+                    <div class="w3-left "><i class="fa fa-search w3-xxxlarge "></i></div>
+                    <div class="w3-right ">
+                        <h3>50</h3>
+                    </div>
+                    <div class="w3-clear "></div>
+                    <h4>SEARCH</h4>
+                </div>
+            </div>
 
-      <div class="w3-quarter w3-btn">
-        <div class="w3-container w3-white w3-padding-16" onclick="window.location.hash='site_map';">
-          <div class="w3-left"><i class="fa fa-search w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>50</h3>
-          </div>
-          <div class="w3-clear"></div>
-          <h4>SEARCH</h4>
         </div>
-      </div>
+        <div class="w3-container i-text-h3 w3-center ">
+            <br><br>
+        </div>
+    </header>
+    <!-- JOB POOL -->
+    <div id="job_pool " class="w3-main w3-white " style="margin-left:300px; ">
+
+
+        <div class="w3-container ">
+
+            <!-- CALENDAR -->
+            <div id="calendar_title " class="w3-twothird ">
+                <h6 class="w3-left ">SURVEY BOARD</h6>
+                <!-- <div class = "w3-bar "> -->
+                <!-- <div > -->
+                <p style="text-align:right; font-weight:lighter; font-family:monospace; line-height:10%; ">Latest Update</p>
+                <!-- </div> -->
+                <!-- </div> -->
+                <table class="w3-table w3-white w3-striped ">
+                    <tr>
+                        <td><i class="fa fa-check w3-text-green w3-large "></i></td>
+                        <td>BULK PRIDE - EL DEKHEILA - DIPROINDUCA</td>
+                        <td><i>10 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-bell w3-text-red w3-large "></i></td>
+                        <td>JPS PORTO - ESCOMBRERAS - ETS</td>
+                        <td><i>15 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-users w3-text-gray w3-large "></i></td>
+                        <td>VECTIS EAGLE - MOTRIL - ETS</td>
+                        <td><i>17 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-check w3-text-green w3-large "></i></td>
+                        <td>SIKANIA - ADABIYA - DIPROINDUCA</td>
+                        <td><i>25 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-check w3-text-green w3-large "></i></td>
+                        <td>PARIS TRADER - BILBAO - ETS</td>
+                        <td><i>28 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-bell w3-text-red w3-large "></i></td>
+                        <td>PANOCEANIS - GIBRALATAR - CENTURION</td>
+                        <td><i>35 mins</i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-check w3-text-green w3-large "></i></td>
+                        <td>BBC LAGOS - MOTRIL - ETS</td>
+                        <td><i>39 mins</i></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- END OF BOARD -->
+            <!-- MAP -->
+            <div class=" w3-rest w3-container " style="padding-top: 15px; "><iframe src="https://www.google.com/maps/d/embed?mid=1BMZ4SrzRD2xWRyb3kr296vR8jS9PcYt7 " style=" min-height:250px; height:100%; width:100%; "></iframe>
+            </div>
+            <!-- END OF MAP -->
+        </div>
+        <!-- END OF SURVEY BOARD -->
+
+
+
+
+
+
+
+
+
+
+        <div class="w3-panel ">
+            <div class="w3-row-padding " style="margin:0 -16px ">
+
+                go to board:
+            </div>
+        </div>
+
+        <!-- PORTS  -->
+        <div class="w3-container w3-black ">
+            <h5>PORTS</h5>
+            <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white ">
+                <tr>
+                    <td>Spain</td>
+                    <td>65%</td>
+                </tr>
+                <tr>
+                    <td>US</td>
+                    <td>15.7%</td>
+                </tr>
+                <tr>
+                    <td>ARA</td>
+                    <td>2.1%</td>
+                </tr>
+                <tr>
+                    <td>Nort Africa</td>
+                    <td>1.9%</td>
+                </tr>
+                <tr>
+                    <td>Sout America</td>
+                    <td>1.5%</td>
+                </tr>
+            </table><br>
+            <button class="w3-button w3-right w3-dark-grey ">Other Ports  <i class="fa fa-arrow-right "></i></button>
+        </div>
+
+
+        <div class="w3-container w3-white ">
+            <h5>Recent LOG Entries</h5>
+            <div class="w3-row ">
+                <div class="w3-col m2 text-center ">
+                    <img class="w3-circle " src="/w3images/avatar3.png " style="width:96px;height:96px ">
+                </div>
+                <div class="w3-col m10 w3-container ">
+                    <h4>John <span class="w3-opacity w3-medium ">Sep 29, 2014, 9:12 PM</span></h4>
+                    <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+                </div>
+            </div>
+
+            <div class="w3-row ">
+                <div class="w3-col m2 text-center ">
+                    <img class="w3-circle " src="/w3images/avatar1.png " style="width:96px;height:96px ">
+                </div>
+                <div class="w3-col m10 w3-container ">
+                    <h4>Bo <span class="w3-opacity w3-medium ">Sep 28, 2014, 10:15 PM</span></h4>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+                </div>
+            </div>
+        </div>
+
+        <div id="site_map " class="w3-container w3-dark-grey w3-padding-32 ">
+            <div class="w3-row ">
+                <div class="w3-container w3-third ">
+                    <h5 class="w3-bottombar w3-border-green ">Mailing</h5>
+                    <p>Inbox</p>
+                    <p>Out</p>
+                    <p>Temp</p>
+                </div>
+                <div class="w3-container w3-third ">
+                    <h5 class="w3-bottombar w3-border-red ">Log</h5>
+                    <p>Case Profile</p>
+                    <p>Report</p>
+                    <p>Submission</p>
+                </div>
+                <div class="w3-container w3-third ">
+                    <h5 class="w3-bottombar w3-border-orange ">Apps</h5>
+                    <p>Scan</p>
+                    <p>Drone</p>
+                    <p>Trim</p>
+                    <p>Volumes</p>
+                    <p>Lashing</p>
+                    <p>Math</p>
+                    <p>DOJO</p>
+                </div>
+            </div>
+        </div>
+
+
 
     </div>
-    <div class="w3-container i-text-h3 w3-center">
-      <br><br>
-    </div>
-  </header>
-  <!-- JOB POOL -->
-  <div id="job_pool" class="w3-main w3-white" style="margin-left:300px;">
-
-
-    <div class="w3-container">
-
-      <!-- CALENDAR -->
-      <div id="calendar_title" class="w3-twothird ">
-        <h6 class="w3-left">SURVEY BOARD</h6>
-        <!-- <div class = "w3-bar"> -->
-        <!-- <div > -->
-        <p style="text-align:right; font-weight:lighter; font-family:monospace; line-height:10%;">Latest Update</p>
-        <!-- </div> -->
-        <!-- </div> -->
-        <table class="w3-table w3-white w3-striped">
-          <tr>
-            <td><i class="fa fa-check w3-text-green w3-large"></i></td>
-            <td>BULK PRIDE - EL DEKHEILA - DIPROINDUCA</td>
-            <td><i>10 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>JPS PORTO - ESCOMBRERAS - ETS</td>
-            <td><i>15 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-users w3-text-gray w3-large"></i></td>
-            <td>VECTIS EAGLE - MOTRIL - ETS</td>
-            <td><i>17 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check w3-text-green w3-large"></i></td>
-            <td>SIKANIA - ADABIYA - DIPROINDUCA</td>
-            <td><i>25 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check w3-text-green w3-large"></i></td>
-            <td>PARIS TRADER - BILBAO - ETS</td>
-            <td><i>28 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>PANOCEANIS - GIBRALATAR - CENTURION</td>
-            <td><i>35 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check w3-text-green w3-large"></i></td>
-            <td>BBC LAGOS - MOTRIL - ETS</td>
-            <td><i>39 mins</i></td>
-          </tr>
-        </table>
-      </div>
-      <!-- END OF BOARD -->
-      <!-- MAP -->
-      <div class=" w3-rest w3-container" style="padding-top: 15px;"><iframe src="https://www.google.com/maps/d/embed?mid=1BMZ4SrzRD2xWRyb3kr296vR8jS9PcYt7" style=" min-height:250px; height:100%; width:100%;"></iframe>
-      </div>
-      <!-- END OF MAP -->
-    </div>
-    <!-- END OF SURVEY BOARD -->
-
-
-
-
-
-
-
-
-
-
-    <div class="w3-panel">
-      <div class="w3-row-padding" style="margin:0 -16px">
-
-        go to board:
-      </div>
     </div>
 
-    <!-- PORTS  -->
-    <div class="w3-container w3-black">
-      <h5>PORTS</h5>
-      <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-        <tr>
-          <td>Spain</td>
-          <td>65%</td>
-        </tr>
-        <tr>
-          <td>US</td>
-          <td>15.7%</td>
-        </tr>
-        <tr>
-          <td>ARA</td>
-          <td>2.1%</td>
-        </tr>
-        <tr>
-          <td>Nort Africa</td>
-          <td>1.9%</td>
-        </tr>
-        <tr>
-          <td>Sout America</td>
-          <td>1.5%</td>
-        </tr>
-      </table><br>
-      <button class="w3-button w3-right w3-dark-grey">Other Ports  <i class="fa fa-arrow-right"></i></button>
+    <!-- Footer -->
+    <footer class="w3-bar w3-center w3-red i-text-h3 " style="line-height:0%; font-size:50% ">
+        <!-- <h4>FOOTER</h4> -->
+        <p>Powered by <a href="https://www.killerbotstudios.com " target="_blank ">BOT</a></p>
+    </footer>
+
+    <!-- End page content -->
     </div>
 
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar ");
 
-    <div class="w3-container w3-white">
-      <h5>Recent LOG Entries</h5>
-      <div class="w3-row">
-        <div class="w3-col m2 text-center">
-          <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
-        </div>
-        <div class="w3-col m10 w3-container">
-          <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-        </div>
-      </div>
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay ");
 
-      <div class="w3-row">
-        <div class="w3-col m2 text-center">
-          <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-        </div>
-        <div class="w3-col m10 w3-container">
-          <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-        </div>
-      </div>
-    </div>
-
-    <div id = "site_map" class="w3-container w3-dark-grey w3-padding-32">
-      <div class="w3-row">
-        <div class="w3-container w3-third">
-          <h5 class="w3-bottombar w3-border-green">Mailing</h5>
-          <p>Inbox</p>
-          <p>Out</p>
-          <p>Temp</p>
-        </div>
-        <div class="w3-container w3-third">
-          <h5 class="w3-bottombar w3-border-red">Log</h5>
-          <p>Case Profile</p>
-          <p>Report</p>
-          <p>Submission</p>
-        </div>
-        <div class="w3-container w3-third">
-          <h5 class="w3-bottombar w3-border-orange">Apps</h5>
-          <p>Scan</p>
-          <p>Drone</p>
-          <p>Trim</p>
-          <p>Volumes</p>
-          <p>Lashing</p>
-          <p>Math</p>
-          <p>DOJO</p>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-bar w3-center w3-red i-text-h3" style="line-height:0%; font-size:50%">
-    <!-- <h4>FOOTER</h4> -->
-    <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
-  </footer>
-
-  <!-- End page content -->
-  </div>
-
-  <script>
-    // Get the Sidebar
-    var mySidebar = document.getElementById("mySidebar");
-
-    // Get the DIV with overlay effect
-    var overlayBg = document.getElementById("myOverlay");
-
-    // Toggle between showing and hiding the sidebar, and add overlay effect
-    function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-      } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-      }
-    }
-
-    // Close the sidebar with the close button
-    function w3_close() {
-      mySidebar.style.display = "none";
-      overlayBg.style.display = "none";
-    }
-
-    var mybtn = document.getElementsByClassName("testbtn")[0];
-    mybtn.click();
-
-    // Accordions
-    function myAccFunc(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    // Slideshows
-    var slideIndex = 1;
-
-    function plusDivs(n) {
-      slideIndex = slideIndex + n;
-      showDivs(slideIndex);
-    }
-
-    function showDivs(n) {
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {
-        slideIndex = 1
-      }
-      if (n < 1) {
-        slideIndex = x.length
-      };
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      x[slideIndex - 1].style.display = "block";
-    }
-
-    showDivs(1);
-
-    // Progress Bars
-    function move() {
-      var elem = document.getElementById("myBar");
-      var width = 5;
-      var id = setInterval(frame, 10);
-
-      function frame() {
-        if (width == 100) {
-          clearInterval(id);
-        } else {
-          width++;
-          elem.style.width = width + '%';
-          elem.innerHTML = width * 1 + '%';
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none ";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block ";
+            }
         }
-      }
-    }
 
-    function rgbToHex(r, g, b) {
-      return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
-
-    function toggle_cases_summary(toggle) {
-      if (toggle == 0) {
-        document.getElementById('case_off').style.display = "block";
-        document.getElementById('head2').style.display = "none";
-      } else {
-        document.getElementById('case_off').style.display = "none";
-        document.getElementById('head2').style.display = "block";
-
-      }
-      console.log("COMAND")
-    }
-
-
-    function handleMarquee() {
-      const marquee = document.querySelectorAll('.marquee');
-      let speed = 4;
-      let lastScrollPos = 0;
-      let timer;
-      marquee.forEach(function(el) {
-        const container = el.querySelector('.inner');
-        const content = el.querySelector('.inner > *');
-        //Get total width
-        const elWidth = content.offsetWidth;
-        //Duplicate content
-        let clone = content.cloneNode(true);
-        container.appendChild(clone);
-        let progress = 1;
-
-        function loop() {
-          progress = progress - speed;
-          if (progress <= elWidth * -1) {
-            progress = 0;
-          }
-          container.style.transform = 'translateX(' + progress + 'px)';
-          container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
-          window.requestAnimationFrame(loop);
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none ";
+            overlayBg.style.display = "none ";
         }
-        loop();
-      });
-      window.addEventListener('scroll', function() {
-        const maxScrollValue = 12;
-        const newScrollPos = window.scrollY;
-        let scrollValue = newScrollPos - lastScrollPos;
-        if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
-        else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
-        speed = scrollValue;
-        clearTimeout(timer);
-        timer = setTimeout(handleSpeedClear, 10);
-      });
 
-      function handleSpeedClear() {
-        speed = 4;
-      }
-    };
-    handleMarquee();
+        var mybtn = document.getElementsByClassName("testbtn ")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show ") == -1) {
+                x.className += " w3-show ";
+            } else {
+                x.className = x.className.replace(" w3-show ", " ");
+            }
+        }
+
+        // Slideshows
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName("mySlides ");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none ";
+            }
+            x[slideIndex - 1].style.display = "block ";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+            var elem = document.getElementById("myBar ");
+            var width = 5;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width == 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
+                }
+            }
+        }
+
+        function rgbToHex(r, g, b) {
+            return "# " + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        }
+
+        function toggle_cases_summary(toggle) {
+            if (toggle == 0) {
+                document.getElementById('case_off').style.display = "block ";
+                document.getElementById('head2').style.display = "none ";
+            } else {
+                document.getElementById('case_off').style.display = "none ";
+                document.getElementById('head2').style.display = "block ";
+
+            }
+            console.log("COMAND ")
+        }
 
 
-    var timer;
+        function handleMarquee() {
+            const marquee = document.querySelectorAll('.marquee');
+            let speed = 4;
+            let lastScrollPos = 0;
+            let timer;
+            marquee.forEach(function(el) {
+                const container = el.querySelector('.inner');
+                const content = el.querySelector('.inner > *');
+                //Get total width
+                const elWidth = content.offsetWidth;
+                //Duplicate content
+                let clone = content.cloneNode(true);
+                container.appendChild(clone);
+                let progress = 1;
 
-    function setTimer() {
-      timer = setTimeout(showPage, 333);
-    }
+                function loop() {
+                    progress = progress - speed;
+                    if (progress <= elWidth * -1) {
+                        progress = 0;
+                    }
+                    container.style.transform = 'translateX(' + progress + 'px)';
+                    container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+                    window.requestAnimationFrame(loop);
+                }
+                loop();
+            });
+            window.addEventListener('scroll', function() {
+                const maxScrollValue = 12;
+                const newScrollPos = window.scrollY;
+                let scrollValue = newScrollPos - lastScrollPos;
+                if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+                else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+                speed = scrollValue;
+                clearTimeout(timer);
+                timer = setTimeout(handleSpeedClear, 10);
+            });
 
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
-    }
-  </script>
+            function handleSpeedClear() {
+                speed = 4;
+            }
+        };
+        handleMarquee();
+
+
+        var timer;
+
+        function setTimer() {
+            timer = setTimeout(showPage, 333);
+        }
+
+        function showPage() {
+            document.getElementById("loader ").style.display = "none ";
+            document.getElementById("myDiv ").style.display = "block ";
+        }
+    </script>
 
 </body>
 

@@ -35,11 +35,24 @@
 
   <!-- Top container -->
 
-  <div id"head_band" class="w3-bar w3-top w3-black w3-large i-tiny" style="z-index:4; display:inline; ">
+  <div id"head_band"
+  class="w3-bar w3-top w3-black w3-large i-tiny"
+  style="z-index:4; display:inline; ">
     <button class="w3-bar-item w3-button  w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
       <i class="fa fa-bars w3-hide-large"></i>
       <b class="i-title-h1 w3-hide-tiny"> i<b class="i-tiny-hide">SURVEYOR</b>
     </button>
+
+
+    <!-- SEARCH ICON -->
+        <div class="w3-bar-item  w3-center w3-button w3-hover-jump w3-center" onclick="window.location.hash='site_tree';">
+
+          <i class="fa fa-search w3-medium"></i>
+
+
+        </div>
+
+
     <!-- icon -->
     <img class="w3-bar-item w3-animate-top  w3-right i-tiny-hide w3-hide-mobile" src="images/logos/osg_emblem_smooth.png" style="
         height: inherit;
@@ -164,58 +177,65 @@
   </div>
 
   <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:300px;margin-top:50px;">
+  <div class="w3-main " style="margin-left:300px;margin-top:50px;">
     <!-- TOP BAR -->
-    <div class = "w3-bar">
-      <div class="w3-bar-item w3-btn">
-        <div class="w3-container w3-black">
-          <div class="w3-left"><i class="fa fa-list w3-xxxlarge"></i></div>
-          <div class="w3-right">
-            <h3>7</h3>
+    <div class= "w3-center i-osg-dark">
+      <div class = "w3-bar ">
+        <div class="w3-bar-item w3-btn">
+          <div class="w3-container w3-black">
+            <div class="w3-left"><i class="fa fa-list w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3>71</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>FILTERS</h4>
+            <p><input class="w3-input w3-padding-16 w3-border"
+              type="datetime-local" placeholder="Date and time"
+              required name="date" value="2020-11-16T20:00"></p>
           </div>
-          <div class="w3-clear"></div>
-          <h4>FILTERS</h4>
         </div>
-      </div>
 
-      <div class="w3-bar-item w3-btn">
-        <div class="w3-container w3-black">
-          <div class="w3-center"><i class="fa fa-history w3-xxxlarge"></i></div>
-          <div class="w3-clear"></div>
-          <h5>HISTORY</h5>
-        </div>
-      </div>
-
-      <div class="w3-bar-item w3-btn">
-        <div class="w3-container w3-black">
-          <div class="w3-left"><i class="fa fa-clipboard w3-xxxlarge"></i></div>
-          <div class="w3-clear"></div>
-          <h4>CASE</h4>
-        </div>
-      </div>
-
-      <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
-        <div class="w3-container i-osg-dark">
-          <div class="w3-center">
-            <i class="fa fa-globe w3-xxxlarge">
-          </i>
+        <div class="w3-bar-item w3-btn">
+          <div class="w3-container w3-black">
+            <div class="w3-center"><i class="fa fa-history w3-xxxlarge"></i></div>
+            <div class="w3-clear"></div>
+            <h5>HISTORY</h5>
           </div>
-          <div class="w3-clear"></div>
-          <h4>MAP</h4>
         </div>
-      </div>
 
-      <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
-        <div class="w3-container i-warning2">
-          <div class="w3-center">
-            <i class="fa fa-ship w3-xxxlarge"></i></div>
-          <div class="w3-clear"></div>
-          <h6>TRACKER</h6>
+        <div class="w3-bar-item w3-btn">
+          <div class="w3-container w3-black">
+            <div class="w3-left"><i class="fa fa-clipboard w3-xxxlarge"></i></div>
+            <div class="w3-clear"></div>
+            <h4>CASE</h4>
+          </div>
         </div>
-      </div>
 
+        <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+          <div class="w3-container i-osg-dark">
+            <div class="w3-center">
+              <i class="fa fa-globe w3-xxxlarge">
+            </i>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>MAP</h4>
+          </div>
+        </div>
+
+        <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+          <div class="w3-container i-warning2">
+            <div class="w3-center">
+              <i class="fa fa-ship w3-xxxlarge"></i></div>
+            <div class="w3-clear"></div>
+            <h6>TRACKER</h6>
+          </div>
+        </div>
+
+
+      </div>
 
     </div>
+
 
 
 
@@ -245,8 +265,16 @@
                 <!-- PORTS  -->
 
                 <div id="filters" class="w3-quarter w3-padding w3-white">
-                  <div id = ports_filter >
-                    <h3>FINDER<i class="fa fa-search"></i></h3>
+                  <div class="w3-bar w3-button"
+                  onclick="myAccFunc('filters_containers')" >
+                  <h3>FINDER<i class="fa fa-search" ></i></h3>
+                </div>
+
+                  <div id = "filters_containers"  style= "display:none">
+
+                  <div id = "ports_filter"  style= "display:show">
+
+
                     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                       <tr>
                         <td>Spain</td>
@@ -331,6 +359,7 @@
                   </div>
                 </div>
                 <!-- SEARCH CASE END -->
+              </div>
               </div>
 
 
@@ -427,6 +456,56 @@
                   <td><i>10 mins</i></td>
                 </tr>
 
+                <tr>
+                  <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+                  <td>BULK PRIDE</td>
+                  <td><i>DIPROINDUCA</i></td>
+                  <td><i>EL DEKHEILA</i></td>
+                  <td><i>Hired</i></td>
+                  <td>26-SEP</td>
+                  <td><i>10 mins</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-check w3-text-green w3-large"></i></td>
+                  <td>VECTIS EAGLE</td>
+                  <td><i>ETS</i></td>
+                  <td><i>MOTRIL</i></td>
+                  <td><i>Hired</i></td>
+                  <td>29-SEP</td>
+                  <td><i>4 hrs</i></td>
+                </tr>
+
+                <tr>
+                  <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+                  <td>BULK PRIDE</td>
+                  <td><i>DIPROINDUCA</i></td>
+                  <td><i>EL DEKHEILA</i></td>
+                  <td><i>Un-Hired</i></td>
+                  <td>26-SEP</td>
+                  <td><i>10 mins</i></td>
+                </tr>
+
+
               </table>
             </div>
             <!-- MAP -->
@@ -491,15 +570,16 @@
                     <h4>TRACKER</h4>
                   </div>
                 </div>
+                <hr>
 
-              </div>
+
 
 
 
               <div class="w3-container i-text-h3 w3-center">
                 <br><br>
               </div>
-      </header>
+
 
     </div>
   </div>
@@ -507,7 +587,7 @@
 
 
   <div class="w3-container w3-white">
-    <h5>Recent LOG Entries</h5>
+    <h5>LOG: latest cases entries</h5>
     <div class="w3-row">
       <div class="w3-col m2 text-center">
         <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
@@ -529,7 +609,7 @@
     </div>
   </div>
 
-  <div class="w3-container w3-dark-grey w3-padding-32">
+  <div id = "site_tree" class="w3-container w3-dark-grey w3-padding-32">
     <div class="w3-row">
       <div class="w3-container w3-third">
         <h5 class="w3-bottombar w3-border-green">Mailing</h5>
@@ -555,14 +635,14 @@
       </div>
     </div>
   </div>
-
-
+</div>
+</header>
 
   </div>
   </div>
 
   <!-- Footer -->
-  <footer class="w3-bar w3-center w3-red i-text-h3" style="line-height:0%; font-size:50%">
+  <footer class="w3-bar w3-center w3-red i-text-h3" style=" line-height:0%; font-size:50%">
     <!-- <h4>FOOTER</h4> -->
     <p>Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
   </footer>

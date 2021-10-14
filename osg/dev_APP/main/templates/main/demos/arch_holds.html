@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<title>iSURVEYOR : home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <link rel="stylesheet" href="osg_light.css" type="text/css">
+    <link rel="stylesheet" href="osg_3D.css" tyle="text/css">
+    <link rel="stylesheet" href="osg_layouts.css" type="text/css">
+    <link rel="stylesheet" href="demo.css">
+    <!-- <link rel="stylesheet" href="tickerwrapper.css"> -->
+    <!-- <link rel="stylesheet" href="loader.css"> -->
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+
+
+</head>
+
+<body class="i-osg-light">
+    <div class="w3-center">
+        <p class="w3-container w3-center radio-group" style="display:block">
+            <label>
+              <input type="radio" name="rotate-cube-side"
+              value="front" /> PORT
+            </label>
+
+            <label>
+              <input type="radio" name="rotate-cube-side" value="back" /> STAR
+            </label>
+            <label>
+              <input type="radio" name="rotate-cube-side" value="right" /> FOR
+            </label>
+            <label>
+              <input type="radio" name="rotate-cube-side" value="left" checked /> AFT
+            </label>
+            <label>
+              <input type="radio" name="rotate-cube-side" value="top" /> TOP
+            </label>
+            <label>
+              <input type="radio" name="rotate-cube-side" value="bottom" /> FLOOR
+            </label>
+        </p>
+
+    </div>
+
+
+    <nav class=" w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <h5>Control Panel</h5>
+            <hr>
+        </div>
+        <!-- TITLE -->
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="images/Gallery/DJI_0807.jpg" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>Surveyor</strong></span><br>
+            </div>
+
+
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button">
+                    <blink><i class="fa fa-warning"></i></blink>
+                </a>
+                <a href="#" class="w3-bar-item w3-button">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="#" class="w3-bar-item w3-button">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
+                <i class="fa fa-remove fa-fw"></i>  Close panel</a>
+
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-envelope fa-fw"></i>  Mail <u class="i-text-h3 w3-right">(52)</u>
+                <blink class="fa fa-circle w3-text-red w3-right">
+                </blinK>
+
+
+
+                <div class="w3-container" id="mailSidebar">
+
+                    <!-- NEW MESSAGE -->
+
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('mail_write').style.display='block'">
+              New Message
+              <i class="w3-padding fa fa-pencil"></i>
+            </a>
+
+                    <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button">
+                        <i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+
+                    <div id="Demo1" class="w3-hide w3-animate-left">
+                        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+                            <div class="w3-container">
+                                <img class="w3-round w3-margin-right" src="images/Gallery/DJI_0807.jpg" style="width:15%;"><span class="w3-opacity w3-large">Borge Refsnes</span>
+                                <h6>Subject: Remember Me</h6>
+                                <p>Hello, i just wanted to let you know that i'll be home at...</p>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
+                            <div class="w3-container">
+                                <img class="w3-round w3-margin-right" src="images/Gallery/DJI_0807.jpg" style="width:15%;"><span class="w3-opacity w3-large">Jane Doe</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
+                            <div class="w3-container">
+                                <img class="w3-round w3-margin-right" src="images/Gallery/DJI_0807.jpg" style="width:15%;"><span class="w3-opacity w3-large">John Doe</span>
+                                <p>Welcome!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+                    <!-- </nav> -->
+
+                </div>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-bars fa-fw" onclick="location.href='mail_demo_1.html';"></i>  Case</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-calendar fa-fw" onclick="location.href='case.html';"></i>  Calendar Board</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-suitcase fa-fw" onclick="location.href='board.html';"></i>  Toolbox</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-coffee fa-fw" onclick="location.href='demo_blog.html';"></i>  Blog</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-ship fa-fw" onclick="location.href='board.html';"></i>  Tracker</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-binoculars fa-fw" onclick="location.href='dojo.html';"></i>  Finder</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding">
+                <i class="fa fa-bullseye fa-fw" onclick="location.href='dojo.html';"></i>  DOJO</a><br><br>
+        </div>
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-top:50px; align-content:stretch;">
+        <!-- TOP BAR -->
+        <div class="w3-container w3-center w3-padding-64">
+            <div id="cube" style=" border:1px solid black; margin-left:15%; margin-right: 15%; transform: scale(1.5);">
+                <div class="scene" style="border:3px dashed orange">
+                    <div class="box" style="border:1px dashed white">
+                        <!-- PORT -->
+                        <div id="port_container" class="box__face box__face--front w3-container" style="line-height:100%;">
+
+                            <!--
+                                  <div class= "face_lad" style="z-index:-1; background-color:red; position:absolute;">
+                                    <div class= "face_lad" style="background-color:yellow">
+                                      <div class= "face_lad" style="background-color:orange">
+                                        <div class= "face_lad" style="color:blue">===</div>
+                                      </div>
+                                    </div>
+                                    
+                                  </div> -->
+                            <div class="w3-container" style="z-index:-5; position:absolute;
+                                  top:10%;
+                                  bottom:10%;
+                                  transform: rotate(0deg) translateZ(110px);
+                                  ">
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                                <div class="face_col" style="background-color:gray"></div>
+                            </div>
+
+                            <head class="w3-panel w3-header" style="max-height:33%; opacity:20%;">
+                                <div class="w3-row i-blur w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-panel w3-btn">
+                                    PORT
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+                        <!-- STAR -->
+                        <div id="start_container" class="box__face box__face--back w3-container w3-animate-opacity" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    STAR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                        <!-- FOR -->
+                        <div id="for_container" class="box__face box__face--right w3-container w3-animate-opacity" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn w3-text-black">
+                                    FOR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                        <!-- AFT -->
+                        <div id="aft_container" class="box__face box__face--left w3-text-black w3-animate-opacity">AFT
+
+                            <div class="face_lad"></div>
+                            <div id="aft_container2" class=" box__face--left3 w3-animate-bottom" style="position:absolute; display:none">
+
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- AFT 2 LADDER-->
+
+                        <!-- AFT 3 PIPING-->
+                        <div id="aft_piping" class="box__face--left2 w3-animate-top" style="position:absolute; display:block;">
+                            <p style="
+                                float:left;
+                                width: 15%;
+                                height: 100%;
+                                margin-left: 100px;
+                                line-height: 100%;
+                                "></p>
+                            <div class="face_col">1 st</div>
+                            <div class="face_col">1 st</div>
+
+                            <p style="
+                                float:left;
+                                width: 10%;
+                                height: 100%;
+                                margin-left: 100px;
+                                line-height: 100%;
+                                "></p>
+                            <!-- <div class="face_lad"></div> -->
+
+                            <!-- <div class="face_col">2 nd</div> -->
+                        </div>
+
+
+
+
+
+
+                        <!-- TOP -->
+                        <div id="top_container" class="box__face box__face--top  w3-container" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    TOP
+                                    <div style="position:fixed; z-index:5;">aa
+                                        <h1>A</h1>
+                                    </div>
+                                    <div style="position:relative; z-index:5;">bb
+                                        <h1>B</h1>
+                                    </div>
+                                    <div style="position:absolute; z-index:5;">cc
+                                        <h1>D</h1>
+                                    </div>
+                                    <div style="position:sticky; z-index:5;">dd
+                                        <h1>C</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+
+
+                        </div>
+
+                        <!-- FLOOR -->
+                        <div id="floor_container" class="box__face box__face--bottom  w3-container" style="line-height:100%;">
+
+                            <head class="w3-panel w3-header" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge">TOP</div>
+                            </head>
+                            <div class="w3-container" style=" height: 33%; max-height:66%;">
+                                <div class="w3-bar w3-btn">
+                                    FLOOR
+                                </div>
+                            </div>
+                            <foot class="w3-panel w3-footer w3-hoverable" style="max-height:33%;">
+                                <div class="w3-row w3-black w3-xlarge hover_blur">BOTTOM</div>
+                            </foot>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <hr>
+                    <hr>
+
+                </div>
+
+
+
+
+            </div>
+
+            <!-- Footer -->
+
+
+            <!-- End page content -->
+        </div>
+    </div>
+
+    <script>
+        // ROTATIONS handleMarquee
+
+
+        var box = document.querySelector('.box');
+        var radioGroup = document.querySelector('.radio-group');
+        var currentClass = '';
+
+        function changeSide() {
+            var checkedRadio = radioGroup.querySelector(':checked');
+            var showClass = 'show-' + checkedRadio.value;
+            if (currentClass) {
+                box.classList.remove(currentClass);
+            }
+            box.classList.add(showClass);
+            currentClass = showClass;
+        }
+        // set initial side
+        changeSide();
+
+        radioGroup.addEventListener('change', changeSide);
+
+
+
+        // END OF ROTAITONS
+
+
+
+
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Slideshows
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+            var elem = document.getElementById("myBar");
+            var width = 5;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width == 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
+                }
+            }
+        }
+
+        function rgbToHex(r, g, b) {
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        }
+
+        function toggle_cases_summary(toggle) {
+            if (toggle == 0) {
+                document.getElementById('case_off').style.display = "block";
+                document.getElementById('head2').style.display = "none";
+            } else {
+                document.getElementById('case_off').style.display = "none";
+                document.getElementById('head2').style.display = "block";
+
+            }
+            console.log("COMAND")
+        }
+
+
+        function handleMarquee() {
+            const marquee = document.querySelectorAll('.marquee');
+            let speed = 4;
+            let lastScrollPos = 0;
+            let timer;
+            marquee.forEach(function(el) {
+                const container = el.querySelector('.inner');
+                const content = el.querySelector('.inner > *');
+                //Get total width
+                const elWidth = content.offsetWidth;
+                //Duplicate content
+                let clone = content.cloneNode(true);
+                container.appendChild(clone);
+                let progress = 1;
+
+                function loop() {
+                    progress = progress - speed;
+                    if (progress <= elWidth * -1) {
+                        progress = 0;
+                    }
+                    container.style.transform = 'translateX(' + progress + 'px)';
+                    container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+                    window.requestAnimationFrame(loop);
+                }
+                loop();
+            });
+            window.addEventListener('scroll', function() {
+                const maxScrollValue = 12;
+                const newScrollPos = window.scrollY;
+                let scrollValue = newScrollPos - lastScrollPos;
+                if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+                else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+                speed = scrollValue;
+                clearTimeout(timer);
+                timer = setTimeout(handleSpeedClear, 10);
+            });
+
+            function handleSpeedClear() {
+                speed = 4;
+            }
+        };
+        handleMarquee();
+
+
+        var timer;
+
+        function setTimer() {
+            timer = setTimeout(showPage, 333);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+
+        var openTab = document.getElementById("firstTab");
+        openTab.click();
+
+        var openInbox = document.getElementById("myBtn");
+        openInbox.click();
+        openMail("Borge")
+
+        function openMail(personName) {
+            var i;
+            var x = document.getElementsByClassName("person");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x = document.getElementsByClassName("test");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" w3-light-grey", "");
+            }
+            document.getElementById(personName).style.display = "block";
+            event.currentTarget.className += " w3-light-grey";
+        }
+    </script>
+
+
+</body>
+<hr>
+
+<footer class="w3-bar w3-center i-warning2 i-text-h3" style=" line-height:0%; font-size:50%">
+    <div class="w3-center w3-clear">
+        <div class="w3-bar ">
+
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container w3-clear">
+                    <div class="w3-center">
+                        <i class="fa fa-level-up w3-large"></i>
+                    </div>
+                    <b>BACK</b>
+                </div>
+            </div>
+
+
+            <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                <div class="w3-container ">
+                    <div class="w3-center">
+                        <i class="fa fa-file w3-large"></i>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <b>REPORT</b>
+                </div>
+            </div>
+
+            <div class="w3-bar-item w3-btn " onclick="window.location.hash='map';">
+                <div class="w3-container i-green2">
+                    <div class="w3-center">
+                        <i class="fa fa-level-down w3-large">
+                      </i>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <b>EXPLORE</b>
+                </div>
+            </div>
+
+            <div class="w3-bar-item w3-btn">
+                <div class="w3-container ">
+                    <div class="w3-center"><i class="fa fa-cubes w3-large"></i></div>
+                    <div class="w3-clear"></div>
+                    <b>ITEMS</b>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <p class="w3-right">Powered by <a href="https://www.killerbotstudios.com" target="_blank">BOT</a></p>
+</footer>
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="mail_write" class="w3-modal" style="z-index:4">
+    <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-padding w3-red">
+            <span onclick="document.getElementById('mail_write').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+            <h2>Send Mail</h2>
+        </div>
+        <div class="w3-panel">
+            <label>To</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>From</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <label>Subject</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text">
+            <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
+            <div class="w3-section">
+                <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+                <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
