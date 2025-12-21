@@ -1,37 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="webassets/BOTfavicon.ico" type="imagen.ico">
-    <title>Killerbot</title>
-    <link rel="stylesheet" href="styles/redStyle.css">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7KHBDHMDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-G7KHBDHMDK');
+  </script>
 
-    <style>
-      body, html{height:100%; background-color:none}
-      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-      .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-      .fa-anchor,.fa-coffee {font-size:200px}
-      .parallax{height:100%;  background-image:url('/webassets/bkgcode2.jpg');background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover}
-      .clearBackground{background-color:none; height:100px; content:box}
-      .w3-padding-64{padding-top: 20px!important;}
+  <meta charset="UTF-8">
+  <title>Killerbot Studios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Killerbot Studios — indie game studio focused on sharp systems and compact, strategic experiences.">
 
-      .container{position:relative; width:100%;}
-      .container img{width:100%;height:100%}
-      .container h1,h4 {position: absolute;left: 50%;transform:translate(-50%, 50%);text-align:center}
-      .container .btn{position:absolute;top:70%;left:50%;transform:translate(-50%,50%);background-color:#555; color:white;font-size:16;padding: 12px 24px; border:none; cursor:pointer;text-align:center}
-      .container .btn:hover{background-color:black;}
-    </style>
+  <link rel="icon" href="webassets/BOTfavicon.ico" type="image/x-icon">
 
-  </head>
-  <body>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap">
 
-    <header class="container w3-red w3-center"style="padding:0px 16px" >
-      <img src="webassets/bots3Dt.png" alt="bots" style="width:100%">
-      <h1  style="font-size:3.5vw;top:15%; font-weight:100;font-weight:900;">THIS WEBSITE</h1>
-      <h1  style=" font-size:3.5vw;font-family:Arial, Helvetica, sans-serif;font-weight:900;top:30%">IS CURRENTLY</h1>
-      <h1  style="font-size:3.5vw; top:45%; font-weight:900; text-wrap:none">UNDER DEVELOPMENT</h4>
-      <h1 style = "font-size:2.5vw; top:75%">but meanwhile...</h3>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <button class="btn" onclick="location.href= 'games/Owly/' " style = "top:85%;">Check our latest project</button>
-    </header>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles/killercss.css">
+</head>
+<body id="top">
+  <!-- Navigation -->
+  <header class="kb-nav">
+    <div class="kb-nav-inner">
+      <a href="#top" class="kb-logo">
+        <img src="webassets/KBOTw.png" alt="Killerbot Studios logo">
+        <span>Killerbot Studios</span>
+      </a>
 
-  </body>
+      <button class="kb-nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="kb-nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#doce">DOCE®</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="kb-hero">
+      <div class="kb-hero-overlay"></div>
+      <div class="kb-hero-inner">
+        <p class="kb-hero-kicker">WE ARE</p>
+        <h1>KILLERBOT STUDIOS</h1>
+        <!-- Logo canvas -->
+<canvas id="kb-logo-canvas" width="400" height="540" aria-label="Killerbot Studios logo"></canvas>
+        <p class="kb-hero-subkicker">AND WE MAKE VIDEOGAMES</p>
+        <div class="kb-hero-actions">
+          <a href="/doce" class="kb-btn kb-btn-primary kb-btn-large">Check our latest project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="kb-section kb-section-light">
+      <div class="kb-section-inner kb-grid-2">
+        <div>
+          <h2>Studio</h2>
+          <p class="kb-lead">
+            Killerbot Studios is a small independent team focused on tight, strategic games.
+          </p>
+          <p>
+            We care about clarity, depth, and a distinct visual style.
+          </p>
+        </div>
+        <div class="kb-card kb-card-glass kb-about-card">
+          <h3>What we do</h3>
+          <ul class="kb-list">
+            <li>🎮 Indie videogames</li>
+            <li>🧠 Strategy & abstract games</li>
+            <li>🧩 Digital adaptations</li>
+            <li>🚢 Systems & simulations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="kb-section kb-section-dark">
+      <div class="kb-section-inner">
+        <div class="kb-section-header">
+          <h2>Projects</h2>
+          <p class="kb-lead">
+            Selected work from the studio.
+          </p>
+        </div>
+
+        <div class="kb-project-grid">
+          <!-- DOCE card -->
+          <article class="kb-project-card">
+            <div class="kb-project-image">
+              <img src="webassets/doce-screenshot.png" alt="DOCE game screenshot">
+            </div>
+            <div class="kb-project-body">
+              <h3>DOCE® — Digital Board Game</h3>
+              <p>
+                DOCE® is an abstract strategy game by Dan &amp; Luis Machado, brought to screens with a clean, faithful digital version.
+              </p>
+              <a href="/doce" class="kb-btn kb-btn-outline">Play DOCE®</a>
+            </div>
+          </article>
+
+          <!-- Killer Bots -->
+          <article class="kb-project-card">
+            <div class="kb-project-image">
+              <img src="webassets/bots3Dcolor.png" alt="Killer Bots teaser art">
+            </div>
+            <div class="kb-project-body">
+              <h3>Killer Bots — In Development</h3>
+              <p>
+                A characterful tactics game in development: grid-based combat, bold bots, and focused systems.
+              </p>
+              <a href="#contact" class="kb-btn kb-btn-outline">Get updates</a>
+            </div>
+          </article>
+
+          <!-- Future Projects -->
+          <article class="kb-project-card">
+            <div class="kb-project-image">
+              <img src="webassets/basejump2.jpg" alt="Concept art for future projects">
+            </div>
+            <div class="kb-project-body">
+              <h3>Upcoming Collaborations</h3>
+              <p>
+                We collaborate with inventors, studios, and publishers exploring new formats.
+              </p>
+              <p>
+                Have a board game or system to bring to life digitally? Let’s talk.
+              </p>
+              <a href="#contact" class="kb-btn kb-btn-outline">Pitch a project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCE Highlight -->
+    <section id="doce" class="kb-section kb-section-accent">
+      <div class="kb-section-inner kb-grid-2">
+        <div>
+          <h2>DOCE®</h2>
+          <p class="kb-lead">
+            Elegant rules, sharp decisions, fast digital play.
+          </p>
+          <p>
+            A faithful board game adaptation with a clean, focused interface.
+          </p>
+          <div class="kb-cta-row">
+            <a href="/doce" class="kb-btn kb-btn-primary kb-btn-large">Play DOCE® now</a>
+            <span class="kb-cta-caption">
+              Available directly in your browser — no install required.
+            </span>
+          </div>
+        </div>
+        <div class="kb-doce-panel">
+          <div class="kb-doce-tag">Featured Collaboration</div>
+          <p><strong>Original creators:</strong> Dan &amp; Luis Machado</p>
+          <p><strong>Publisher:</strong> SmartIguana Games</p>
+          <p>
+            Built to keep the original tension while staying readable and fast.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action / Contact -->
+    <section id="contact" class="kb-section kb-section-light">
+      <div class="kb-section-inner kb-center">
+        <h2>Let’s talk.</h2>
+        <p class="kb-lead">
+          Collaborations, prototypes, or full game dev.
+        </p>
+        <div class="kb-contact-actions">
+          <a href="mailto:info@killerbotstudios.com" class="kb-btn kb-btn-primary kb-btn-large">
+            <i class="fa fa-envelope"></i> Email the studio
+          </a>
+        </div>
+        <p class="kb-contact-note">
+          Send us a short brief and we’ll get back to you.
+        </p>
+        <div class="kb-social">
+          <a href="#" aria-label="Killerbot on Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" aria-label="Killerbot on Instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" aria-label="Killerbot on Facebook"><i class="fa fa-facebook-official"></i></a>
+          <a href="#" aria-label="Killerbot on LinkedIn"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="kb-footer">
+    <div class="kb-footer-inner">
+      <span>© <span id="year"></span> Killerbot Studios. All rights reserved.</span>
+      <span>Let’s bring the madness.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
